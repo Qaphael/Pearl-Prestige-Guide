@@ -514,7 +514,7 @@ header.white-bg a {
   max-width: 800px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  border-radius: 3rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -527,25 +527,18 @@ header.white-bg a {
 .search-input {
   flex: 2;
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none; /* Remove default border */
+  border-radius: 2rem;
   font-size: 16px;
 }
 
-.search-select {
-  flex: 1;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
 
 .search-button {
   padding: 15px 20px;
-  background-color: #0288d1;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  background-color: #007bff; /* Example button color */
+  color: #fff; /* Example button text color */
+  border: none; /* Remove default border */
+  border-radius: 2rem; /* Rounded corners for the button */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -558,7 +551,9 @@ header.white-bg a {
   .search {
     top: 120px; /* Adjusted top position for smaller screens */
     flex-direction: column;
-    padding: 20px;
+    padding: 1rem;
+    border-radius: 2rem;
+    position: absolute;
   }
 
   .search-form {
@@ -567,7 +562,6 @@ header.white-bg a {
   }
 
   .search-input,
-  .search-select,
   .search-button {
     width: 100%;
   }
@@ -575,7 +569,7 @@ header.white-bg a {
 
 @media (max-width: 480px) {
   .search {
-    top: 120px; /* Adjusted top position for smaller screens */
+    width: 80%; /* Full width on smaller screens */
     flex-direction: column;
     padding: 10px;
   }
@@ -586,12 +580,6 @@ header.white-bg a {
   }
 
   .search-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .search-select {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -702,10 +690,10 @@ header.white-bg a {
 
   /* Input field styling */
   .search input[type="text"] {
-    width: 300px; /* Adjusted width */
-    padding: 20px;
+    /*width: 300px;*/ /* Adjusted width */
+    padding: 1rem;
     border: none;
-    border-radius: 100px;
+    border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -715,10 +703,10 @@ header.white-bg a {
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 22px;
-    border-radius: 50px;
+    padding: 1rem;
+    border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     transition: 0.9s ease;
