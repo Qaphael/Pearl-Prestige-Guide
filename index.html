@@ -23,6 +23,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link href="/style.css" rel="stylesheet" />
     <style>
       .carousel-container {
@@ -81,8 +87,21 @@
       <div class="container">
         <!-- Floating Search Bar in the Hero Section -->
         <div class="search">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">Go</button>
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Destination, city, or activity"
+              class="search-input"
+            />
+            <select class="search-select">
+              <option value="all">All Categories</option>
+              <option value="destinations">Destinations</option>
+              <option value="tours">Tours</option>
+              <option value="activities">Activities</option>
+              <option value="hotels">Hotels</option>
+            </select>
+            <button type="submit" class="search-button">Search</button>
+          </form>
         </div>
 
         <!-- Hero Carousel -->
@@ -441,7 +460,7 @@
               />
               <div class="content">
                 <h4 class="author">LUNDEV</h4>
-                <h2 class="title">DESIGN SLIDER</h3>
+                <h2 class="title">DESIGN SLIDER</h2>
                 <h3 class="topic">ANIMAL</h3>
                 <p class="des">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
@@ -790,35 +809,305 @@
     <section class="featured-tours">
       <div class="container">
         <h2 class="section-title">Featured Tours</h2>
-
+        <!-- Swiper -->
+        <div
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+          class="swiper mySwiper2"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 1</h3>
+                  <p>
+                    Explore the beauty of nature with our exclusive tour
+                    package.
+                  </p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 2</h3>
+                  <p>
+                    Experience the adventure of a lifetime with our guided
+                    tours.
+                  </p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 3</h3>
+                  <p>
+                    Discover the wonders of the world with our curated tours.
+                  </p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 4</h3>
+                  <p>Relax and rejuvenate with our luxury tour packages.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 5</h3>
+                  <p>Adventure awaits with our thrilling tour packages.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 6</h3>
+                  <p>Explore hidden gems with our exclusive tour packages.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 7</h3>
+                  <p>Experience the best of nature with our curated tours.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 8</h3>
+                  <p>Discover new destinations with our exclusive tours.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 9</h3>
+                  <p>Relax and unwind with our luxury tour packages.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-package">
+                <div class="tour-info">
+                  <h3>Tour Package 10</h3>
+                  <p>Adventure and excitement with our thrilling tours.</p>
+                  <button>Learn More</button>
+                </div>
+                <div class="tour-image">
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
       <div class="container">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial">
-            <p>
-              "An unforgettable experience! The team at Jungle Beauty Sunset
-              made everything so seamless. Highly recommend!"
-            </p>
-            <h4>- Sarah K.</h4>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-grid swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <div class="testimonial swiper-slide">
+              <p>
+                "An unforgettable experience! The team at Jungle Beauty Sunset
+                made everything so seamless. Highly recommend!"
+              </p>
+              <img src="images/hero/Bwindi.jpg" alt="Sarah K." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- Sarah K.</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <p>
+                "The best vacation of my life! Great service and breathtaking
+                destinations. I’ll definitely book again."
+              </p>
+              <img src="images/hero/Gulu.jpg" alt="David L." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- David L.</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <p>
+                "Amazing tours, excellent planning, and beautiful locations.
+                Thank you for the great memories!"
+              </p>
+              <img src="images/hero/hero1.jpg" alt="Maria S." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- Maria S.</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <p>
+                "A truly remarkable experience. The team was professional and
+                the destinations were stunning."
+              </p>
+              <img src="images/hero/hero2.jpg" alt="John D." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- John D.</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <p>
+                "I had an amazing time! The tours were well-organized and the
+                guides were very knowledgeable."
+              </p>
+              <img src="images/hero/hero3.jpg" alt="Emily R." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- Emily R.</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <p>
+                "An incredible journey! The team went above and beyond to ensure
+                we had a fantastic experience." we had a fantastic experience."
+              </p>
+              <img src="images/hero/Kidepo.jpg" alt="Michael B." />
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>- Michael B.</h4>
+            </div>
           </div>
-          <div class="testimonial">
-            <p>
-              "The best vacation of my life! Great service and breathtaking
-              destinations. I’ll definitely book again."
-            </p>
-            <h4>- David L.</h4>
+          <div class="testimonial-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2 class="cta-title">
+              Get Your Travel Inspiration Straight to Your Inbox
+            </h2>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="subscribe-input"
+              />
+              <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
           </div>
-          <div class="testimonial">
-            <p>
-              "Amazing tours, excellent planning, and beautiful locations. Thank
-              you for the great memories!"
-            </p>
-            <h4>- Maria S.</h4>
+          <div class="cta-image">
+            <img src="images/hero/Gulu.jpg" alt="Travel Inspiration" />
           </div>
         </div>
       </div>
@@ -827,25 +1116,71 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <h2 class="footer-title">
-          Get Your Travel Inspiration Straight to Your Inbox
-        </h2>
-        <form class="subscribe-form">
-          <input
-            type="email"
-            placeholder="Your email"
-            class="subscribe-input"
+        <div class="footer-logo">
+          <img
+            src="images/items/apartment/apartment1.jpg"
+            alt="Storyteller Travel Logo"
           />
-          <button type="submit" class="subscribe-button">Subscribe</button>
-        </form>
-        <div class="social-links">
-          <p>Follow us on:</p>
-          <div class="social-icons">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">YouTube</a>
+          <p>
+            Storyteller Media covers the best destinations, animals, and natural
+            experiences around the world.
+          </p>
+          <p>
+            We are located in Antigonish, a beautiful university town on Nova
+            Scotia’s Northumberland shore.
+          </p>
+          <p>Storyteller Travel is part of Storyteller Group</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
           </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
         </div>
         <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
       </div>
@@ -859,6 +1194,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer type="text/javascript" src="/script.js"></script>
     <script defer type="text/javascript" src="/main.js"></script>
     <script defer type="text/javascript" src="/items.js"></script>
