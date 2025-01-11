@@ -87,14 +87,16 @@
       <div class="container">
         <!-- Floating Search Bar in the Hero Section -->
         <div class="search">
-          <form class="search-form">
-            <input
-              type="text"
-              placeholder="Destination, city, or activity"
-              class="search-input"            
-            />            
-            <button type="submit" class="search-button">Search</button>
-          </form>
+          <div class="container">
+            <form class="search-form">
+              <input
+                type="text"
+                placeholder="Destination, city, or activity"
+                class="search-input"
+              />
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
         </div>
 
         <!-- Hero Carousel -->
@@ -803,179 +805,343 @@
       <div class="container">
         <h2 class="section-title">Featured Tours</h2>
         <!-- Swiper -->
-        <div
-          style="
-            --swiper-navigation-color: #fff;
-            --swiper-pagination-color: #fff;
-          "
-          class="swiper mySwiper2"
-        >
+        <div class="swiper mySwiper2">
+          <h2 class="section-title">Featured Uganda Tour Packages</h2>
+          <p class="tour-package-count">1-20 of 1,384 Uganda Tour Packages</p>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 1</h3>
-                  <p>
-                    Explore the beauty of nature with our exclusive tour
-                    package.
-                  </p>
-                  <button>Learn More</button>
+              <article class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-1.jpg"
+                  alt="Tour Package 1"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$2,572 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    7-Day Murchison Falls, Chimps & Gorilla Trekking
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge & Guest House
+                    </p>
+                  </div>
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Entebbe (Start), Ziwa Rhino Ranch, Murchison Falls NP, Kibale NP
+                      (Chimps), Queen Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Entebbe
+                      Airport (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>                  
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">5.0/5</p>
+                      <p class="review-count">– 57 Reviews</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-2.jpg"
+                  alt="Tour Package 2"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$3,100 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    8 Days Uganda Wildlife & Gorilla Safari
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge & Tented Camp
+                    </p>
+                  </div>
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Entebbe (Start), Murchison Falls NP, Kibale
+                      Forest NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable
+                      NP (Gorillas), Entebbe (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">4.9/5</p>
+                      <p class="review-count">– 32 Reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-3.jpg"
+                  alt="Tour Package 3"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$1,450 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    3 Days Gorilla Trekking Safari in Bwindi
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge
+                    </p>
+                  </div>
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Kigali (Start), Bwindi Impenetrable Forest
+                      (Gorillas), Kigali (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">4.8/5</p>
+                      <p class="review-count">– 25 Reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-4.jpg"
+                  alt="Tour Package 4"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$3,850 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    10 Days Uganda Primates & Wildlife Safari
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge & Tented Camp
+                    </p>
+                  </div>
+
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Entebbe (Start), Kibale Forest (Chimps), Queen
+                      Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Lake Mburo
+                      NP, Entebbe (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">4.7/5</p>
+                      <p class="review-count">– 18 Reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <div class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-5.jpg"
+                  alt="Tour Package 5"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$2,150 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    5 Days Gorilla & Chimpanzee Trekking in Uganda
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge
+                    </p>
+                  </div>
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Entebbe (Start), Kibale Forest NP (Chimps), Queen
+                      Elizabeth NP, Bwindi Impenetrable Forest (Gorillas), Entebbe
+                      (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">4.6/5</p>
+                      <p class="review-count">– 12 Reviews</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 2</h3>
-                  <p>
-                    Experience the adventure of a lifetime with our guided
-                    tours.
-                  </p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 3</h3>
-                  <p>
-                    Discover the wonders of the world with our curated tours.
-                  </p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 4</h3>
-                  <p>Relax and rejuvenate with our luxury tour packages.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 5</h3>
-                  <p>Adventure awaits with our thrilling tour packages.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 6</h3>
-                  <p>Explore hidden gems with our exclusive tour packages.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 7</h3>
-                  <p>Experience the best of nature with our curated tours.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 8</h3>
-                  <p>Discover new destinations with our exclusive tours.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 9</h3>
-                  <p>Relax and unwind with our luxury tour packages.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="tour-package">
-                <div class="tour-info">
-                  <h3>Tour Package 10</h3>
-                  <p>Adventure and excitement with our thrilling tours.</p>
-                  <button>Learn More</button>
-                </div>
-                <div class="tour-image">
-                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+              <div class="tour-card">
+                <img
+                  src="https://swiperjs.com/demos/images/nature-6.jpg"
+                  alt="Tour Package 6"
+                  class="tour-image"
+                />
+                <div class="tour-card-content">
+                  <div class="price-div">
+                    <p class="best-seller">Best Seller</p>
+                    <p class="tour-price">$4,200 pp (USD)</p>
+                  </div>
+                  <h3 class="tour-title">
+                    9 Days Uganda Gorilla & Wildlife Safari
+                  </h3>
+                  <div class="tour-details">
+                    <p class="tour-location">
+                      <i class="fas fa-map-marker-alt"></i>Uganda: Private tour
+                    </p>
+                    <p class="tour-style">
+                      <i class="fas fa-suitcase-rolling"></i>Mid-range
+                    </p>
+                    <p class="tour-accommodation">
+                      <i class="fas fa-hotel"></i>Lodge & Tented Camp
+                    </p>
+                  </div>
+                  <div class="tour-description-wrapper">
+                    <p class="tour-description">
+                      <i class="fas fa-info-circle"></i>
+                      You Visit: Entebbe (Start), Murchison Falls NP, Kibale
+                      Forest NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable
+                      NP (Gorillas), Entebbe (End)
+                    </p>
+                    <a href="#" class="read-more-link">Read More
+                      <svg class="circle-svg" viewBox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="tour-rating-div">
+                    <div class="stars">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="tour-rating">
+                      <p class="rating-value">4.5/5</p>
+                      <p class="review-count">– 8 Reviews</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-        <div thumbsSlider="" class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </div>
-          </div>
+          <div class="carousel-button tours-swiper-btn swiper-button-next"></div>
+          <div class="carousel-button tours-swiper-btn swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -1110,10 +1276,11 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-logo">
-          <img
-            src="images/items/apartment/apartment1.jpg"
+          <!-- <img
+            src="images/items/apartment/apartment1.jpg" 
             alt="Storyteller Travel Logo"
-          />
+          /> -->
+          <span class="Logo-space">Logo</span>
           <p>
             Storyteller Media covers the best destinations, animals, and natural
             experiences around the world.

@@ -151,14 +151,9 @@ body {
 
 .container {
   width: 100%; /* Start with 100% width */
-  max-width: 1300px; /* Maximum width */
+  max-width: 1150px; /* Maximum width */
   margin: 0 auto; /* Center horizontally */
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 90%; /* Occupy 90% width on larger screens */
-  }
+  padding: 0;
 }
 
 /* Header Styling */
@@ -415,9 +410,11 @@ header.white-bg a {
 
 /* Hero Section and Carousel */
 .hero {
-  position: relative;
+  position: relative;  
   width: 100%;
-  /*height: 100vh;*/ /* Make the hero section take the full viewport height */
+  height: 650px; /* Calculated height for 1150px width and 90vh aspect ratio */
+  /* Make the hero section take the full viewport height on mobile*/
+
   overflow: hidden;
   z-index: 0;
 }
@@ -496,7 +493,7 @@ header.white-bg a {
 @media (max-width: 480px) {
   .hero .carousel-slider .list .item .content {
     /*top: 20%;*/ /* Adjust for smaller screens */
-    top: 135px;
+    top: 155px;
   }
 }
 
@@ -532,7 +529,6 @@ header.white-bg a {
   font-size: 16px;
 }
 
-
 .search-button {
   padding: 15px 20px;
   background-color: #007bff; /* Example button color */
@@ -549,48 +545,51 @@ header.white-bg a {
 
 @media (max-width: 768px) {
   .search {
-    top: 80px; /* Adjusted top position for smaller screens */
-    /* flex-direction: column; */
-    padding: 1rem;
+    width: 90%;
+    top: 80px;
+    padding: 0.7rem; /* Reduced padding */
     border-radius: 2rem;
-    position: absolute;
-    width: 80%; /* Full width on smaller screens */
+    width: 90%;
   }
 
   .search-form {
-    flex-direction: column;
-    gap: 10px;
+    gap: 5px; /* Reduced gap */
   }
 
   .search-input,
   .search-button {
-    width: 100%;
-    font-size: 13px;
-    padding: 0.7rem;
+    font-size: 14px;
+    padding: 0.5rem; /* Reduced padding */
+  }
+
+  .hero {
+    height: 100vh; /* Set hero section to 100vh on mobile */
+    font-size: 14px;
   }
 }
 
+/* Making hero section 100vh for mobile */
 @media (max-width: 480px) {
   .search {
-    
-    /* flex-direction: column; */
-    padding: 10px;
+    padding: 0.5rem; /* Further reduced padding */
   }
 
   .search-form {
-    flex-direction: column;
     gap: 5px;
   }
 
   .search-input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     font-size: 14px;
   }
 
   .search-button {
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 0.5rem; /* Reduced padding, making it circular */
+    font-size: 1rem;
+    border-radius: 50%; /* Circular button */
+    width: fit-content; /*Adjust size as needed */
+    /* height: 40px; Adjust size as needed */
   }
 }
 
@@ -694,7 +693,7 @@ header.white-bg a {
   /* Input field styling */
   .search input[type="text"] {
     /*width: 300px;*/ /* Adjusted width */
-    padding: 1rem;
+    padding: 0.7rem;
     border: none;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -706,7 +705,7 @@ header.white-bg a {
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.7rem;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* position: absolute; */
@@ -913,15 +912,12 @@ header.white-bg a {
 
 /* General styles for the Top Destinations section */
 .carousel-slider {
-  height: 70vh;
+  /* height: 80vh; */
+  height: 650px; /* Calculated height, adjust as needed */ 
   /* margin-top: -50px; */
   /* width: 100vw; */
   overflow: hidden;
   position: relative;
-}
-
-.hero .carousel-slider {
-  height: 80vh;
 }
 
 .carousel-slider .section-title {
@@ -957,6 +953,7 @@ header.white-bg a {
 }
 .carousel-slider .list .item .author {
   font-weight: bold;
+  font-size: 0.8rem;
 }
 .carousel-slider .list .item .title,
 .carousel-slider .list .item .topic {
@@ -997,7 +994,7 @@ header.white-bg a {
 }
 
 @media (max-width: 768px) {
-  .carousel-slider {
+  .hero .carousel-slider {
     height: 100vh;
   }
   .carousel-slider .list .item .content {
@@ -1382,6 +1379,7 @@ header.white-bg a {
   color: inherit;
   margin: 0 var(--spacing, 0px);
   transition: margin 0.25s;
+  display: inline-block;
 }
 
 .circle-svg {
@@ -1841,15 +1839,14 @@ header.white-bg a {
 }
 
 /* Featured Tours Section */
-#featured-tours {
+.featured-tours {
   padding: 2rem 1rem 2rem 1rem;
   background: #f4f4f4;
 }
 
-/* .swiper {
-  width: 100%;
-  height: 100%;
-} */
+.featured-tours .container {
+  position: relative;
+}
 
 .swiper-slide {
   text-align: center;
@@ -1885,7 +1882,7 @@ header.white-bg a {
 }
 
 .mySwiper2 {
-  height: 50vh;
+  /* height: 50vh; */
   width: 100%;
   border-radius: 1.5rem;
 }
@@ -1902,15 +1899,164 @@ header.white-bg a {
   opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.carousel-button.tours-swiper-btn {
+  padding: 1.5rem;
+}
+
+.tours-swiper-btn.swiper-button-prev::after, .tours-swiper-btn.swiper-button-next::after {
+font-size: 1.5rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0; /* Hide by default */
+  pointer-events: none; /* Disable interaction when hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  opacity: 1; /* Reveal buttons on hover */
+  pointer-events: all; /* Enable interaction */
+}
+
+/* Add hover effect for better UX */
+.swiper-container.is-first-slide .swiper-button-prev,
+.swiper-container.is-last-slide .swiper-button-next {
+  opacity: 1; /* Show buttons when hovering over edge slides */
+  pointer-events: all;
+}
+
+/* Tour Package Card Styles */
+.tour-card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents image overflow */
+  transition: transform 0.3s ease; 
+  padding: 0.5rem;
+}
+
+.mySwiper2 .swiper-slide {
+  text-align: left;
+  background: none;
+  box-shadow: none;
+}
+
+.tour-card:hover {
+  /* transform: translateY(-5px); Subtle hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 210px; /* Adjust as needed */
+  object-fit: cover; 
+}
+
+.tour-card-content {
+  padding: 1rem;
+}
+
+.tour-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tour-price {
+  font-size: 1rem;
+  color: #ff4e3e; /* Example price color */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.tour-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tour-rating {
+  font-size: 0.8rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.tour-rating p {
+  line-height: 0;
+}
+
+.price-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.tour-details p {
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap; /* Allow wrapping of text */
+  word-wrap: break-word; /* Break long words if necessary */
+  overflow-wrap: break-word; /* Ensures text breaks nicely in modern browsers */
+}
+
+.tour-details i {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.tour-rating-div {
+  display: flex;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-rating-div .stars {
+  justify-content: left;
+  margin: 0;
+}
+
+.tour-description-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.tour-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em; /* Adjust based on font size (1.5em per line for two lines) */
+}
+
+/* Responsive adjustments for tour cards */
+@media (max-width: 768px) {
+  .tour-card img {
+    height: 300px; /* Adjust image height for smaller screens */
+  }
 }
 
 .tour-package {

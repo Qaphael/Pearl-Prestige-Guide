@@ -11,7 +11,7 @@ let thumbnailBorderDom = document.querySelector(
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
 
 let timeRunning = 500; // Animation duration
-let timeAutoNext = 7000; // Auto-next duration
+let timeAutoNext = 15000; // Auto-next duration
 
 // Initialize the carousel
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
@@ -201,7 +201,7 @@ setInterval(() => {
 
   // Update the carousel to show the new slide
   updateCarousel(currentIndex);
-}, 5000); // 5000ms = 5 seconds
+}, 15000); // 5000ms = 5 seconds
 
 
 // Swiper JS Code
@@ -222,17 +222,61 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   loop: true,
-  spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  thumbs: {
-    swiper: swiper,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 1,
+    },
   },
-  
+  on: {
+    slideChange: function () {
+      const swiperContainer = document.querySelector(".mySwiper2");
+      const isFirstSlide = this.isBeginning;
+      const isLastSlide = this.isEnd;
+
+      // Add or remove hover classes for the first or last slide
+      swiperContainer.classList.toggle("is-first-slide", isFirstSlide);
+      swiperContainer.classList.toggle("is-last-slide", isLastSlide);
+    },
+  },
 });
+
+// Handle hover to reveal buttons
+const swiperContainer = document.querySelector(".mySwiper2");
+
+swiperContainer.addEventListener("mouseover", (e) => {
+  const isOnEdge =
+    swiperContainer.classList.contains("is-first-slide") ||
+    swiperContainer.classList.contains("is-last-slide");
+
+  if (isOnEdge) {
+    document.querySelector(".swiper-button-prev").style.opacity = "1";
+    document.querySelector(".swiper-button-next").style.opacity = "1";
+  }
+});
+
+swiperContainer.addEventListener("mouseleave", () => {
+  document.querySelector(".swiper-button-prev").style.opacity = "0";
+  document.querySelector(".swiper-button-next").style.opacity = "0";
+});
+
 
 var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: 1,
@@ -242,6 +286,7 @@ var swiper3 = new Swiper(".mySwiper3", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  loop: true,
   breakpoints: {
     1024: {
       slidesPerView: 4,
@@ -254,3 +299,21 @@ var swiper3 = new Swiper(".mySwiper3", {
     },
   },
 });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const readMoreLink = document.querySelector('.read-more-link');
+    const description = document.querySelector('.tour-description');
+
+    readMoreLink.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent page scroll/jump
+      const isExpanded = description.classList.toggle('expanded');
+      
+      if (isExpanded) {
+        description.style.maxHeight = 'none'; // Expand the full text
+        readMoreLink.textContent = 'Read Less';
+      } else {
+        description.style.maxHeight = '3em'; // Collapse back to 2 lines
+        readMoreLink.textContent = 'Read More';
+      }
+    });
+  });
