@@ -549,11 +549,12 @@ header.white-bg a {
 
 @media (max-width: 768px) {
   .search {
-    top: 120px; /* Adjusted top position for smaller screens */
-    flex-direction: column;
+    top: 80px; /* Adjusted top position for smaller screens */
+    /* flex-direction: column; */
     padding: 1rem;
     border-radius: 2rem;
     position: absolute;
+    width: 80%; /* Full width on smaller screens */
   }
 
   .search-form {
@@ -564,13 +565,15 @@ header.white-bg a {
   .search-input,
   .search-button {
     width: 100%;
+    font-size: 13px;
+    padding: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
   .search {
-    width: 80%; /* Full width on smaller screens */
-    flex-direction: column;
+    
+    /* flex-direction: column; */
     padding: 10px;
   }
 
