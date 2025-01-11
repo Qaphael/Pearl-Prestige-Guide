@@ -223,13 +223,13 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 10,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  loop: true,
+  loop: true, // Loop is enabled, so Swiper reuses slides
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -251,30 +251,35 @@ var swiper2 = new Swiper(".mySwiper2", {
       const isFirstSlide = this.isBeginning;
       const isLastSlide = this.isEnd;
 
-      // Add or remove hover classes for the first or last slide
+      // Add or remove classes for edge states
       swiperContainer.classList.toggle("is-first-slide", isFirstSlide);
       swiperContainer.classList.toggle("is-last-slide", isLastSlide);
     },
   },
 });
 
-// Handle hover to reveal buttons
+// Hover logic for revealing buttons
 const swiperContainer = document.querySelector(".mySwiper2");
 
+// Reveal buttons on hover when on edge
 swiperContainer.addEventListener("mouseover", (e) => {
-  const isOnEdge =
-    swiperContainer.classList.contains("is-first-slide") ||
-    swiperContainer.classList.contains("is-last-slide");
+  const isFirstSlide = swiperContainer.classList.contains("is-first-slide");
+  const isLastSlide = swiperContainer.classList.contains("is-last-slide");
 
-  if (isOnEdge) {
+  if (isFirstSlide || isLastSlide) {
     document.querySelector(".swiper-button-prev").style.opacity = "1";
     document.querySelector(".swiper-button-next").style.opacity = "1";
+    document.querySelector(".swiper-button-prev").style.pointerEvents = "all";
+    document.querySelector(".swiper-button-next").style.pointerEvents = "all";
   }
 });
 
+// Hide buttons when mouse leaves the container
 swiperContainer.addEventListener("mouseleave", () => {
   document.querySelector(".swiper-button-prev").style.opacity = "0";
   document.querySelector(".swiper-button-next").style.opacity = "0";
+  document.querySelector(".swiper-button-prev").style.pointerEvents = "none";
+  document.querySelector(".swiper-button-next").style.pointerEvents = "none";
 });
 
 

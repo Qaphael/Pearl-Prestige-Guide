@@ -154,6 +154,7 @@ body {
   max-width: 1150px; /* Maximum width */
   margin: 0 auto; /* Center horizontally */
   padding: 0;
+  position: relative;
 }
 
 /* Header Styling */
@@ -721,9 +722,22 @@ header.white-bg a {
   background: #f4f4f4;
 }
 
-.find-section .section-title {
+.section-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.section-title-wrapper h2 {
+  margin-right: 1rem; /* Add right margin to the title */
+}
+
+@media (max-width: 768px) {
+  .section-title-wrapper h2 {
+    margin-right: 0.5rem; /* Adjust margin for smaller screens */
+  }
 }
 
 .find-section .section-title h2 {
@@ -905,12 +919,40 @@ header.white-bg a {
 
 .section-title {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* General styles for the Top Destinations section */
+.top-destinations {
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.carousel-caption {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.carousel-image {
+  flex: 1;
+  text-align: right;
+}
+
+.carousel-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 .carousel-slider {
   /* height: 80vh; */
   height: 650px; /* Calculated height, adjust as needed */ 
@@ -918,6 +960,7 @@ header.white-bg a {
   /* width: 100vw; */
   overflow: hidden;
   position: relative;
+  border-radius: 1.5rem;
 }
 
 .carousel-slider .section-title {
@@ -925,6 +968,7 @@ header.white-bg a {
   z-index: 5;
   color: white;
   margin-top: 1rem;
+  left: 100px;
 }
 
 .carousel-slider .list .item {
@@ -932,11 +976,13 @@ header.white-bg a {
   height: 100%;
   position: absolute;
   inset: 0 0 0 0;
+  border-radius: 1.5rem;
 }
 .carousel-slider .list .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 1.5rem;
 }
 
 .carousel-slider .list .item .content {
@@ -994,6 +1040,9 @@ header.white-bg a {
 }
 
 @media (max-width: 768px) {
+  .carousel-slider .section-title {
+    left: 70px;
+  }
   .hero .carousel-slider {
     height: 100vh;
   }
@@ -1022,6 +1071,9 @@ header.white-bg a {
 }
 
 @media (max-width: 480px) {
+  .carousel-slider .section-title {
+    left: 70px;
+  }
   .carousel-slider .list .item .content {
     top: 10%;
     width: 100%;
@@ -1161,7 +1213,7 @@ header.white-bg a {
   position: absolute;
   bottom: 150px;
   left: 50%;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   animation: showImage 0.5s linear 1 forwards;
 }
 @keyframes showImage {
@@ -1300,6 +1352,10 @@ header.white-bg a {
 }
 
 /* Latest Stories */
+section.latest-stories {
+  position: relative;
+  padding: 2rem 1rem 2rem 1rem;
+}
 .additional-stories {
   display: flex;
   flex-direction: column;
@@ -1406,24 +1462,47 @@ header.white-bg a {
 }
 
 .read-more-button {
-  margin-top: 1rem;
   background: #f57c00;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   cursor: pointer;
+  /* Position at the top right */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Remove default margin */
+  margin: 0;
   transition: background 0.3s;
+  z-index: 100;
 }
+
+@media (max-width: 768px) {
+  .read-more-button {
+    position: static; /* Remove absolute positioning */
+    display: block; /* Make it a block element to take full width */
+    width: 100%; /* Full width button */
+    text-align: center; /* Center text */
+    margin-top: 1rem; /* Add top margin for spacing */
+  }
+
+  .section-title-wrapper {
+    flex-direction: column; /* Stack title and button vertically */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .section-title-wrapper h2 {
+    margin-left: 0.5rem; /* Adjust margin for smaller screens */
+  }
+}
+
 .read-more-button:hover {
   background: #ef6c00;
 }
 
 /* Tablet Screens */
 @media (max-width: 768px) {
-  section.latest-stories {
-    padding: 2rem 1rem 2rem 1rem;
-  }
 
   .latest-stories .story-grid {
     grid-template-columns: 1fr;
@@ -1452,10 +1531,6 @@ header.white-bg a {
 
 /* Mobile Screens */
 @media (max-width: 678px) {
-  section.latest-stories {
-    padding: 2rem 1rem 2rem 1rem;
-  }
-
   .additional-stories {
     grid-template-columns: 1fr;
   }
@@ -1476,7 +1551,11 @@ header.white-bg a {
 }
 
 /* Trekker's Highlights */
+.trekker-highlights {
+  padding: 2rem 1rem 2rem 1rem;
+}
 .teal-gradient {
+  position: relative;
   background: linear-gradient(to right, #26a69a, #00796b);
 }
 .highlight-title {
@@ -1768,7 +1847,7 @@ header.white-bg a {
 
 #services {
   padding: 2rem 1rem 2rem 1rem;
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
 }
 
 .services-grid {
@@ -1782,7 +1861,7 @@ header.white-bg a {
 
 .service-item {
   background-color: #fff;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08),
     -4px -4px 12px rgba(0, 0, 0, 0.08);
@@ -1810,28 +1889,6 @@ header.white-bg a {
   color: #666;
 }
 
-/* Style the CTA button in the services section */
-.cta-button {
-  text-align: center; /* Center the text within the button */
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: bold; /* Make text bolder */
-  transition: background-color 0.3s ease;
-
-  /* Gradient background */
-  background: linear-gradient(to right, #0288d1, #0277bd);
-  color: #fff; /* White text color */
-}
-
-.cta-button:hover {
-  /* Slightly change the gradient on hover */
-  background: linear-gradient(to right, #0277bd, #0288d1);
-}
-
 @media (max-width: 480px) {
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1842,10 +1899,6 @@ header.white-bg a {
 .featured-tours {
   padding: 2rem 1rem 2rem 1rem;
   background: #f4f4f4;
-}
-
-.featured-tours .container {
-  position: relative;
 }
 
 .swiper-slide {
@@ -1884,7 +1937,7 @@ header.white-bg a {
 .mySwiper2 {
   /* height: 50vh; */
   width: 100%;
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
 }
 
 .mySwiper {
@@ -1966,7 +2019,7 @@ font-size: 1.5rem;
 }
 
 .tour-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
