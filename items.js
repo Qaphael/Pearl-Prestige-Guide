@@ -393,14 +393,16 @@ const renderItems = (category = "villa") => {
           <div class="find-item" data-category="${item.category}">
             <img src="${item.image}" alt="${item.title}">
             <div class="find-info">
-              <h3>${item.title}</h3>
-              <p>${item.location}</p>
+              <div class="price-div">
+              <h3 class="card-title">${item.title}</h3>
+              <p class="card-price">${item.price}</p>
+              </div>
+              <p class="card-location">${item.location}</p>
               <div class="find-meta">
                 <span><i class="fa-solid fa-user-group"></i> ${item.guests} Guests</span>
                 <span><i class="fa-solid fa-shower"></i> ${item.bathrooms} Bathrooms</span>
                 <span><i class="fa-solid fa-bed"></i> ${item.bedrooms} Bedrooms</span>
               </div>
-              <div class="price">${item.price}</div>
             </div>
           </div>
         `;
