@@ -473,7 +473,7 @@ const showPage = (page, filteredItems, itemsPerPage) => {
 };
 
 // Event listener for category filtering
-const categoryButtons = document.querySelectorAll(".categories li");
+const categoryButtons = document.querySelectorAll(".categories-list a");
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Remove 'active' class from all buttons

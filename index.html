@@ -48,7 +48,7 @@
           </ul>
         </nav>
         <div class="login-options">
-          <a href="#login">Login</a> | <a href="#signup">Sign Up</a>
+          <a href="#login">Login</a> <a href="#signup">Sign up</a>
         </div>
 
         <!-- Menu Toggle Icon -->
@@ -205,6 +205,10 @@
       </div>
     </section>
 
+    <div class="btt-container container">
+      <button class="btt-button" id="backToTop"><i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
     <!-- Statistics Section -->
     <section class="stats-section">
       <div class="container">
@@ -239,40 +243,241 @@
     <!-- Find Section -->
     <section id="find" class="find-section">
       <div class="container">
-        <!-- Section Title -->
-        <div>
-          <h2 class="section-title">What Are You Looking For?</h2>
-          <h3 class="section-sub-title">
-            From the research, we have collected the categories most visited by
-            travelers.
-          </h3>
-        </div>
-
-        <!-- Categories -->
+        <h2 class="section-title">What Are You Looking For?</h2>
+        <h3 class="section-sub-title">
+          From the research, we have collected the categories most visited by
+          travelers.
+        </h3>
+        <button class="filter-toggle-btn" id="filterToggleBtn">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
         <div class="categories">
-          <ul>
-            <li data-category="villa" class="active">Villa</li>
-            <li data-category="apartment">Apartment</li>
-            <li data-category="hotel">Hotel</li>
-            <li data-category="small-home">Small Home</li>
-            <li data-category="beach">Beach</li>
-            <li data-category="hiking">Hiking</li>
-            <li data-category="mountain">Mountain</li>
-            <li data-category="cinema">Cinema</li>
-          </ul>
+          <div class="categories-list">
+            <a class="active find-filters" href="#" data-category="villa"
+              >Villa</a
+            >
+            <a class="find-filters" href="#" data-category="apartment"
+              >Apartment</a
+            >
+            <a class="find-filters" href="#" data-category="hotel">Hotel</a>
+            <a class="find-filters" href="#" data-category="small-home"
+              >Small Home</a
+            >
+            <a class="find-filters" href="#" data-category="beach">Beach</a>
+            <a class="find-filters" href="#" data-category="hiking">Hiking</a>
+            <a class="find-filters" href="#" data-category="mountain"
+              >Mountain</a
+            >
+            <a class="find-filters" href="#" data-category="cinema">Cinema</a>
+          </div>
         </div>
+        <!-- Flex container to position the sidebar and main content -->
+        <div class="find-content">
+          <!-- Filters Sidebar -->
+          <div id="filtersBackdrop"></div>
+          <aside id="filtersSidebar" class="filters-sidebar">
+            <h4 class="card-title">Filter by:</h4>
+            <button class="filter-close-btn" id="closeSidebarBtn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="filters-content">
+              <div class="filter-group">
+                <h4>Location</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Feteira (82)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Angra do Heroismo (33)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Praia da Vitoria (2)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-group">
+                <h4>Category</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Services & rentals (57)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Tours (55)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Museums, arts & culture (15)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Nature & outdoor (5)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Food & drinks (3)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Workshops & classes (2)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-group">
+                <h4>Show results with</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Free cancellation (117)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-group">
+                <h4>Review score</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      4.5 & up (12)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      4 & up (12)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      3.5 & up (12)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      3 & up (12)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-group">
+                <h4>Time of day</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Morning (51) Starts before 12:00
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Afternoon (23) Starts after 12:00
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Evening & night (3) Starts after 18:00
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-group">
+                <h4>Languages</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      English (14)
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="filter-input" type="checkbox" /><span
+                        class="filter-checkbox"
+                      ></span>
+                      Portuguese (13)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
 
-        <!-- Property Grid -->
-        <div id="findGrid" class="find-grid">
-          <!-- Property items will be dynamically added here -->
-        </div>
-
-        <!-- Pagination -->
-        <div class="pagination">
-          <a href="#">1</a>
-          <a href="#" class="active">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
+          <!-- Main Content -->
+          <div class="main-content">
+            <div id="findGrid" class="find-grid">
+              <!-- Property items will be dynamically added here -->
+            </div>
+            <div class="pagination">
+              <a href="#">1</a>
+              <a href="#" class="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

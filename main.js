@@ -49,3 +49,58 @@ menuToggle.addEventListener("click", () => {
     menuIcon.classList.add("fa-bars");
   }
 });
+
+// Filter Code
+// Select elements
+const filterToggleBtn = document.getElementById("filterToggleBtn");
+const closeSidebarBtn = document.getElementById("closeSidebarBtn");
+const filtersSidebar = document.getElementById("filtersSidebar");
+const backdrop = document.getElementById("filtersBackdrop");
+
+// Toggle the sidebar visibility
+filterToggleBtn.addEventListener("click", () => {
+  filtersSidebar.classList.add("active"); // Show the sidebar
+  backdrop.classList.add("active"); // Show the backdrop
+});
+
+// Close the sidebar when the close button or backdrop is clicked
+closeSidebarBtn.addEventListener("click", () => {
+  filtersSidebar.classList.remove("active"); // Hide the sidebar
+  backdrop.classList.remove("active"); // Hide the backdrop
+});
+
+// Close the sidebar when the close button or backdrop is clicked
+backdrop.addEventListener("click", () => {
+  filtersSidebar.classList.remove("active"); // Hide the sidebar
+  backdrop.classList.remove("active"); // Hide the backdrop
+});
+
+// Prevent scrolling effect of links
+document.querySelectorAll('a[href="#"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default behavior (scrolling to the top)
+  });
+});
+
+// Code to toggle button visibility
+const backToTopButton = document.getElementById('backToTop');
+
+// Function to toggle button visibility
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // Show button after scrolling 100px
+  if (scrollPosition > 600) {
+    backToTopButton.style.display = 'flex';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+// Smooth scroll to top
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
