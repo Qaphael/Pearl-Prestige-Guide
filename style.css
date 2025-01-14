@@ -400,12 +400,7 @@ header nav ul li {
   display: inline-block;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem; /* Add some padding to the links */
-}
+
 
 .white-bg {
   background-color: #fff;
@@ -876,7 +871,8 @@ header.white-bg a {
   }
 }
 
-.find-section .categories .categories-list {
+.find-section .categories .categories-list,
+.tab-section .categories .categories-list {
   padding-bottom: 0.5rem;
   display: flex;
   gap: 1rem;
@@ -910,7 +906,8 @@ header.white-bg a {
   height: 8px; /* Horizontal scrollbar height */
 }
 
-.find-section .categories a {
+.find-section .categories a,
+.tab-section .categories a {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -922,7 +919,8 @@ header.white-bg a {
   text-decoration: none;
 }
 
-.find-section .categories a.active {
+.find-section .categories a.active,
+.tab-section .categories a.active {
   background: var(--primary-color);
   color: var(--color--white);
   font-weight: var(--font-weight-bold);
@@ -930,7 +928,8 @@ header.white-bg a {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.find-section .categories a:hover {
+.find-section .categories a:hover,
+.tab-section .categories a:hover {
   background: var(--hover-color);
   color: var(--color--white);
   font-weight: var(--font-weight-bold);

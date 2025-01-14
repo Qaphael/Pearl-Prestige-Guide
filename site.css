@@ -1,0 +1,147 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(-50%); /* Center horizontally */
+    left: 50%; /* Position at 50% from left */
+}
+
+.page-head-section {
+  padding: 3.5rem 1rem 0;
+}
+
+  .imgpagehead-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color--white)
+  }
+
+  .pageheadimg {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+    object-fit: cover;
+  }
+
+  h1.imgpagehead-title {
+    color: var(--color--white);
+    text-align: center;
+  }
+
+  .imgpagehead-title {
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+
+  .imgpagehead-subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+/* Left Side Tab Menu */
+  
+  .side-nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .side-nav li {
+    /* padding: 10px; */
+    text-align: left;
+  }
+  
+  .side-nav a {
+    color: var(--color--body-text);
+    text-decoration: none;
+    display: block;
+    padding: 8px 1rem;
+    border-radius: var(--border-radius-md);
+    transition: background-color 0.3s ease;
+  }
+  
+  .side-nav a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Main Content */
+  .tab-section {
+    padding: 1rem 1rem 2rem;
+
+  }
+
+  .side-bar-tab {
+    position: sticky;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    min-width: 200px;
+    height: calc(100vh - 40px);
+    top: 20px;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+}
+
+  .tabcontent {
+    display: none;
+  }
+  
+  /* Active Tab Styling */
+  .tabcontent.active {
+    display: block;
+  }
+
+.filters-sidebar .filters-content {
+    padding: 0rem;
+}
+
+.image-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.site-image {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.site-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.site-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.site-map {
+  margin: 1rem;
+  text-align: center;
+}
+
+.site-map iframe {
+  border: 0;
+  border-radius: 8px;
+}
+

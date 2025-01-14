@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Trekker - Explore the World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <!-- <img src="logo.png" alt="Logo" width="150" /> -->
+          <span class="Logo-space">Logo</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#destinations.html">Destinations</a></li>
+            <li><a href="#tours" class="active">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login-options">
+          <a href="#login">Login</a> <a href="#signup">Sign up</a>
+        </div>
+
+        <!-- Menu Toggle Icon -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Image Page Header -->
+    <section class="page-head-section">
+      <div class="container">
+        <img
+          class="pageheadimg"
+          src="images/topDestinations/img4.jpg"
+          alt="Destination Image 4"
+        />
+        <div class="imgpagehead-overlay">
+          <h1 class="imgpagehead-title">Explore Your Next Destination</h1>
+          <p class="imgpagehead-subtitle">
+            Find the perfect place to stay, relax, and enjoy your adventures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Left Side Tab Menu -->
+    <section id="overTabSection" class="tab-section">
+      <div class="container">
+        <button class="filter-toggle-btn" id="filterToggleBtn">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="categories">
+          <div class="categories-list">
+            <a class="active find-filters" href="#" data-category="villa"
+              >Villa</a
+            >
+            <a class="find-filters" href="#" data-category="apartment"
+              >Apartment</a
+            >
+            <a class="find-filters" href="#" data-category="hotel">Hotel</a>
+            <a class="find-filters" href="#" data-category="small-home"
+              >Small Home</a
+            >
+            <a class="find-filters" href="#" data-category="beach">Beach</a>
+            <a class="find-filters" href="#" data-category="hiking">Hiking</a>
+            <a class="find-filters" href="#" data-category="mountain"
+              >Mountain</a
+            >
+            <a class="find-filters" href="#" data-category="cinema">Cinema</a>
+          </div>
+        </div>
+        <!-- Flex container to position the sidebar and main content -->
+        <div class="find-content">
+          <!-- Filters Sidebar -->
+          <div id="filtersBackdrop"></div>
+          <aside id="side-bar-tab" class="side-bar-tab">
+            <h4 class="card-title">Gulu</h4>
+            <button class="filter-close-btn" id="closeSidebarBtn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="side-nav filters-content">
+              <ul>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Overview')"
+                    >Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Parks')"
+                    >Parks & Reserves</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Reviews')"
+                    >Reviews</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Wildlife')"
+                    >Wildlife</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Birds')"
+                    >Birds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'BestTime')"
+                    >Best Time To Visit</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Weather')"
+                    >Weather & Climate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Routes')"
+                    >Popular Routes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'GettingThere')"
+                    >Getting There</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Malaria')"
+                    >Malaria & Vaccinations</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="tablinks"
+                    onclick="openTab(event, 'Safety')"
+                    >Safety</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+            <!-- Overview Tab -->
+            <div id="Overview" class="tabcontent active">
+              <!-- Title -->
+              <h2 class="section-title">Overview</h2>
+
+              <!-- Introduction -->
+              <p class="intro-text">
+                Uganda, often referred to as the "Pearl of Africa," boasts
+                diverse landscapes, abundant wildlife, and rich cultural
+                heritage. From the misty mountains of Bwindi to the expansive
+                savannas of Queen Elizabeth National Park, Uganda offers a
+                unique safari experience.
+              </p>
+
+              <div class="image-box">
+                <div class="site-image">
+                  <img src="images/maps/map1.png" alt="Uganda Map 1" onclick="openCarousel(1)">
+                </div>
+                <div class="site-image">
+                  <img src="images/maps/map2.png" alt="Uganda Map 2" onclick="openCarousel(2)">
+                </div>
+                <div class="site-image">
+                  <img src="images/maps/map3.png" alt="Uganda Map 3" onclick="openCarousel(3)">
+                </div>
+              </div>
+              <div class="site-map" id="map">
+                  <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug" 
+                      width="100%" 
+                      height="300" 
+                      style="border:0;" 
+                      allowfullscreen="" 
+                      loading="lazy">
+                  </iframe>
+              </div>
+    
+            <div id="carousel-view" style="display:none;">
+                <img id="carousel-image" src="" alt="Large view" style="width:100%; max-height:400px; object-fit:cover;">
+            </div>
+    
+
+              <!-- Key Information -->
+              <div class="key-info">
+                <div class="info-item">
+                  <h3>Best Time To Go</h3>
+                  <p>June to September (Dry season)</p>
+                </div>
+                <div class="info-item">
+                  <h3>High Season</h3>
+                  <p>June to September (Popular parks may be crowded)</p>
+                </div>
+                <div class="info-item">
+                  <h3>Size</h3>
+                  <p>241,038 km² / 93,065 mi²</p>
+                </div>
+              </div>
+
+              <!-- Pros & Cons -->
+              <div class="pros-cons">
+                <h3>Pros & Cons</h3>
+                <ul class="pros">
+                  <li>Exceptional gorilla trekking experiences</li>
+                  <li>Rich birdlife with over 1,000 species</li>
+                  <li>Scenic landscapes including mountains and lakes</li>
+                  <li>Friendly and welcoming locals</li>
+                </ul>
+                <ul class="cons">
+                  <li>Some areas have underdeveloped infrastructure</li>
+                  <li>Malaria is prevalent; precautions are necessary</li>
+                </ul>
+              </div>
+
+              <!-- Wildlife & Activities -->
+              <div class="wildlife-activities">
+                <div class="wildlife">
+                  <h3>Wildlife</h3>
+                  <p>
+                    Uganda is home to a variety of wildlife, including the Big
+                    Five. The country is particularly renowned for its primate
+                    population, especially the endangered mountain gorillas and
+                    chimpanzees.
+                  </p>
+                </div>
+                <div class="activities">
+                  <h3>Activities</h3>
+                  <p>
+                    Popular activities include gorilla and chimpanzee trekking,
+                    game drives, bird watching, boat safaris, and cultural
+                    tours.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Weather & Climate -->
+              <div class="weather-climate">
+                <h3>Weather & Climate</h3>
+                <p>
+                  Uganda enjoys a tropical climate with two dry seasons
+                  (December to February, June to August) and two wet seasons
+                  (March to May, September to November). Temperatures are
+                  generally pleasant, ranging from 21°C to 25°C (70°F to 77°F).
+                </p>
+              </div>
+
+              <!-- Best Time To Visit -->
+              <div class="best-time">
+                <h3>Best Time To Visit</h3>
+                <p>
+                  The dry seasons from June to August and December to February
+                  are ideal for wildlife viewing and trekking activities.
+                </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="#parks">Parks & Reserves</a></li>
+                  <li><a href="#reviews">Reviews</a></li>
+                  <li><a href="#wildlife">Wildlife</a></li>
+                  <li><a href="#birds">Birds</a></li>
+                  <li><a href="#best-time">Best Time To Visit</a></li>
+                  <li><a href="#weather">Weather & Climate</a></li>
+                  <li><a href="#routes">Popular Routes</a></li>
+                  <li><a href="#getting-there">Getting There</a></li>
+                  <li><a href="#health">Malaria & Vaccinations</a></li>
+                  <li><a href="#safety">Safety</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Parks & Reserves Tab -->
+            <div id="Parks" class="tabcontent">
+              <h2>Parks & Reserves</h2>
+              <p>Details about the parks and reserves in the area.</p>
+            </div>
+
+            <!-- Reviews Tab -->
+            <div id="Reviews" class="tabcontent">
+              <h2>Reviews</h2>
+              <p>Visitor reviews and feedback.</p>
+            </div>
+
+            <!-- Wildlife Tab -->
+            <div id="Wildlife" class="tabcontent">
+              <h2>Wildlife</h2>
+              <p>Information about the wildlife in the destination.</p>
+            </div>
+
+            <!-- Birds Tab -->
+            <div id="Birds" class="tabcontent">
+              <h2>Birds</h2>
+              <p>Details about bird species in the area.</p>
+            </div>
+
+            <!-- Best Time To Visit Tab -->
+            <div id="BestTime" class="tabcontent">
+              <h2>Best Time To Visit</h2>
+              <p>When is the best time to visit this destination?</p>
+            </div>
+
+            <!-- Weather & Climate Tab -->
+            <div id="Weather" class="tabcontent">
+              <h2>Weather & Climate</h2>
+              <p>
+                Information on the destination's climate and weather patterns.
+              </p>
+            </div>
+
+            <!-- Popular Routes Tab -->
+            <div id="Routes" class="tabcontent">
+              <h2>Popular Routes</h2>
+              <p>Suggested travel routes to get around the area.</p>
+            </div>
+
+            <!-- Getting There Tab -->
+            <div id="GettingThere" class="tabcontent">
+              <h2>Getting There</h2>
+              <p>How to reach the destination from various parts of Uganda.</p>
+            </div>
+
+            <!-- Malaria & Vaccinations Tab -->
+            <div id="Malaria" class="tabcontent">
+              <h2>Malaria & Vaccinations</h2>
+              <p>
+                Health advice for travelers regarding vaccinations and malaria.
+              </p>
+            </div>
+
+            <!-- Safety Tab -->
+            <div id="Safety" class="tabcontent">
+              <h2>Safety</h2>
+              <p>Important safety tips for travelers visiting the area.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <span class="Logo-space">Logo</span>
+          <p>
+            Storyteller Media covers the best destinations, animals, and natural
+            experiences around the world.
+          </p>
+          <p>
+            We are located in Antigonish, a beautiful university town on Nova
+            Scotia’s Northumberland shore.
+          </p>
+          <p>Storyteller Travel is part of Storyteller Group</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/39c1912948.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="text/javascript" src="site.js"></script>
+  </body>
+</html>
