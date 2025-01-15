@@ -207,65 +207,97 @@
           </aside>
 
           <!-- Main Content -->
-            <!-- Overview Tab -->
-            <div id="Overview" class="tabcontent active">
-              <!-- Title -->
-              <h2 class="section-title">Overview</h2>
+          <!-- Overview Tab -->
+          <div id="Overview" class="tabcontent active">
+            <!-- Title -->
+            <h3 class="section-title">Overview</h3>
 
-              <!-- Introduction -->
-              <p class="intro-text">
-                Uganda, often referred to as the "Pearl of Africa," boasts
-                diverse landscapes, abundant wildlife, and rich cultural
-                heritage. From the misty mountains of Bwindi to the expansive
-                savannas of Queen Elizabeth National Park, Uganda offers a
-                unique safari experience.
-              </p>
+            <!-- Introduction -->
+            <p class="intro-text">
+              Uganda, often referred to as the "Pearl of Africa," boasts diverse
+              landscapes, abundant wildlife, and rich cultural heritage. From
+              the misty mountains of Bwindi to the expansive savannas of Queen
+              Elizabeth National Park, Uganda offers a unique safari experience.
+            </p>
 
-              <div class="image-box">
-                <div class="site-image">
-                  <img src="images/maps/map1.png" alt="Uganda Map 1" onclick="openCarousel(1)">
-                </div>
-                <div class="site-image">
-                  <img src="images/maps/map2.png" alt="Uganda Map 2" onclick="openCarousel(2)">
-                </div>
-                <div class="site-image">
-                  <img src="images/maps/map3.png" alt="Uganda Map 3" onclick="openCarousel(3)">
-                </div>
+            <div class="image-box">
+              <div class="site-image">
+                <img
+                  src="images/maps/map1.png"
+                  alt="Uganda Map 1"
+                  onclick="openCarousel(1)"
+                />
               </div>
-              <div class="site-map" id="map">
-                  <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug" 
-                      width="100%" 
-                      height="300" 
-                      style="border:0;" 
-                      allowfullscreen="" 
-                      loading="lazy">
-                  </iframe>
+              <div class="site-image">
+                <img
+                  src="images/maps/map2.png"
+                  alt="Uganda Map 2"
+                  onclick="openCarousel(2)"
+                />
               </div>
-    
-            <div id="carousel-view" style="display:none;">
-                <img id="carousel-image" src="" alt="Large view" style="width:100%; max-height:400px; object-fit:cover;">
+              <div class="site-image">
+                <img
+                  src="images/maps/map3.png"
+                  alt="Uganda Map 3"
+                  onclick="openCarousel(3)"
+                />
+              </div>
             </div>
-    
+            <div class="site-map" id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
 
-              <!-- Key Information -->
-              <div class="key-info">
-                <div class="info-item">
-                  <h3>Best Time To Go</h3>
+            <div id="carousel-view" style="display: none">
+              <img
+                id="carousel-image"
+                src=""
+                alt="Large view"
+                style="width: 100%; max-height: 400px; object-fit: cover"
+              />
+            </div>
+
+            <!-- Key Information -->
+            <div class="key-info">
+              <div class="info-item">
+                <div class="info-content">
+                  <h3>
+                    <i class="fas fa-calendar-alt info-icon"></i>
+                    Best Time To Go
+                  </h3>
                   <p>June to September (Dry season)</p>
                 </div>
-                <div class="info-item">
-                  <h3>High Season</h3>
+              </div>
+              <div class="info-item">
+                <div class="info-content">
+                  <h3>
+                    <i class="fa-solid fa-umbrella info-icon"></i>
+                    High Season
+                  </h3>
                   <p>June to September (Popular parks may be crowded)</p>
                 </div>
-                <div class="info-item">
-                  <h3>Size</h3>
+              </div>
+              <div class="info-item">
+                <div class="info-content">
+                  <h3>
+                    <i class="fas fa-map info-icon"></i>
+                    Size
+                  </h3>
                   <p>241,038 km² / 93,065 mi²</p>
                 </div>
               </div>
+            </div>
 
-              <!-- Pros & Cons -->
-              <div class="pros-cons">
+            <!-- Pros & Cons -->
+            <div class="pros-cons">
+              <div class="pros-cons-div">
                 <h3>Pros & Cons</h3>
                 <ul class="pros">
                   <li>Exceptional gorilla trekking experiences</li>
@@ -278,29 +310,122 @@
                   <li>Malaria is prevalent; precautions are necessary</li>
                 </ul>
               </div>
-
-              <!-- Wildlife & Activities -->
-              <div class="wildlife-activities">
-                <div class="wildlife">
-                  <h3>Wildlife</h3>
-                  <p>
-                    Uganda is home to a variety of wildlife, including the Big
-                    Five. The country is particularly renowned for its primate
-                    population, especially the endangered mountain gorillas and
-                    chimpanzees.
-                  </p>
+              <div class="review-section">
+                <div class="review-header">
+                  <h3 class="title">Customer Reviews</h3>
+                  <div class="rating-overview">
+                    <div class="rating-score">4.8</div>
+                    <div class="stars">
+                      <div class="star-icons">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <p class="review-count">Based on 1,248 reviews</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="activities">
-                  <h3>Activities</h3>
-                  <p>
-                    Popular activities include gorilla and chimpanzee trekking,
-                    game drives, bird watching, boat safaris, and cultural
-                    tours.
-                  </p>
+
+                <div class="rating-bars">
+                  <div class="rating-bar">
+                    <span class="label">Quality</span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 92%"></div>
+                    </div>
+                    <span class="score">4.6</span>
+                  </div>
+                  <div class="rating-bar">
+                    <span class="label">Value</span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 88%"></div>
+                    </div>
+                    <span class="score">4.4</span>
+                  </div>
+                  <div class="rating-bar">
+                    <span class="label">Usability</span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 96%"></div>
+                    </div>
+                    <span class="score">4.8</span>
+                  </div>
+                </div>
+
+                <div class="reviews">
+                  <div class="review">
+                    <img
+                      class="profile-pic"
+                      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+                      alt="James Wilson"
+                    />
+                    <div class="review-details">
+                      <div class="review-header">
+                        <h3 class="name">James Wilson</h3>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-text">
+                        Exceptional quality and outstanding customer service.
+                        The attention to detail is remarkable.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="review">
+                    <img
+                      class="profile-pic"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                      alt="Sarah Thompson"
+                    />
+                    <div class="review-details">
+                      <div class="review-header">
+                        <h3 class="name">Sarah Thompson</h3>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                        </div>
+                      </div>
+                      <p class="review-text">
+                        Great value for money. The product exceeded my
+                        expectations in terms of functionality.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Weather & Climate -->
+            <!-- Wildlife & Activities -->
+            <div class="wildlife-activities">
+              <div class="wildlife">
+                <h3>Wildlife</h3>
+                <p>
+                  Uganda is home to a variety of wildlife, including the Big
+                  Five. The country is particularly renowned for its primate
+                  population, especially the endangered mountain gorillas and
+                  chimpanzees.
+                </p>
+              </div>
+              <div class="activities">
+                <h3>Activities</h3>
+                <p>
+                  Popular activities include gorilla and chimpanzee trekking,
+                  game drives, bird watching, boat safaris, and cultural tours.
+                </p>
+              </div>
+            </div>
+
+            <!-- Weather & Climate -->
+            <div class="weather-best-time">
               <div class="weather-climate">
                 <h3>Weather & Climate</h3>
                 <p>
@@ -310,7 +435,6 @@
                   generally pleasant, ranging from 21°C to 25°C (70°F to 77°F).
                 </p>
               </div>
-
               <!-- Best Time To Visit -->
               <div class="best-time">
                 <h3>Best Time To Visit</h3>
@@ -319,88 +443,542 @@
                   are ideal for wildlife viewing and trekking activities.
                 </p>
               </div>
+            </div>
 
-              <!-- Quick Links -->
-              <div class="quick-links">
-                <h4>Quick Links</h4>
-                <ul>
-                  <li><a href="#parks">Parks & Reserves</a></li>
-                  <li><a href="#reviews">Reviews</a></li>
-                  <li><a href="#wildlife">Wildlife</a></li>
-                  <li><a href="#birds">Birds</a></li>
-                  <li><a href="#best-time">Best Time To Visit</a></li>
-                  <li><a href="#weather">Weather & Climate</a></li>
-                  <li><a href="#routes">Popular Routes</a></li>
-                  <li><a href="#getting-there">Getting There</a></li>
-                  <li><a href="#health">Malaria & Vaccinations</a></li>
-                  <li><a href="#safety">Safety</a></li>
-                </ul>
+            <!-- Quick Links -->
+            <div class="quick-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#parks">Parks & Reserves</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#wildlife">Wildlife</a></li>
+                <li><a href="#birds">Birds</a></li>
+                <li><a href="#best-time">Best Time To Visit</a></li>
+                <li><a href="#weather">Weather & Climate</a></li>
+                <li><a href="#routes">Popular Routes</a></li>
+                <li><a href="#getting-there">Getting There</a></li>
+                <li><a href="#health">Malaria & Vaccinations</a></li>
+                <li><a href="#safety">Safety</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Parks & Reserves Tab -->
+          <div id="Parks" class="tabcontent">
+            <!-- Parks Section -->
+            <div class="parks-section">
+              <h3 class="section-title">
+                <i class="fas fa-tree icon"></i> National Parks & Game Reserves
+                – Namibia
+              </h3>
+
+              <!-- Premier Parks -->
+              <div class="premier-parks">
+                <h3>Premier Parks & Reserves</h3>
+                <div class="parks-grid">
+                  <!-- Etosha National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Etosha National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Etosha National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.6</span> · Exceptional
+                          (152 reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Classic safaris with abundant wildlife during the Dry
+                        season.
+                      </p>
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$50</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Namib-Naukluft National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Namib-Naukluft National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Namib-Naukluft National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.8</span> · Exceptional
+                          (220 reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Stunning desert scenery with iconic sand dunes like
+                        Sossusvlei.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$45</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- All Parks -->
+              <div class="all-parks">
+                <h3>All Parks & Reserves</h3>
+                <div class="parks-grid">
+                  <!-- Etosha National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Etosha National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Etosha National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.6</span> · Exceptional
+                          (152 reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Classic safaris with abundant wildlife during the Dry
+                        season.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$50</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Namib-Naukluft National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Namib-Naukluft National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Namib-Naukluft National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.8</span> · Exceptional
+                          (220 reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Stunning desert scenery with iconic sand dunes like
+                        Sossusvlei.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$45</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Skeleton Coast National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Skeleton Coast National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Skeleton Coast National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.1</span> · Great (46
+                          reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Beautiful desert coastline with wildlife, though scarce.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$40</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bwabwata National Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Bwabwata National Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Bwabwata National Park</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">3.9</span> · Good (14
+                          reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Classic safaris featuring giraffe and four of the Big
+                        Five (no rhino).
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$35</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- |Ai-|Ais/Richtersveld Transfrontier Park -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="|Ai-|Ais/Richtersveld Transfrontier Park"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">
+                        |Ai-|Ais/Richtersveld Transfrontier Park
+                      </h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.0</span> · Great (21
+                          reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Hiking paradise with stunning desert scenery and scarce
+                        wildlife.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$30</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Damaraland -->
+                  <div class="park-card">
+                    <img
+                      src="images/hero/Bwindi.jpg"
+                      alt="Damaraland"
+                      class="park-image"
+                    />
+                    <div class="park-info">
+                      <h3 class="park-title">Damaraland</h3>
+                      <div class="location-rating">
+                        <p class="park-location">Namibia</p>
+                        <p class="park-rating">
+                          <span class="rating-score">4.3</span> · Exceptional
+                          (46 reviews)
+                        </p>
+                      </div>
+                      <p class="park-description">
+                        Home to desert-adapted elephants, lions, and rare
+                        rhinos.
+                      </p>
+
+                      <div class="park-actions">
+                        <p class="price">
+                          From <span class="price-value">US$55</span>
+                        </p>
+                        <a href="#" class="btn-view-more">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add more parks in the same format -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div id="Reviews" class="tabcontent">
+            <!-- Rating Overview -->
+            <div class="review-rating-overview">
+              <div class="average-rating">
+                <h3>Customer review</h3>
+                <h3>4.8 out of 5</h3>
+                <p>13,949 global ratings</p>
+              </div>
+              <div class="rating-breakdown">
+                <div class="rating-bar">
+                  <span>5 star</span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 84%"></div>
+                  </div>
+                  <span>84%</span>
+                </div>
+                <div class="rating-bar">
+                  <span>4 star</span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 11%"></div>
+                  </div>
+                  <span>11%</span>
+                </div>
+                <div class="rating-bar">
+                  <span>3 star</span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 4%"></div>
+                  </div>
+                  <span>4%</span>
+                </div>
+                <div class="rating-bar">
+                  <span>2 star</span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 1%"></div>
+                  </div>
+                  <span>1%</span>
+                </div>
+                <div class="rating-bar">
+                  <span>1 star</span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 1%"></div>
+                  </div>
+                  <span>1%</span>
+                </div>
               </div>
             </div>
 
-            <!-- Parks & Reserves Tab -->
-            <div id="Parks" class="tabcontent">
-              <h2>Parks & Reserves</h2>
-              <p>Details about the parks and reserves in the area.</p>
+            <!-- Review Images -->
+            <div class="review-images">
+              <h3>Reviews with images</h3>
+              <div class="images-container">
+                <img src="images/hero/Bwindi.jpg" alt="Review Image 1" />
+                <img src="images/hero/Bwindi.jpg" alt="Review Image 2" />
+                <img src="images/hero/Bwindi.jpg" alt="Review Image 3" />
+                <img src="images/hero/Bwindi.jpg" alt="Review Image 4" />
+              </div>
             </div>
 
-            <!-- Reviews Tab -->
-            <div id="Reviews" class="tabcontent">
-              <h2>Reviews</h2>
-              <p>Visitor reviews and feedback.</p>
+            <!-- Keyword Mentions -->
+            <div class="keyword-section">
+              <h3>Read reviews that mention</h3>
+              <div class="keywords">
+                <span>hawaiian breeze</span>
+                <span>cashmere woods</span>
+                <span>automatic spray</span>
+                <span>clean linen</span>
+                <span>air freshener</span>
+                <span>lavender and peach</span>
+                <span>air wick</span>
+                <span>peach blossom</span>
+              </div>
             </div>
 
-            <!-- Wildlife Tab -->
-            <div id="Wildlife" class="tabcontent">
-              <h2>Wildlife</h2>
-              <p>Information about the wildlife in the destination.</p>
+            <!-- Reviews List -->
+            <div class="reviews-list">
+              <h3>Top Reviews from the United States</h3>
+
+              <!-- Single Review -->
+              <div class="review-item">
+                <div class="profile-review-title">
+                  <div class="profile-card">
+                    <img
+                      src="images/hero/bwindi.jpg"
+                      alt="Reviewer Profile"
+                      class="profile-pic"
+                    />
+                    <div class="profile-info">
+                      <p class="reviewer-name">John Doe</p>
+                      <div class="review-rating">
+                        <div class="stars">
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <span class="rating-score">4.5</span>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="review-title">Poor quality spray nozzle</h3>
+                </div>
+                <p class="review-meta">
+                  <span class="review-location"
+                    >Reviewed in the United States</span
+                  >
+                  on <span class="review-date">August 23, 2019</span> |
+                  <span class="review-style">Style: Cashmere Woods</span> |
+                  <span class="verified">Verified Purchase</span>
+                </p>
+                <p class="review-content">
+                  I have ordered this twice. Love the scent. However, both
+                  times, there has been 1 or 2 cans with faulty nozzles. I have
+                  to switch the one good nozzle to the next can each time they
+                  run out. If I didn't do that, I wouldn't be able to use 1 out
+                  of 3 cans. Please test the spray nozzle on ALL of them before
+                  you throw an empty can away!
+                </p>
+              </div>
+
+              <!-- Additional Review Example -->
+              <div class="review-item">
+                <div class="profile-review-title">
+                  <div class="profile-card">
+                    <img
+                      src="images/hero/bwindi.jpg"
+                      alt="Reviewer Profile"
+                      class="profile-pic"
+                    />
+                    <div class="profile-info">
+                      <p class="reviewer-name">Jane Smith</p>
+                      <div class="review-rating">
+                        <div class="stars">
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                          <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <span class="rating-score">4.0</span>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="review-title">
+                    Amazing scent but inconsistent quality
+                  </h3>
+                </div>
+                <p class="review-meta">
+                  <span class="review-location"
+                    >Reviewed in the United States</span
+                  >
+                  on <span class="review-date">September 5, 2020</span> |
+                  <span class="review-style">Style: Hawaiian Breeze</span> |
+                  <span class="verified">Verified Purchase</span>
+                </p>
+                <p class="review-content">
+                  The scent is absolutely wonderful and lasts a long time.
+                  However, I had a similar issue with one of the cans not
+                  functioning properly. The other two cans in the pack worked
+                  fine. Hopefully, they improve the quality control for this
+                  product.
+                </p>
+              </div>
             </div>
 
-            <!-- Birds Tab -->
-            <div id="Birds" class="tabcontent">
-              <h2>Birds</h2>
-              <p>Details about bird species in the area.</p>
+            <!-- Feature Breakdown -->
+            <div class="feature-breakdown">
+              <h3>By feature</h3>
+              <div class="feature-bar">
+                <span>Freshness</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 90%"></div>
+                </div>
+                <span>4.5</span>
+              </div>
+              <div class="feature-bar">
+                <span>Scent</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 90%"></div>
+                </div>
+                <span>4.5</span>
+              </div>
+              <div class="feature-bar">
+                <span>Longevity</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 85%"></div>
+                </div>
+                <span>4.3</span>
+              </div>
+              <div class="feature-bar">
+                <span>Value for money</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 80%"></div>
+                </div>
+                <span>4.2</span>
+              </div>
             </div>
+          </div>
 
-            <!-- Best Time To Visit Tab -->
-            <div id="BestTime" class="tabcontent">
-              <h2>Best Time To Visit</h2>
-              <p>When is the best time to visit this destination?</p>
-            </div>
+          <!-- Wildlife Tab -->
+          <div id="Wildlife" class="tabcontent">
+            <h2>Wildlife</h2>
+            <p>Information about the wildlife in the destination.</p>
+          </div>
 
-            <!-- Weather & Climate Tab -->
-            <div id="Weather" class="tabcontent">
-              <h2>Weather & Climate</h2>
-              <p>
-                Information on the destination's climate and weather patterns.
-              </p>
-            </div>
+          <!-- Birds Tab -->
+          <div id="Birds" class="tabcontent">
+            <h2>Birds</h2>
+            <p>Details about bird species in the area.</p>
+          </div>
 
-            <!-- Popular Routes Tab -->
-            <div id="Routes" class="tabcontent">
-              <h2>Popular Routes</h2>
-              <p>Suggested travel routes to get around the area.</p>
-            </div>
+          <!-- Best Time To Visit Tab -->
+          <div id="BestTime" class="tabcontent">
+            <h2>Best Time To Visit</h2>
+            <p>When is the best time to visit this destination?</p>
+          </div>
 
-            <!-- Getting There Tab -->
-            <div id="GettingThere" class="tabcontent">
-              <h2>Getting There</h2>
-              <p>How to reach the destination from various parts of Uganda.</p>
-            </div>
+          <!-- Weather & Climate Tab -->
+          <div id="Weather" class="tabcontent">
+            <h2>Weather & Climate</h2>
+            <p>
+              Information on the destination's climate and weather patterns.
+            </p>
+          </div>
 
-            <!-- Malaria & Vaccinations Tab -->
-            <div id="Malaria" class="tabcontent">
-              <h2>Malaria & Vaccinations</h2>
-              <p>
-                Health advice for travelers regarding vaccinations and malaria.
-              </p>
-            </div>
+          <!-- Popular Routes Tab -->
+          <div id="Routes" class="tabcontent">
+            <h2>Popular Routes</h2>
+            <p>Suggested travel routes to get around the area.</p>
+          </div>
 
-            <!-- Safety Tab -->
-            <div id="Safety" class="tabcontent">
-              <h2>Safety</h2>
-              <p>Important safety tips for travelers visiting the area.</p>
-            </div>
+          <!-- Getting There Tab -->
+          <div id="GettingThere" class="tabcontent">
+            <h2>Getting There</h2>
+            <p>How to reach the destination from various parts of Uganda.</p>
+          </div>
+
+          <!-- Malaria & Vaccinations Tab -->
+          <div id="Malaria" class="tabcontent">
+            <h2>Malaria & Vaccinations</h2>
+            <p>
+              Health advice for travelers regarding vaccinations and malaria.
+            </p>
+          </div>
+
+          <!-- Safety Tab -->
+          <div id="Safety" class="tabcontent">
+            <h2>Safety</h2>
+            <p>Important safety tips for travelers visiting the area.</p>
+          </div>
         </div>
       </div>
     </section>
