@@ -668,6 +668,79 @@ body {
   background: #ffa726;
 }
 
+/* Expert Section */
+.expert-section {
+  padding: 10px 20px;
+  background-color: #ebf0ea;
+  border-left: 4px solid #4fb28f;
+  margin-bottom: 20px;
+}
+
+.expert-title {
+  font-weight: bold;
+  color: #515654;
+}
+
+/* Overview Section */
+.overview {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* Highlights, Best Time, and Park Ratings */
+.wildlife-highlights, .best-time, .park-ratings {
+  margin-bottom: 20px;
+}
+
+.park-ratings ul, .wildlife-books ul, .namibia-safaris ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.park-ratings ul li, .wildlife-books ul li, .namibia-safaris ul li {
+  margin-bottom: 10px;
+}
+
+/* Recommended Books */
+.wildlife-books ul li {
+  font-size: 1rem;
+}
+
+.wildlife-books strong {
+  color: #4fb28f;
+}
+
+.namibia-safaris ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.namibia-safaris ul li {
+  margin-bottom: 10px;
+}
+
+.namibia-safaris ul li a {
+  text-decoration: none;
+  color: #4fb28f;
+  font-weight: bold;
+}
+
+.namibia-safaris ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
 
 /* Responsive spacing for small screens */
 @media (max-width: 768px) {
@@ -694,5 +767,15 @@ body {
 
   .parks-section {
     padding: 0.5rem;
+  }
+
+  .wildlife-section {
+    padding: 15px;
+  }
+
+
+  .wildlife-list th, .wildlife-list td {
+    padding: 8px;
+    font-size: 0.9rem;
   }
 }
