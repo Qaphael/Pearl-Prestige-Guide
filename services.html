@@ -28,20 +28,54 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="services.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header>
       <div class="container">
-        <h3 class="header-title">Explore Our Services</h3>
-        <p class="header-subtitle">
-          Your journey, your way – we make it happen!
-        </p>
+        <div class="logo">
+          <!-- <img src="logo.png" alt="Logo" width="150" /> -->
+          <span class="Logo-space">Logo</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#destinations.html">Destinations</a></li>
+            <li><a href="#tours" class="active">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login-options">
+          <a href="#login">Login</a> <a href="#signup">Sign up</a>
+        </div>
+
+        <!-- Menu Toggle Icon -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </header>
+
+    <!-- Image Page Header -->
+    <section class="page-head-section">
+      <div class="container">
+        <img
+          class="pageheadimg"
+          src="images/topDestinations/img4.jpg"
+          alt="Destination Image 4"
+        />
+        <div class="imgpagehead-overlay">
+          <h1 class="imgpagehead-title">Explore Our Services</h1>
+          <p class="imgpagehead-subtitle">
+            Your journey, your way – we make it happen!
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Call-to-Action Section -->
     <section id="cta" class="cta-section">
@@ -133,9 +167,16 @@
       <div class="container">
         <h2 class="section-title">Our Services</h2>
 
+        <button class="filter-toggle-btn" id="servicesToggleButton">
+          <i class="fa-solid fa-sliders"></i> services
+        </button>
         <div class="tab-system">
+          <div id="serviceFiltersBackdrop"></div>
           <!-- Tab Links -->
-          <div class="tab-links">
+          <div id="servicesTabLinks" class="tab-links">
+            <button class="filter-close-btn" id="closeServiceFilterButton">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
             <button class="tab-link active" data-tab="custom-tours">
               Custom Tour Packages
             </button>
@@ -159,36 +200,50 @@
             <!-- Custom Tour Packages -->
             <div id="custom-tours" class="tab-pane active">
               <div class="service-detail">
-                <i class="fas fa-route service-icon"></i>
-                <h3 class="service-title">Custom Tour Packages</h3>
-                <p class="service-description">
-                  We design personalized tours tailored to your preferences and
-                  budget.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
-                  <img src="custom-tours.jpg" alt="Custom Tour Packages" />
+                  <img
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
+                  />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">Custom Tour Packages</h3>
+                    <p class="service-description">
+                      We design personalized tours tailored to your preferences
+                      and budget.
+                    </p>
+                  </div>
                 </div>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>Tailored itineraries based on your interests</li>
+                      <li>Flexible scheduling and destinations</li>
+                      <li>Expert advice from travel consultants</li>
+                      <li>24/7 support during your trip</li>
+                    </ul>
+                  </div>
 
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>Tailored itineraries based on your interests</li>
-                    <li>Flexible scheduling and destinations</li>
-                    <li>Expert advice from travel consultants</li>
-                    <li>24/7 support during your trip</li>
-                  </ul>
-                </div>
-
-                <!-- Pricing -->
-                <div class="service-pricing">
-                  <h4>Pricing:</h4>
-                  <p>
-                    Packages start at <strong>$500</strong> per person.
-                    <a href="#contact">Contact us</a> for a detailed quote.
-                  </p>
+                  <!-- Pricing -->
+                  <div class="service-pricing">
+                    <h4>Pricing:</h4>
+                    <p>
+                      Packages start at <strong>$500</strong> per person.
+                      <a href="#contact">Contact us</a> for a detailed quote.
+                    </p>
+                  </div>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Contact us with your travel preferences.</li>
+                      <li>We create a customized itinerary for you.</li>
+                      <li>Review and approve the plan.</li>
+                      <li>Pack your bags and enjoy your trip!</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -200,17 +255,6 @@
                     destinations."
                     <cite>- John Doe</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Contact us with your travel preferences.</li>
-                    <li>We create a customized itinerary for you.</li>
-                    <li>Review and approve the plan.</li>
-                    <li>Pack your bags and enjoy your trip!</li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->
@@ -243,36 +287,51 @@
 
             <div id="accommodation" class="tab-pane">
               <div class="service-detail">
-                <i class="fas fa-hotel service-icon"></i>
-                <h3 class="service-title">Accommodation</h3>
-                <p class="service-description">
-                  Enjoy comfortable stays at the best hotels, resorts, and
-                  guesthouses.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
-                  <img src="accommodation.jpg" alt="Accommodation" />
+                  <img
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
+                  />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">Accommodation</h3>
+                    <p class="service-description">
+                      Enjoy comfortable stays at the best hotels, resorts, and
+                      guesthouses.
+                    </p>
+                  </div>
                 </div>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>5-star hotels and boutique resorts</li>
+                      <li>Budget-friendly guesthouses</li>
+                      <li>Family-friendly accommodations</li>
+                      <li>Convenient locations near major attractions</li>
+                    </ul>
+                  </div>
 
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>5-star hotels and boutique resorts</li>
-                    <li>Budget-friendly guesthouses</li>
-                    <li>Family-friendly accommodations</li>
-                    <li>Convenient locations near major attractions</li>
-                  </ul>
-                </div>
+                  <!-- Pricing -->
+                  <div class="service-pricing">
+                    <h4>Pricing:</h4>
+                    <p>
+                      Prices start at <strong>$100</strong> per night.
+                      <a href="#contact">Contact us</a> for special offers.
+                    </p>
+                  </div>
 
-                <!-- Pricing -->
-                <div class="service-pricing">
-                  <h4>Pricing:</h4>
-                  <p>
-                    Prices start at <strong>$100</strong> per night.
-                    <a href="#contact">Contact us</a> for special offers.
-                  </p>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Tell us your preferred location and budget.</li>
+                      <li>We recommend the best options for you.</li>
+                      <li>Book your stay with just a few clicks.</li>
+                      <li>Enjoy a hassle-free check-in experience.</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -283,17 +342,6 @@
                     resort with stunning views."
                     <cite>- Jane Smith</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Tell us your preferred location and budget.</li>
-                    <li>We recommend the best options for you.</li>
-                    <li>Book your stay with just a few clicks.</li>
-                    <li>Enjoy a hassle-free check-in experience.</li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->
@@ -324,36 +372,53 @@
 
             <div id="transportation" class="tab-pane">
               <div class="service-detail">
-                <i class="fas fa-car service-icon"></i>
-                <h3 class="service-title">Transportation</h3>
-                <p class="service-description">
-                  Reliable and comfortable transport to all destinations,
-                  including airport transfers.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
-                  <img src="transportation.jpg" alt="Transportation" />
+                  <img
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
+                  />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">Transportation</h3>
+                    <p class="service-description">
+                      Reliable and comfortable transport to all destinations,
+                      including airport transfers.
+                    </p>
+                  </div>
                 </div>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>Private cars and chauffeur services</li>
+                      <li>Airport pickups and drop-offs</li>
+                      <li>Luxury vehicles for special occasions</li>
+                      <li>24/7 availability for your convenience</li>
+                    </ul>
+                  </div>
 
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>Private cars and chauffeur services</li>
-                    <li>Airport pickups and drop-offs</li>
-                    <li>Luxury vehicles for special occasions</li>
-                    <li>24/7 availability for your convenience</li>
-                  </ul>
-                </div>
+                  <!-- Pricing -->
+                  <div class="service-pricing">
+                    <h4>Pricing:</h4>
+                    <p>
+                      Prices start at <strong>$50</strong> per trip.
+                      <a href="#contact">Contact us</a> for group discounts.
+                    </p>
+                  </div>
 
-                <!-- Pricing -->
-                <div class="service-pricing">
-                  <h4>Pricing:</h4>
-                  <p>
-                    Prices start at <strong>$50</strong> per trip.
-                    <a href="#contact">Contact us</a> for group discounts.
-                  </p>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Provide us with your travel details.</li>
+                      <li>We assign a vehicle and driver for your trip.</li>
+                      <li>Enjoy a smooth and comfortable ride.</li>
+                      <li>
+                        We handle all logistics, so you don’t have to worry.
+                      </li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -364,19 +429,6 @@
                     punctual and the car was very comfortable."
                     <cite>- Sarah Johnson</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Provide us with your travel details.</li>
-                    <li>We assign a vehicle and driver for your trip.</li>
-                    <li>Enjoy a smooth and comfortable ride.</li>
-                    <li>
-                      We handle all logistics, so you don’t have to worry.
-                    </li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->
@@ -401,39 +453,51 @@
 
             <div id="adventure-activities" class="tab-pane">
               <div class="service-detail">
-                <i class="fas fa-hiking service-icon"></i>
-                <h3 class="service-title">Adventure Activities</h3>
-                <p class="service-description">
-                  Exciting activities like hiking, trekking, wildlife safaris,
-                  and more.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
                   <img
-                    src="adventure-activities.jpg"
-                    alt="Adventure Activities"
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
                   />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">Adventure Activities</h3>
+                    <p class="service-description">
+                      Exciting activities like hiking, trekking, wildlife
+                      safaris, and more.
+                    </p>
+                  </div>
                 </div>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>Guided hiking and trekking tours</li>
+                      <li>Wildlife safaris in national parks</li>
+                      <li>Water sports like snorkeling and scuba diving</li>
+                      <li>Camping and outdoor adventures</li>
+                    </ul>
+                  </div>
 
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>Guided hiking and trekking tours</li>
-                    <li>Wildlife safaris in national parks</li>
-                    <li>Water sports like snorkeling and scuba diving</li>
-                    <li>Camping and outdoor adventures</li>
-                  </ul>
-                </div>
+                  <!-- Pricing -->
+                  <div class="service-pricing">
+                    <h4>Pricing:</h4>
+                    <p>
+                      Prices start at <strong>$75</strong> per person.
+                      <a href="#contact">Contact us</a> for group rates.
+                    </p>
+                  </div>
 
-                <!-- Pricing -->
-                <div class="service-pricing">
-                  <h4>Pricing:</h4>
-                  <p>
-                    Prices start at <strong>$75</strong> per person.
-                    <a href="#contact">Contact us</a> for group rates.
-                  </p>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Choose your preferred adventure activity.</li>
+                      <li>We provide all necessary equipment and guides.</li>
+                      <li>Enjoy a thrilling and safe experience.</li>
+                      <li>We handle all the logistics for you.</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -445,17 +509,6 @@
                     fun."
                     <cite>- Michael Brown</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Choose your preferred adventure activity.</li>
-                    <li>We provide all necessary equipment and guides.</li>
-                    <li>Enjoy a thrilling and safe experience.</li>
-                    <li>We handle all the logistics for you.</li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->
@@ -490,36 +543,52 @@
 
             <div id="travel-insurance" class="tab-pane">
               <div class="service-detail">
-                <i class="fas fa-globe service-icon"></i>
-                <h3 class="service-title">Travel Insurance</h3>
-                <p class="service-description">
-                  Comprehensive travel insurance for your peace of mind.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
-                  <img src="travel-insurance.jpg" alt="Travel Insurance" />
+                  <img
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
+                  />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">Travel Insurance</h3>
+                    <p class="service-description">
+                      Comprehensive travel insurance for your peace of mind.
+                    </p>
+                  </div>
                 </div>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>Medical coverage for emergencies</li>
+                      <li>Trip cancellation and interruption protection</li>
+                      <li>Lost luggage and travel delay coverage</li>
+                      <li>24/7 global assistance</li>
+                    </ul>
+                  </div>
 
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>Medical coverage for emergencies</li>
-                    <li>Trip cancellation and interruption protection</li>
-                    <li>Lost luggage and travel delay coverage</li>
-                    <li>24/7 global assistance</li>
-                  </ul>
-                </div>
-
-                <!-- Pricing -->
-                <div class="service-pricing">
-                  <h4>Pricing:</h4>
-                  <p>
-                    Plans start at <strong>$20</strong> per trip.
-                    <a href="#contact">Contact us</a> for annual coverage
-                    options.
-                  </p>
+                  <!-- Pricing -->
+                  <div class="service-pricing">
+                    <h4>Pricing:</h4>
+                    <p>
+                      Plans start at <strong>$20</strong> per trip.
+                      <a href="#contact">Contact us</a> for annual coverage
+                      options.
+                    </p>
+                  </div>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Choose a plan that suits your travel needs.</li>
+                      <li>
+                        Purchase the insurance online or through our agents.
+                      </li>
+                      <li>Receive your policy details via email.</li>
+                      <li>Travel with confidence, knowing you’re protected.</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -531,19 +600,6 @@
                     were covered."
                     <cite>- Emily Davis</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Choose a plan that suits your travel needs.</li>
-                    <li>
-                      Purchase the insurance online or through our agents.
-                    </li>
-                    <li>Receive your policy details via email.</li>
-                    <li>Travel with confidence, knowing you’re protected.</li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->
@@ -577,27 +633,45 @@
 
             <div id="support" class="tab-pane">
               <div class="service-detail">
-                <i class="fas fa-headset service-icon"></i>
-                <h3 class="service-title">24/7 Support</h3>
-                <p class="service-description">
-                  Our dedicated team is available to assist you throughout your
-                  journey.
-                </p>
-
                 <!-- Image -->
                 <div class="service-image">
-                  <img src="support.jpg" alt="24/7 Support" />
+                  <img
+                    src="images/hero/Bwindi.jpg"
+                    alt="Custom Tour Packages"
+                  />
+                  <div class="imgpagehead-overlay">
+                    <h3 class="service-title">24/7 Support</h3>
+                    <p class="service-description">
+                      Our dedicated team is available to assist you throughout
+                      your journey.
+                    </p>
+                  </div>
                 </div>
-
-                <!-- Features -->
-                <div class="service-features">
-                  <h4>What's Included:</h4>
-                  <ul>
-                    <li>24/7 customer support via phone and email</li>
-                    <li>Emergency assistance during your trip</li>
-                    <li>Expert advice and travel tips</li>
-                    <li>Assistance with bookings and reservations</li>
-                  </ul>
+                <div class="service-grid">
+                  <!-- Features -->
+                  <div class="service-features">
+                    <h4>What's Included:</h4>
+                    <ul>
+                      <li>24/7 customer support via phone and email</li>
+                      <li>Emergency assistance during your trip</li>
+                      <li>Expert advice and travel tips</li>
+                      <li>Assistance with bookings and reservations</li>
+                    </ul>
+                  </div>
+                  <!-- How It Works -->
+                  <div class="service-process">
+                    <h4>How It Works:</h4>
+                    <ol>
+                      <li>Contact us via phone, email, or chat.</li>
+                      <li>
+                        Our team will assist you with any queries or issues.
+                      </li>
+                      <li>
+                        Get real-time updates and support during your trip.
+                      </li>
+                      <li>Enjoy a stress-free travel experience.</li>
+                    </ol>
+                  </div>
                 </div>
 
                 <!-- Testimonials -->
@@ -608,19 +682,6 @@
                     last-minute changes and made sure our trip went smoothly."
                     <cite>- Mark Thompson</cite>
                   </blockquote>
-                </div>
-
-                <!-- How It Works -->
-                <div class="service-process">
-                  <h4>How It Works:</h4>
-                  <ol>
-                    <li>Contact us via phone, email, or chat.</li>
-                    <li>
-                      Our team will assist you with any queries or issues.
-                    </li>
-                    <li>Get real-time updates and support during your trip.</li>
-                    <li>Enjoy a stress-free travel experience.</li>
-                  </ol>
                 </div>
 
                 <!-- FAQ -->

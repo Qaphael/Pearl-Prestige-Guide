@@ -16,3 +16,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Filter Code
+// Select elements
+const servicesToggleButton = document.getElementById("servicesToggleButton");
+const closeServiceFilterButton = document.getElementById(
+  "closeServiceFilterButton"
+);
+const serviceTab = document.getElementById("servicesTabLinks");
+const serviceFiltersBackdrop = document.getElementById(
+  "serviceFiltersBackdrop"
+);
+
+// Toggle the sidebar visibility
+servicesToggleButton.addEventListener("click", () => {
+  serviceTab.classList.add("active"); // Show the sidebar
+  serviceFiltersBackdrop.classList.add("active"); // Show the backdrop
+});
+
+// Close the sidebar when the close button or backdrop is clicked
+closeServiceFilterButton.addEventListener("click", () => {
+  serviceTab.classList.remove("active"); // Hide the sidebar
+  serviceFiltersBackdrop.classList.remove("active"); // Hide the backdrop
+});
+
+// Close the sidebar when the close button or backdrop is clicked
+serviceFiltersBackdrop.addEventListener("click", () => {
+  serviceTab.classList.remove("active"); // Hide the sidebar
+  serviceFiltersBackdrop.classList.remove("active"); // Hide the backdrop
+});
