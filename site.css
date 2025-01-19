@@ -72,6 +72,7 @@ h1.imgpagehead-title {
 }
 
 /* Main Content */
+
 .tab-section {
   padding: 1rem 1rem 2rem;
 }
@@ -170,12 +171,14 @@ aside h4.card-title {
   border-left: 2px solid #ccc;
 }
 
-.info-icon {
+.info-icon,
+.best-time-card i {
   color: #4fb28f; /* Icon color */
   margin-right: 0.75rem;
 }
 
-.info-content h3 {
+.info-content h3,
+.best-time-card h3 {
   margin: 0 0 0.5rem 0;
   color: #4fb28f; /* Highlight color for headers */
   font-size: 1rem;
@@ -187,24 +190,19 @@ aside h4.card-title {
   color: #515654; /* Text color for details */
 }
 
-.pros-cons, .wildlife-activities, .weather-best-time {
+.wildlife-activities {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem 0;
 }
 
-/* Review Section */
-.review-section {
-  padding: 0 1rem 1rem;
+.pros-cons {
+  display: flex;
+  gap: 1rem;
 }
 
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
+/* Review Section */
 
 h2.title {
   text-align: left;
@@ -221,7 +219,6 @@ h2.title {
 .rating-overview .stars {
   display: flex;
   flex-direction: column;
-
 }
 
 .rating-score {
@@ -287,14 +284,16 @@ h2.title {
   margin-top: 20px;
 }
 
-.review {
+.review,
+.review-card .review-header {
   display: flex;
   border-top: 1px solid #e2e8f0;
   padding-top: 20px;
   margin-top: 20px;
 }
 
-.profile-pic {
+.profile-pic,
+.user-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -306,14 +305,8 @@ h2.title {
   flex: 1;
 }
 
-.review .review-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.review .stars {
+.review .stars,
+.review-details .stars {
   margin-left: 0;
 }
 
@@ -331,7 +324,7 @@ h3.name {
 }
 
 .quick-links {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .parks-section h3.section-title {
@@ -339,7 +332,8 @@ h3.name {
   margin-bottom: 1rem;
 }
 
-.premier-parks, .all-parks {
+.premier-parks,
+.all-parks {
   margin-bottom: 2rem;
 }
 
@@ -418,7 +412,6 @@ h3.name {
 }
 
 .park-actions .price {
-
   font-size: 1.1rem;
   color: var(--primary-color);
   margin-bottom: 10px;
@@ -439,13 +432,6 @@ h3.name {
 .btn-view-more:hover {
   background-color: #3b9476;
   color: var(--color--white);
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
 }
 
 .review-rating-overview {
@@ -620,7 +606,6 @@ body {
   font-size: 0.875rem;
 }
 
-
 .review-item h3 {
   font-size: 1rem;
   margin: 0;
@@ -671,14 +656,14 @@ body {
 /* Expert Section */
 .expert-section {
   padding: 10px 20px;
-  background-color: #ebf0ea;
+  background-color: #f4fbf2;
   border-left: 4px solid #4fb28f;
   margin-bottom: 20px;
 }
 
 .expert-title {
   font-weight: bold;
-  color: #515654;
+  color: var(--primary-color);
 }
 
 /* Overview Section */
@@ -687,19 +672,102 @@ body {
   margin-bottom: 20px;
 }
 
+.wildlife-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
 
+.wildlife-highlights,
+.best-time,
+.park-ratings,
+.wildlife-books,
+.namibia-safaris {
+  grid-column: 1 / -1; /* Make these sections span the full width */
+}
+
+.review-section .reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Wildlife Cards Container */
+.wildlife-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual Wildlife Card */
+.wildlife-card {
+  background-color: #ebf0ea; /* Light green background */
+  border: 1px solid #515654; /* Slightly darker border */
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Wildlife Card Image */
+.wildlife-card img {
+  width: 100%;
+  /* height: 120px; */
+  object-fit: cover; /* Ensure the image fits nicely */
+  border-radius: 0;
+}
+
+.photo-highlights {
+  margin-top: 1rem;
+}
+
+.wildlife-photo .swiper-slide {
+  /* border: 2px solid #0288d1; */
+
+  /* border-radius: 1.5rem; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Wildlife Card Info */
+.wildlife-info {
+  padding: 0.785rem;
+}
+
+/* Wildlife Name */
+.wildlife-info h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4fb28f; /* Greenish text */
+  margin: 0;
+}
+
+/* Abundance Text */
+.wildlife-info p {
+  font-size: 0.785rem;
+  color: #515654; /* Neutral text color */
+  margin: 0;
+  text-align: left;
+}
 
 /* Highlights, Best Time, and Park Ratings */
-.wildlife-highlights, .best-time, .park-ratings {
-  margin-bottom: 20px;
+.wildlife-highlights,
+.park-ratings,
+.pros-cons {
+  margin: 2rem 0 1rem;
 }
 
-.park-ratings ul, .wildlife-books ul, .namibia-safaris ul {
+.park-ratings ul,
+.wildlife-books ul,
+.namibia-safaris ul {
   list-style-type: disc;
-  margin-left: 20px;
 }
 
-.park-ratings ul li, .wildlife-books ul li, .namibia-safaris ul li {
+.park-ratings ul li,
+.wildlife-books ul li,
+.namibia-safaris ul li {
   margin-bottom: 10px;
 }
 
@@ -715,35 +783,964 @@ body {
 .namibia-safaris ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .namibia-safaris ul li {
   margin-bottom: 10px;
 }
 
-.namibia-safaris ul li a {
+/* Best Time to Visit Section */
+
+/* Expert Introduction */
+.expert-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Seasonal Overview */
+.seasonal-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Best Time Section */
+.best-time-section {
+  margin: 1rem 0;
+}
+.best-time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+  background-color: #ebf0ea;
+  border-radius: 8px;
+}
+
+.best-time-card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border-left: 2px solid #ccc;
+}
+
+.best-time-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Season Details */
+.season-details {
+  margin-bottom: 1rem;
+}
+
+.season-details ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.photo-highlights {
+  margin-top: 1rem;
+}
+
+.photo-highlights a {
+  color: var(--primary-color);
   text-decoration: none;
-  color: #4fb28f;
-  font-weight: bold;
 }
 
-.namibia-safaris ul li a:hover {
-  text-decoration: underline;
+/* Park Guide */
+
+.park-ratings {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-/* Section Styling */
-section {
-  padding-bottom: 20px;
+.park .rating {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.park .rating span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Recommended Safaris */
+.recommended-safaris {
+  padding: 1rem 0;
+}
+
+.safari-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  list-style: none;
+}
+/* Visual Rating System */
+.visual-rating {
+  margin: 1rem 0;
+}
+
+.visual-rating h2 {
+  margin-bottom: 1rem;
+}
+
+.park-ratings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.park {
+  border-radius: 1rem;
+}
+
+.park h3 {
+  margin-bottom: 1rem;
+}
+
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Color Coding for Bars */
+.excellent .bar {
+  background: #4caf50; /* Green */
+}
+
+.good .bar {
+  background: #8bc34a; /* Light Green */
+}
+
+.fair .bar {
+  background: #ffc107; /* Yellow */
+}
+
+.poor .bar {
+  background: #f44336; /* Red */
+}
+
+/* Color Key */
+
+.color-key h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.key-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key-item span:nth-child(2) {
+  font-size: 0.785rem;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.color-box.excellent {
+  background: #4caf50;
+}
+
+.color-box.good {
+  background: #8bc34a;
+}
+
+.color-box.fair {
+  background: #ffc107;
+}
+
+.color-box.poor {
+  background: #f44336;
+}
+
+/* Tooltip Styling */
+.month-rating {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.month-rating:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip p {
+  margin: 0.25rem 0;
+}
+
+.tooltip p strong {
+  color: var(--primary-color);
+}
+
+/* Hover Effects */
+.month-rating:hover .bar {
+  opacity: 0.8;
+}
+
+.month-rating:hover .stars {
+  color: #ff6f61;
+}
+
+/* Park Header Styling */
+.park-header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.park-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.park-header h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5rem;
+  margin: 0;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Rating Bars Styling */
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.stars {
+  font-size: 0.9rem;
+  color: #ffc107; /* Star color */
+}
+
+/* Color Coding for Bars */
+.excellent .bar {
+  background: #4caf50; /* Green */
+}
+
+.good .bar {
+  background: #8bc34a; /* Light Green */
+}
+
+.fair .bar {
+  background: #ffc107; /* Yellow */
+}
+
+.poor .bar {
+  background: #f44336; /* Red */
+}
+
+/* Hover Effects */
+.month-rating:hover .bar {
+  opacity: 0.8;
+}
+
+.month-rating:hover .stars {
+  color: #ff6f61;
+}
+
+/* Filter System Styling */
+.filter-system {
+  margin: 1rem 0;
+}
+
+.filters {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: 0.5rem; */
+}
+
+/* User Reviews Section */
+.user-reviews {
+  margin: 2rem 0;
+}
+
+.user-reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.user-info h4 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.user-info .stars {
+  color: #ffc107; /* Star color */
+}
+
+.review-date {
+  font-size: 0.785rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+/* Comparison Table Section */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-section:last-of-type {
-  border-bottom: none;
+table th {
+  background: #333;
+  color: #fff;
+  font-weight: bold;
 }
 
+table tbody tr:hover {
+  background: #f4f4f4;
+}
+
+table td {
+  color: #555;
+}
+
+.table-container {
+  overflow-x: auto; /* Fallback for horizontal scrolling */
+  width: 100%;
+}
+Z table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block; /* Converts table to block elements */
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; /* Hides the header row */
+  }
+
+  tr {
+    border: 1px solid #ddd;
+    margin-bottom: 10px; /* Adds spacing between rows */
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%; /* Adds space for labels */
+    padding-top: 8px; /* Adds vertical spacing */
+    padding-bottom: 8px; /* Adds vertical spacing */
+    word-wrap: break-word; /* Ensures long text wraps */
+  }
+
+  td:before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label); /* Uses data-label for mobile headers */
+    font-weight: bold; /* Makes labels bold for better readability */
+  }
+
+  td:nth-of-type(1):before {
+    content: "Park";
+  }
+  td:nth-of-type(2):before {
+    content: "Best Time to Visit";
+  }
+  td:nth-of-type(3):before {
+    content: "Wildlife Highlights";
+  }
+  td:nth-of-type(4):before {
+    content: "Weather Conditions";
+  }
+  td:nth-of-type(5):before {
+    content: "Tourist Crowds";
+  }
+}
+
+/* Booking Widget Section */
+.booking-widget {
+  margin-top: 2rem;
+}
+
+.booking-widget h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3sease, color 0.3sease, transform 0.2sease;
+  color: var(--color--body-text);
+  text-decoration: none;
+}
+
+.form-group input[type="date"] {
+  padding: 0.45rem;
+}
+
+/* Map Section */
+.map-section {
+  margin-top: 2rem;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.map-container {
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.park-list {
+  margin-top: 2rem;
+}
+
+.park-list ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.park-list li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.park-list li strong {
+  color: #333;
+}
+
+/* Newsletter Signup Section */
+.newsletter-signup {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.newsletter-signup h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.newsletter-signup p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.newsletter-form label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.newsletter-form .btn:hover {
+  background: #e65a50;
+}
+
+/* Timeline View Section */
+.timeline-view {
+  margin-top: 2rem;
+}
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* margin: 1rem 0; */
+}
+
+.park-timeline {
+  /* background: #fff; */
+  padding: 1rem 0;
+}
+
+.timeline-view h3 {
+  margin-bottom: 0;
+}
+
+.timeline {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.month {
+  /* flex: 1; */
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.besttime-section .rating-bars .month {
+  color: var(--color--body-text);
+  text-align: left;
+}
+
+.month:hover {
+  opacity: 0.8;
+}
+
+.besttime-section .month-bar.excellent,
+.besttime-section .month-bar.good,
+.besttime-section .month-bar.fair,
+.besttime-section .month-bar.poor {
+  background: none;
+}
+
+/* Color Coding for Months */
+.excellent {
+  background: #4caf50; /* Green */
+}
+
+.good {
+  background: #8bc34a; /* Light Green */
+}
+
+.fair {
+  background: #ffc107; /* Yellow */
+}
+
+.poor {
+  background: #f44336; /* Red */
+}
+
+/* Color Key */
+.color-key {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.color-key h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.key-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.color-box.excellent {
+  background: #4caf50;
+}
+
+.color-box.good {
+  background: #8bc34a;
+}
+
+.color-box.fair {
+  background: #ffc107;
+}
+
+.color-box.poor {
+  background: #f44336;
+}
+
+/* Accordion Styling */
+.accordion {
+  margin-bottom: 2rem;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+  background: transparent;
+  border: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Accordion Styling */
+
+.accordion-content ul {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 1rem 0;
+}
+
+.accordion-content ul {
+  padding-left: 1.5rem;
+}
+
+.accordion-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content .btn {
+  background: transparent;
+  color: var(--primary-color);
+  padding: 0;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.accordion-content .btn:hover {
+  color: var(--text--color);
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Useful Links */
+.useful-links {
+  margin-bottom: 2rem;
+}
+
+.links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.links-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Safety & Security Section */
+
+.expert-intro {
+  margin-bottom: 2rem;
+}
+
+/* Government Travel Advice */
+.travel-advice {
+  margin-bottom: 2rem;
+}
+
+/* Call-to-Action */
+.cta-section {
+  text-align: left;
+  flex-direction: column;
+  align-items: normal;
+}
+
+/* Safari Tours Section */
+.tour-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  display: unset;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: none;
+}
+
+.tour-image {
+  width: 100%;
+  /* height: 200px; */
+  object-fit: cover;
+}
+
+.tour-card h3,
+.tour-card .card-price,
+.tour-card .details {
+  margin: 0 1rem 0.5rem;
+}
+
+.tour-card h3 {
+  margin-top: 1rem;
+}
+
+.tour-card .details {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.tour-card .itinerary,
+.tour-card .bio {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 1rem 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 2.5rem;
+}
+
+.tour-card .read-more-link {
+  display: inline-block;
+  margin: 0 1rem 0.5rem;
+}
+
+.operator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+  display: none;
+}
+
+.operator p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.operator .rating {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Experts Section */
+.experts-swiper .tour-card {
+  background: transparent;
+}
+
+img.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.experts-swiper .review {
+  margin: 0;
+  border-top: 3px solid #ccc;
+}
+
+.experts-swiper h3 {
+  margin: 0;
+}
+
+.location-review {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expert-card .location {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.experts-swiper .reviews {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.tour-card .bio {
+  margin: 0;
+}
+
+.tour-card:hover {
+  box-shadow: none;
+}
+
+.experts-swiper .btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.expert-card .btn:hover {
+  background: #e65a50;
+}
 
 /* Responsive spacing for small screens */
 @media (max-width: 768px) {
+  .pros-cons {
+    flex-direction: column;
+  }
+
+  .profile-review-title {
+    flex-direction: column;
+    align-items: start;
+  }
   .key-info {
     gap: 0.5rem;
     padding: 0.5rem;
@@ -765,17 +1762,59 @@ section:last-of-type {
     font-size: 0.9rem;
   }
 
-  .parks-section {
-    padding: 0.5rem;
-  }
-
-  .wildlife-section {
-    padding: 15px;
-  }
-
-
-  .wildlife-list th, .wildlife-list td {
+  .wildlife-list th,
+  .wildlife-list td {
     padding: 8px;
     font-size: 0.9rem;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+
+  .color-key {
+    flex-direction: column;
+  }
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 540px) {
+  .tabcontent {
+    padding: 0;
+  }
+
+  .tabcontent.active {
+    display: block;
+    width: 100%;
+  }
+  .side-bar-tab {
+    position: fixed;
+    width: 95%;
+    top: 20px;
+    left: -200%;
+    z-index: 2000;
+    transform: translateX(-50%);
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+
+  .side-bar-tab.active {
+    left: 50%;
+  }
+
+  /* Show backdrop when active */
+  #filtersBackdrop.active {
+    display: block;
+  }
+
+  .filter-toggle-btn {
+    position: sticky;
+    display: block;
+    top: 20px;
+    left: 90%;
+    z-index: 1002;
+    margin-bottom: 1rem;
   }
 }

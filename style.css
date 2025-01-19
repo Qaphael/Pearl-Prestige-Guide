@@ -273,7 +273,7 @@ section {
 }
 
 .card-title {
-  font-size: 1.25rem; /* Larger font size for title */
+  font-size: 1.2rem; /* Larger font size for title */
   margin-bottom: 0.5rem; /* Adds space below title */
 }
 
@@ -399,8 +399,6 @@ header nav ul {
 header nav ul li {
   display: inline-block;
 }
-
-
 
 .white-bg {
   background-color: #fff;
@@ -656,7 +654,6 @@ header.white-bg a {
   align-items: center;
 }
 
-
 /* Hero Section Carousel Specific Styles */
 .hero .carousel-slider .list .item .content {
   top: 30%; /* Adjust top position to avoid overlap with search bar */
@@ -872,7 +869,8 @@ header.white-bg a {
 }
 
 .find-section .categories .categories-list,
-.tab-section .categories .categories-list {
+.tab-section .categories .categories-list,
+.filters {
   padding-bottom: 0.5rem;
   display: flex;
   gap: 1rem;
@@ -907,7 +905,11 @@ header.white-bg a {
 }
 
 .find-section .categories a,
-.tab-section .categories a {
+.tab-section .categories a,
+.filter-btn,
+.safari-link,
+.links-grid a,
+.namibia-safaris ul li a {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -929,10 +931,19 @@ header.white-bg a {
 }
 
 .find-section .categories a:hover,
-.tab-section .categories a:hover {
+.tab-section .categories a:hover,
+.safari-link:hover,
+.links-grid a:hover,
+.namibia-safaris ul li a:hover {
   background: var(--hover-color);
   color: var(--color--white);
   font-weight: var(--font-weight-bold);
+}
+
+.safari-link:hover,
+.links-grid a:hover,
+.namibia-safaris ul li a:hover {
+  font-weight: normal;
 }
 
 .find-grid {
@@ -1117,21 +1128,21 @@ h4.card-title {
   cursor: pointer;
 }
 
-  /* Style for the custom checkmark */
-  .filter-checkbox::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 2px;
-    opacity: 0;
-  }
+/* Style for the custom checkmark */
+.filter-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 2px;
+  opacity: 0;
+}
 
-    /* Show the checkmark when checkbox is checked */
+/* Show the checkmark when checkbox is checked */
 .filter-input[type="checkbox"]:checked + .filter-checkbox::after {
   opacity: 1;
 }
@@ -1189,7 +1200,8 @@ h4.card-title {
 }
 
 /* Backdrop overlay */
-#filtersBackdrop {
+#filtersBackdrop,
+#tabFiltersBackdrop {
   display: none;
   position: fixed;
   top: 0;
@@ -1199,8 +1211,6 @@ h4.card-title {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1003;
 }
-
-
 
 /* For tablets and smaller screens */
 @media (max-width: 489px) {
@@ -1214,17 +1224,17 @@ h4.card-title {
   }
 
   .main-content {
-  padding-left: 0;
-}
+    padding-left: 0;
+  }
 
   .filters-sidebar.active {
-left: 50%;
+    left: 50%;
   }
 
   /* Show backdrop when active */
-#filtersBackdrop.active {
-  display: block;
-}
+  #filtersBackdrop.active {
+    display: block;
+  }
 
   .filter-close-btn {
     border: none;
@@ -1255,16 +1265,16 @@ left: 50%;
   }
 }
 
-  /* Find Section */
-  .find {
-    padding-top: 2rem; /* Add more padding to ensure it’s well spaced */
-    text-align: center;
-    background: #f4f4f4;
-  }
+/* Find Section */
+.find {
+  padding-top: 2rem; /* Add more padding to ensure it’s well spaced */
+  text-align: center;
+  background: #f4f4f4;
+}
 
-  .find-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+.find-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
 /* General styles for the Top Destinations section */
 .top-destinations {
@@ -2186,7 +2196,7 @@ section.latest-stories {
 
 .tour-card img {
   width: 100%;
-  height: 210px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
   object-fit: cover;
 }
 

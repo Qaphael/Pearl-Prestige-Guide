@@ -1,0 +1,23 @@
+/* Header Section */
+.header {
+  background: url("images/hero/Bwindi.jpg") no-repeat center center/cover;
+  /* Add a travel-related background image */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+header .container {
+  flex-direction: column;
+}
+
+h3.header-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.header-subtitle {
+  font-size: 24px;
+}

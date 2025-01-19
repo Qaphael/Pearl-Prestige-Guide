@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Travel Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="services.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h3 class="header-title">Explore Our Services</h3>
+        <p class="header-subtitle">
+          Your journey, your way – we make it happen!
+        </p>
+      </div>
+    </header>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to Plan Your Dream Trip?</h2>
+        <p class="cta-subtitle">
+          Contact us today to get started. Let’s make your travel dreams a
+          reality!
+        </p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+          <a href="tel:+1234567890" class="btn btn-secondary">Call Us Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services-overview" class="services-overview">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <!-- Service Item 1 -->
+          <div class="service-item">
+            <i class="fas fa-route service-icon"></i>
+            <h3 class="service-title">Custom Tour Packages</h3>
+            <p class="service-description">
+              Tailored tours for your unique preferences.
+            </p>
+            <a href="#custom-tours" class="btn">Learn More</a>
+          </div>
+          <!-- Service Item 2 -->
+          <div class="service-item">
+            <i class="fas fa-hotel service-icon"></i>
+            <h3 class="service-title">Accommodation</h3>
+            <p class="service-description">
+              Comfortable stays at the best hotels and resorts.
+            </p>
+            <a href="#accommodation" class="btn">Learn More</a>
+          </div>
+
+          <!-- Service Item 3 -->
+          <div class="service-item">
+            <i class="fas fa-car service-icon"></i>
+            <h3 class="service-title">Transportation</h3>
+            <p class="service-description">
+              Reliable and comfortable transport to all destinations, including
+              airport transfers.
+            </p>
+            <a href="#transportation" class="btn">Learn More</a>
+          </div>
+
+          <!-- Service Item 4 -->
+          <div class="service-item">
+            <i class="fas fa-hiking service-icon"></i>
+            <h3 class="service-title">Adventure Activities</h3>
+            <p class="service-description">
+              Exciting activities like hiking, trekking, wildlife safaris, and
+              more.
+            </p>
+            <a href="#adventure-activities" class="btn">Learn More</a>
+          </div>
+
+          <!-- Service Item 5 -->
+          <div class="service-item">
+            <i class="fas fa-globe service-icon"></i>
+            <h3 class="service-title">Travel Insurance</h3>
+            <p class="service-description">
+              Comprehensive travel insurance for your peace of mind.
+            </p>
+            <a href="#travel-insurance" class="btn">Learn More</a>
+          </div>
+
+          <!-- Service Item 6 -->
+          <div class="service-item">
+            <i class="fas fa-headset service-icon"></i>
+            <h3 class="service-title">24/7 Support</h3>
+            <p class="service-description">
+              Our dedicated team is available to assist you throughout your
+              journey.
+            </p>
+            <a href="#support" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Services with Left Tabs -->
+    <section id="detailed-services" class="detailed-services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="tab-system">
+          <!-- Tab Links -->
+          <div class="tab-links">
+            <button class="tab-link active" data-tab="custom-tours">
+              Custom Tour Packages
+            </button>
+            <button class="tab-link" data-tab="accommodation">
+              Accommodation
+            </button>
+            <button class="tab-link" data-tab="transportation">
+              Transportation
+            </button>
+            <button class="tab-link" data-tab="adventure-activities">
+              Adventure Activities
+            </button>
+            <button class="tab-link" data-tab="travel-insurance">
+              Travel Insurance
+            </button>
+            <button class="tab-link" data-tab="support">24/7 Support</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            <!-- Custom Tour Packages -->
+            <div id="custom-tours" class="tab-pane active">
+              <div class="service-detail">
+                <i class="fas fa-route service-icon"></i>
+                <h3 class="service-title">Custom Tour Packages</h3>
+                <p class="service-description">
+                  We design personalized tours tailored to your preferences and
+                  budget.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img src="custom-tours.jpg" alt="Custom Tour Packages" />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>Tailored itineraries based on your interests</li>
+                    <li>Flexible scheduling and destinations</li>
+                    <li>Expert advice from travel consultants</li>
+                    <li>24/7 support during your trip</li>
+                  </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="service-pricing">
+                  <h4>Pricing:</h4>
+                  <p>
+                    Packages start at <strong>$500</strong> per person.
+                    <a href="#contact">Contact us</a> for a detailed quote.
+                  </p>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The custom tour package was amazing! Everything was
+                    perfectly planned, and we had the best time exploring new
+                    destinations."
+                    <cite>- John Doe</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Contact us with your travel preferences.</li>
+                    <li>We create a customized itinerary for you.</li>
+                    <li>Review and approve the plan.</li>
+                    <li>Pack your bags and enjoy your trip!</li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>
+                      Can I make changes to the itinerary after booking?
+                    </summary>
+                    <p>
+                      Yes, we offer flexible itineraries that can be adjusted
+                      based on your needs.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>Do you offer group discounts?</summary>
+                    <p>
+                      Yes, we provide special discounts for group bookings.
+                      Contact us for more details.
+                    </p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Get a Quote</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accommodation" class="tab-pane">
+              <div class="service-detail">
+                <i class="fas fa-hotel service-icon"></i>
+                <h3 class="service-title">Accommodation</h3>
+                <p class="service-description">
+                  Enjoy comfortable stays at the best hotels, resorts, and
+                  guesthouses.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img src="accommodation.jpg" alt="Accommodation" />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>5-star hotels and boutique resorts</li>
+                    <li>Budget-friendly guesthouses</li>
+                    <li>Family-friendly accommodations</li>
+                    <li>Convenient locations near major attractions</li>
+                  </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="service-pricing">
+                  <h4>Pricing:</h4>
+                  <p>
+                    Prices start at <strong>$100</strong> per night.
+                    <a href="#contact">Contact us</a> for special offers.
+                  </p>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The accommodations were top-notch! We stayed at a beautiful
+                    resort with stunning views."
+                    <cite>- Jane Smith</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Tell us your preferred location and budget.</li>
+                    <li>We recommend the best options for you.</li>
+                    <li>Book your stay with just a few clicks.</li>
+                    <li>Enjoy a hassle-free check-in experience.</li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>Can I cancel or modify my booking?</summary>
+                    <p>
+                      Yes, most bookings are flexible. Check the cancellation
+                      policy for details.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>Do you offer all-inclusive packages?</summary>
+                    <p>
+                      Yes, we provide all-inclusive options for resorts and
+                      hotels.
+                    </p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="transportation" class="tab-pane">
+              <div class="service-detail">
+                <i class="fas fa-car service-icon"></i>
+                <h3 class="service-title">Transportation</h3>
+                <p class="service-description">
+                  Reliable and comfortable transport to all destinations,
+                  including airport transfers.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img src="transportation.jpg" alt="Transportation" />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>Private cars and chauffeur services</li>
+                    <li>Airport pickups and drop-offs</li>
+                    <li>Luxury vehicles for special occasions</li>
+                    <li>24/7 availability for your convenience</li>
+                  </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="service-pricing">
+                  <h4>Pricing:</h4>
+                  <p>
+                    Prices start at <strong>$50</strong> per trip.
+                    <a href="#contact">Contact us</a> for group discounts.
+                  </p>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The transportation service was excellent! The driver was
+                    punctual and the car was very comfortable."
+                    <cite>- Sarah Johnson</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Provide us with your travel details.</li>
+                    <li>We assign a vehicle and driver for your trip.</li>
+                    <li>Enjoy a smooth and comfortable ride.</li>
+                    <li>
+                      We handle all logistics, so you don’t have to worry.
+                    </li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>Can I book a vehicle for multiple days?</summary>
+                    <p>Yes, we offer daily and weekly rental options.</p>
+                  </details>
+                  <details>
+                    <summary>Are child seats available?</summary>
+                    <p>Yes, we provide child seats upon request.</p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="adventure-activities" class="tab-pane">
+              <div class="service-detail">
+                <i class="fas fa-hiking service-icon"></i>
+                <h3 class="service-title">Adventure Activities</h3>
+                <p class="service-description">
+                  Exciting activities like hiking, trekking, wildlife safaris,
+                  and more.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img
+                    src="adventure-activities.jpg"
+                    alt="Adventure Activities"
+                  />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>Guided hiking and trekking tours</li>
+                    <li>Wildlife safaris in national parks</li>
+                    <li>Water sports like snorkeling and scuba diving</li>
+                    <li>Camping and outdoor adventures</li>
+                  </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="service-pricing">
+                  <h4>Pricing:</h4>
+                  <p>
+                    Prices start at <strong>$75</strong> per person.
+                    <a href="#contact">Contact us</a> for group rates.
+                  </p>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The adventure activities were the highlight of our trip!
+                    The guides were knowledgeable and made everything so much
+                    fun."
+                    <cite>- Michael Brown</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Choose your preferred adventure activity.</li>
+                    <li>We provide all necessary equipment and guides.</li>
+                    <li>Enjoy a thrilling and safe experience.</li>
+                    <li>We handle all the logistics for you.</li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>
+                      Are these activities suitable for beginners?
+                    </summary>
+                    <p>
+                      Yes, we offer activities for all skill levels, including
+                      beginners.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      What should I bring for an adventure activity?
+                    </summary>
+                    <p>
+                      We provide a checklist based on the activity. Generally,
+                      comfortable clothing and shoes are recommended.
+                    </p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Explore Adventures</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="travel-insurance" class="tab-pane">
+              <div class="service-detail">
+                <i class="fas fa-globe service-icon"></i>
+                <h3 class="service-title">Travel Insurance</h3>
+                <p class="service-description">
+                  Comprehensive travel insurance for your peace of mind.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img src="travel-insurance.jpg" alt="Travel Insurance" />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>Medical coverage for emergencies</li>
+                    <li>Trip cancellation and interruption protection</li>
+                    <li>Lost luggage and travel delay coverage</li>
+                    <li>24/7 global assistance</li>
+                  </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="service-pricing">
+                  <h4>Pricing:</h4>
+                  <p>
+                    Plans start at <strong>$20</strong> per trip.
+                    <a href="#contact">Contact us</a> for annual coverage
+                    options.
+                  </p>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The travel insurance gave us peace of mind during our trip.
+                    Thankfully, we didn’t need it, but it was great to know we
+                    were covered."
+                    <cite>- Emily Davis</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Choose a plan that suits your travel needs.</li>
+                    <li>
+                      Purchase the insurance online or through our agents.
+                    </li>
+                    <li>Receive your policy details via email.</li>
+                    <li>Travel with confidence, knowing you’re protected.</li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>What does travel insurance cover?</summary>
+                    <p>
+                      It covers medical emergencies, trip cancellations, lost
+                      luggage, and more. Check the policy details for full
+                      coverage.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      Can I buy insurance after booking my trip?
+                    </summary>
+                    <p>
+                      Yes, you can purchase insurance up to the day before your
+                      trip.
+                    </p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Get Insured</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="support" class="tab-pane">
+              <div class="service-detail">
+                <i class="fas fa-headset service-icon"></i>
+                <h3 class="service-title">24/7 Support</h3>
+                <p class="service-description">
+                  Our dedicated team is available to assist you throughout your
+                  journey.
+                </p>
+
+                <!-- Image -->
+                <div class="service-image">
+                  <img src="support.jpg" alt="24/7 Support" />
+                </div>
+
+                <!-- Features -->
+                <div class="service-features">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    <li>24/7 customer support via phone and email</li>
+                    <li>Emergency assistance during your trip</li>
+                    <li>Expert advice and travel tips</li>
+                    <li>Assistance with bookings and reservations</li>
+                  </ul>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="service-testimonials">
+                  <h4>What Our Clients Say:</h4>
+                  <blockquote>
+                    "The support team was amazing! They helped us with
+                    last-minute changes and made sure our trip went smoothly."
+                    <cite>- Mark Thompson</cite>
+                  </blockquote>
+                </div>
+
+                <!-- How It Works -->
+                <div class="service-process">
+                  <h4>How It Works:</h4>
+                  <ol>
+                    <li>Contact us via phone, email, or chat.</li>
+                    <li>
+                      Our team will assist you with any queries or issues.
+                    </li>
+                    <li>Get real-time updates and support during your trip.</li>
+                    <li>Enjoy a stress-free travel experience.</li>
+                  </ol>
+                </div>
+
+                <!-- FAQ -->
+                <div class="service-faq">
+                  <h4>Frequently Asked Questions:</h4>
+                  <details>
+                    <summary>How can I reach the support team?</summary>
+                    <p>
+                      You can contact us via phone, email, or chat on our
+                      website.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>What languages does the team speak?</summary>
+                    <p>
+                      Our team is multilingual and can assist you in various
+                      languages.
+                    </p>
+                  </details>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                  <a href="#contact" class="btn">Contact Support</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">
+          Hear from our happy travelers who have experienced our services.
+        </p>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <blockquote>
+                "The custom tour package was amazing! Everything was perfectly
+                planned, and we had the best time exploring new destinations."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="client1.jpg" alt="John Doe" class="author-image" />
+                <p class="author-name">John Doe</p>
+                <p class="author-location">New York, USA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <blockquote>
+                "The accommodations were top-notch! We stayed at a beautiful
+                resort with stunning views."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="client2.jpg" alt="Jane Smith" class="author-image" />
+                <p class="author-name">Jane Smith</p>
+                <p class="author-location">London, UK</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <blockquote>
+                "The adventure activities were the highlight of our trip! The
+                guides were knowledgeable and made everything so much fun."
+              </blockquote>
+              <div class="testimonial-author">
+                <img
+                  src="client3.jpg"
+                  alt="Michael Brown"
+                  class="author-image"
+                />
+                <p class="author-name">Michael Brown</p>
+                <p class="author-location">Sydney, Australia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="why-choose-us-section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-subtitle">
+          Discover what makes us the best choice for your travel needs.
+        </p>
+
+        <div class="reasons-grid">
+          <!-- Reason 1 -->
+          <div class="reason">
+            <i class="fas fa-star reason-icon"></i>
+            <h3 class="reason-title">Expert Guides</h3>
+            <p class="reason-description">
+              Our team of experienced guides ensures you have the best travel
+              experience.
+            </p>
+          </div>
+
+          <!-- Reason 2 -->
+          <div class="reason">
+            <i class="fas fa-headset reason-icon"></i>
+            <h3 class="reason-title">24/7 Support</h3>
+            <p class="reason-description">
+              We’re available around the clock to assist you with any queries or
+              issues.
+            </p>
+          </div>
+
+          <!-- Reason 3 -->
+          <div class="reason">
+            <i class="fas fa-hand-holding-usd reason-icon"></i>
+            <h3 class="reason-title">Affordable Packages</h3>
+            <p class="reason-description">
+              We offer competitive pricing without compromising on quality.
+            </p>
+          </div>
+
+          <!-- Reason 4 -->
+          <div class="reason">
+            <i class="fas fa-globe reason-icon"></i>
+            <h3 class="reason-title">Global Reach</h3>
+            <p class="reason-description">
+              We provide services in over 50 countries worldwide.
+            </p>
+          </div>
+
+          <!-- Reason 5 -->
+          <div class="reason">
+            <i class="fas fa-heart reason-icon"></i>
+            <h3 class="reason-title">Personalized Service</h3>
+            <p class="reason-description">
+              We tailor every trip to your unique preferences and needs.
+            </p>
+          </div>
+
+          <!-- Reason 6 -->
+          <div class="reason">
+            <i class="fas fa-shield-alt reason-icon"></i>
+            <h3 class="reason-title">Travel Insurance</h3>
+            <p class="reason-description">
+              Comprehensive travel insurance for your peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to Plan Your Dream Trip?</h2>
+        <p class="cta-subtitle">
+          Choose how you’d like to get started. We’re here to help!
+        </p>
+
+        <div class="cta-buttons">
+          <!-- Primary CTA -->
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+
+          <!-- Secondary CTAs -->
+          <a href="tel:+1234567890" class="btn btn-secondary">Call Us Now</a>
+          <a href="packages.html" class="btn btn-secondary">Explore Packages</a>
+          <a href="#newsletter" class="btn btn-secondary"
+            >Sign Up for Newsletters</a
+          >
+          <a
+            href="https://facebook.com/yourpage"
+            class="btn btn-secondary"
+            target="_blank"
+            >Follow Us on Facebook</a
+          >
+        </div>
+
+        <!-- Additional CTA for Newsletter -->
+        <div class="newsletter-cta">
+          <h3 class="newsletter-title">Stay Updated with Our Latest Offers</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <!-- <img
+            src="images/items/apartment/apartment1.jpg" 
+            alt="Storyteller Travel Logo"
+          /> -->
+          <span class="Logo-space">Logo</span>
+          <p>
+            Storyteller Media covers the best destinations, animals, and natural
+            experiences around the world.
+          </p>
+          <p>
+            We are located in Antigonish, a beautiful university town on Nova
+            Scotia’s Northumberland shore.
+          </p>
+          <p>Storyteller Travel is part of Storyteller Group</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="services.js"></script>
+  </body>
+</html>
