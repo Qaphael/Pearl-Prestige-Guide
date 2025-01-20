@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-tour-title>Tour Details - Global Trekker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="Logo-space">Logo</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="destinations.html">Tours</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="login-options">
+                <a href="#login">Login</a> <a href="#signup">Sign up</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="tour-detail">
+            <div class="container">
+                <article class="tour-card">
+                    <img data-tour-image alt="Tour Image" class="tour-image">
+                    <div class="tour-card-content">
+                        <div class="price-div">
+                            <p class="best-seller" data-tour-best-seller></p>
+                            <p class="card-price" data-tour-price></p>
+                        </div>
+                        <h3 class="card-title" data-tour-title></h3>
+                        <div class="tour-details">
+                            <p class="card-location" data-tour-location>
+                                <i class="fas fa-map-marker-alt"></i>
+                            </p>
+                            <p class="tour-style" data-tour-style>
+                                <i class="fas fa-suitcase-rolling"></i>
+                            </p>
+                            <p class="tour-accommodation" data-tour-accommodation>
+                                <i class="fas fa-hotel"></i>
+                            </p>
+                        </div>
+                        <div class="tour-description-wrapper">
+                            <p class="tour-description" data-tour-description>
+                                <i class="fas fa-info-circle"></i>
+                            </p>
+                            <a href="#" class="read-more-link">
+                                Read More
+                                <svg class="circle-svg" viewBox="0 0 70 36">
+                                    <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="tour-rating-div">
+                            <div class="stars" data-tour-stars>
+                            </div>
+                            <div class="tour-rating">
+                                <p class="rating-value" data-tour-rating-value></p>
+                                <p class="review-count" data-tour-review-count></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <span class="Logo-space">Logo</span>
+                <p>
+                    Storyteller Media covers the best destinations, animals, and natural
+                    experiences around the world.
+                </p>
+                <p>
+                    We are located in Antigonish, a beautiful university town on Nova
+                    Scotia’s Northumberland shore.
+                </p>
+                <p>Storyteller Travel is part of Storyteller Group</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#destinations">Where Should I Travel?</a></li>
+                        <li><a href="#africa">Africa Travel Guide</a></li>
+                        <li><a href="#uganda">Uganda Travel Guide</a></li>
+                        <li><a href="#north-america">North America Travel</a></li>
+                        <li><a href="#south-america">South America Travel</a></li>
+                        <li><a href="#ecuador">Ecuador Guide</a></li>
+                        <li><a href="#cuenca">Cuenca Ecuador</a></li>
+                        <li><a href="#central-america">Central America</a></li>
+                        <li><a href="#asia">Asia Travel Guide</a></li>
+                        <li><a href="#oceania">Oceania</a></li>
+                        <li><a href="#europe">Europe Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#sitemap">Site Map</a></li>
+                        <li><a href="#animals">Animals of the World</a></li>
+                        <li><a href="#start-planning">Start Planning Now</a></li>
+                        <li><a href="#start-here">Start Here</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Storyteller Travel</h3>
+                    <p>Antigonish, Nova Scotia, CANADA</p>
+                    <p>Phone Number: (902) 517-0570</p>
+                    <p>
+                        Email:
+                        <a href="mailto:admin@storyteller.travel"
+                            >admin@storyteller.travel</a
+                        >
+                    </p>
+                    <p>
+                        As an Amazon Associate, we earn from qualifying purchases. Here's
+                        more about <a href="#how-we-work">how we work</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+        </div>
+    </footer>
+    <script
+        src="https://kit.fontawesome.com/39c1912948.js"
+        crossorigin="anonymous"
+    ></script>
+    <script src="tour.js"></script>
+</body>
+</html>

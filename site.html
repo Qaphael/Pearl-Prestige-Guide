@@ -182,11 +182,7 @@
             <h3 class="section-title">Overview</h3>
 
             <!-- Introduction -->
-            <p class="intro-text">
-              Uganda, often referred to as the "Pearl of Africa," boasts diverse
-              landscapes, abundant wildlife, and rich cultural heritage. From
-              the misty mountains of Bwindi to the expansive savannas of Queen
-              Elizabeth National Park, Uganda offers a unique safari experience.
+            <p class="intro-text" data-site-overview-text>
             </p>
 
             <div class="image-box">
@@ -220,6 +216,8 @@
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                data-site-overview-map
               >
               </iframe>
             </div>
@@ -241,7 +239,7 @@
                     <i class="fas fa-calendar-alt info-icon"></i>
                     Best Time To Go
                   </h3>
-                  <p>June to September (Dry season)</p>
+                  <p data-site-overview-bestTime></p>
                 </div>
               </div>
               <div class="info-item">
@@ -250,7 +248,7 @@
                     <i class="fa-solid fa-umbrella info-icon"></i>
                     High Season
                   </h3>
-                  <p>June to September (Popular parks may be crowded)</p>
+                  <p data-site-overview-highSeason></p>
                 </div>
               </div>
               <div class="info-item">
@@ -259,7 +257,7 @@
                     <i class="fas fa-map info-icon"></i>
                     Size
                   </h3>
-                  <p>241,038 km² / 93,065 mi²</p>
+                  <p data-site-overview-size></p>
                 </div>
               </div>
             </div>
@@ -268,22 +266,16 @@
             <div class="pros-cons">
               <div class="pros-cons-div">
                 <h3>Pros & Cons</h3>
-                <ul class="pros">
-                  <li>Exceptional gorilla trekking experiences</li>
-                  <li>Rich birdlife with over 1,000 species</li>
-                  <li>Scenic landscapes including mountains and lakes</li>
-                  <li>Friendly and welcoming locals</li>
+                <ul class="pros" data-site-overview-pros>
                 </ul>
-                <ul class="cons">
-                  <li>Some areas have underdeveloped infrastructure</li>
-                  <li>Malaria is prevalent; precautions are necessary</li>
+                <ul class="cons" data-site-overview-cons>
                 </ul>
               </div>
               <div class="review-section">
                 <div class="review-header">
                   <h3 class="title">Customer Reviews</h3>
                   <div class="rating-overview">
-                    <div class="rating-score">4.8</div>
+                    <div class="rating-score" data-site-overview-reviews-score>4.8</div>
                     <div class="stars">
                       <div class="star-icons">
                         <i class="fas fa-star"></i>
@@ -292,7 +284,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                       </div>
-                      <p class="review-count">Based on 1,248 reviews</p>
+                      <p class="review-count" data-site-overview-reviews-count>Based on 1,248 reviews</p>
                     </div>
                   </div>
                 </div>
@@ -303,21 +295,21 @@
                     <div class="bar-bg">
                       <div class="bar-fill" style="width: 92%"></div>
                     </div>
-                    <span class="score">4.6</span>
+                    <span class="score" data-site-overview-reviews-quality>4.6</span>
                   </div>
                   <div class="rating-bar">
                     <span class="label">Value</span>
                     <div class="bar-bg">
                       <div class="bar-fill" style="width: 88%"></div>
                     </div>
-                    <span class="score">4.4</span>
+                    <span class="score" data-site-overview-reviews-value>4.4</span>
                   </div>
                   <div class="rating-bar">
                     <span class="label">Usability</span>
                     <div class="bar-bg">
                       <div class="bar-fill" style="width: 96%"></div>
                     </div>
-                    <span class="score">4.8</span>
+                    <span class="score" data-site-overview-reviews-usability>4.8</span>
                   </div>
                 </div>
 
@@ -327,10 +319,11 @@
                       class="profile-pic"
                       src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
                       alt="James Wilson"
+                      data-site-overview-reviews-review1-image
                     />
                     <div class="review-details">
                       <div class="review-header">
-                        <h3 class="name">James Wilson</h3>
+                        <h3 class="name" data-site-overview-reviews-review1-name>James Wilson</h3>
                         <div class="stars">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -339,7 +332,7 @@
                           <i class="fas fa-star"></i>
                         </div>
                       </div>
-                      <p class="review-text">
+                      <p class="review-text" data-site-overview-reviews-review1-text>
                         Exceptional quality and outstanding customer service.
                         The attention to detail is remarkable.
                       </p>
@@ -351,10 +344,11 @@
                       class="profile-pic"
                       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
                       alt="Sarah Thompson"
+                      data-site-overview-reviews-review2-image
                     />
                     <div class="review-details">
                       <div class="review-header">
-                        <h3 class="name">Sarah Thompson</h3>
+                        <h3 class="name" data-site-overview-reviews-review2-name>Sarah Thompson</h3>
                         <div class="stars">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -363,7 +357,7 @@
                           <i class="fas fa-star-half-alt"></i>
                         </div>
                       </div>
-                      <p class="review-text">
+                      <p class="review-text" data-site-overview-reviews-review2-text>
                         Great value for money. The product exceeded my
                         expectations in terms of functionality.
                       </p>
@@ -376,19 +370,13 @@
             <!-- Wildlife & Activities -->
             <div class="wildlife-activities">
               <div class="wildlife">
-                <h3>Wildlife</h3>
-                <p>
-                  Uganda is home to a variety of wildlife, including the Big
-                  Five. The country is particularly renowned for its primate
-                  population, especially the endangered mountain gorillas and
-                  chimpanzees.
+                <h3 data-site-overview-wildlife-title>Wildlife</h3>
+                <p data-site-overview-wildlife-text>
                 </p>
               </div>
               <div class="activities">
-                <h3>Activities</h3>
-                <p>
-                  Popular activities include gorilla and chimpanzee trekking,
-                  game drives, bird watching, boat safaris, and cultural tours.
+                <h3 data-site-overview-activities-title>Activities</h3>
+                <p data-site-overview-activities-text>
                 </p>
               </div>
             </div>
@@ -396,20 +384,14 @@
             <!-- Weather & Climate -->
             <div class="weather-best-time">
               <div class="weather-climate">
-                <h3>Weather & Climate</h3>
-                <p>
-                  Uganda enjoys a tropical climate with two dry seasons
-                  (December to February, June to August) and two wet seasons
-                  (March to May, September to November). Temperatures are
-                  generally pleasant, ranging from 21°C to 25°C (70°F to 77°F).
+                <h3 data-site-overview-weather-title>Weather & Climate</h3>
+                <p data-site-overview-weather-text>
                 </p>
               </div>
               <!-- Best Time To Visit -->
               <div class="best-time">
-                <h3>Best Time To Visit</h3>
-                <p>
-                  The dry seasons from June to August and December to February
-                  are ideal for wildlife viewing and trekking activities.
+                <h3 data-site-overview-bestTime-title>Best Time To Visit</h3>
+                <p data-site-overview-bestTime-text>
                 </p>
               </div>
             </div>
@@ -434,6 +416,7 @@
               </div>
             </div>
           </div>
+
 
           <!-- Parks & Reserves Tab -->
           <div id="Parks" class="tabcontent">

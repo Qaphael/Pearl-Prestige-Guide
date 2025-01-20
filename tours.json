@@ -1,0 +1,83 @@
+{
+    "tours": [
+      {
+        "id": "murchison-falls-chimps-gorilla",
+        "bestSeller": "Best Seller",
+        "title": "7-Day Murchison Falls, Chimps & Gorilla Trekking",
+        "price": "$2,572 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge & Guest House",
+        "description": "You Visit: Entebbe (Start), Ziwa Rhino Ranch, Murchison Falls NP, Kibale NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Entebbe Airport (End)",
+        "rating": "5.0/5",
+        "reviews": 57,
+        "image": "https://swiperjs.com/demos/images/nature-1.jpg"
+      },
+      {
+        "id": "uganda-wildlife-gorilla-safari",
+        "bestSeller": "Best Seller",
+        "title": "8 Days Uganda Wildlife & Gorilla Safari",
+        "price": "$3,100 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge & Tented Camp",
+        "description": "You Visit: Entebbe (Start), Murchison Falls NP, Kibale Forest NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Entebbe (End)",
+        "rating": "4.9/5",
+        "reviews": 32,
+        "image": "https://swiperjs.com/demos/images/nature-2.jpg"
+      },
+      {
+        "id": "gorilla-trekking-bwindi",
+        "bestSeller": "Best Seller",
+        "title": "3 Days Gorilla Trekking Safari in Bwindi",
+        "price": "$1,450 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge",
+        "description": "You Visit: Kigali (Start), Bwindi Impenetrable Forest (Gorillas), Kigali (End)",
+        "rating": "4.8/5",
+        "reviews": 25,
+        "image": "https://swiperjs.com/demos/images/nature-3.jpg"
+      },
+      {
+        "id": "uganda-primates-wildlife-safari",
+        "bestSeller": "Best Seller",
+        "title": "10 Days Uganda Primates & Wildlife Safari",
+        "price": "$3,850 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge & Tented Camp",
+        "description": "You Visit: Entebbe (Start), Kibale Forest (Chimps), Queen Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Lake Mburo NP, Entebbe (End)",
+        "rating": "4.7/5",
+        "reviews": 18,
+        "image": "https://swiperjs.com/demos/images/nature-4.jpg"
+      },
+      {
+        "id": "gorilla-chimpanzee-trekking-uganda",
+        "bestSeller": "Best Seller",
+        "title": "5 Days Gorilla & Chimpanzee Trekking in Uganda",
+        "price": "$2,150 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge",
+        "description": "You Visit: Entebbe (Start), Kibale Forest NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable Forest (Gorillas), Entebbe (End)",
+        "rating": "4.6/5",
+        "reviews": 12,
+        "image": "https://swiperjs.com/demos/images/nature-5.jpg"
+      },
+      {
+        "id": "uganda-gorilla-wildlife-safari",
+        "bestSeller": "Best Seller",
+        "title": "9 Days Uganda Gorilla & Wildlife Safari",
+        "price": "$4,200 pp (USD)",
+        "location": "Uganda: Private tour",
+        "style": "Mid-range",
+        "accommodation": "Lodge & Tented Camp",
+        "description": "You Visit: Entebbe (Start), Murchison Falls NP, Kibale Forest NP (Chimps), Queen Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Entebbe (End)",
+        "rating": "4.5/5",
+        "reviews": 8,
+        "image": "https://swiperjs.com/demos/images/nature-6.jpg"
+      }
+    ]
+  }
+  

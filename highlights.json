@@ -1,0 +1,70 @@
+{
+    "highlights": [
+      {
+        "id": "maria-angelica",
+        "profile": {
+          "image": "https://via.placeholder.com/80",
+          "name": "Opiyo Qaphael Ocaya",
+          "location": "Tee Tank, School Road Subward",
+          "stars": 5
+        },
+        "title": "Maria Angelica",
+        "description": "An unforgettable journey through Turkey. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur doloremque ullam iusto cupiditate adipisci? Omnis pariatur adipisci beatae iure, numquam iusto odio amet illo sunt, quaerat officia quam saepe soluta.",
+        "mainImage": "images/stories/img1.jpg",
+        "content": [
+          "<p>This is the main content of the story.</p>",
+          "<p>It can have multiple paragraphs.</p>",
+          "<p>And more content here.</p>"
+        ]
+      },
+      {
+        "id": "john-doe",
+        "profile": {
+          "image": "images/stories/img2.jpg",
+          "name": "John Doe",
+          "location": "",
+          "stars": 0
+        },
+        "title": "John Doe",
+        "description": "Exploring the hidden gems of the Amazon rainforest.",
+        "mainImage": "images/stories/img2.jpg",
+        "content": [
+          "<p>This is the main content of the story.</p>",
+          "<p>It can have multiple paragraphs.</p>"
+        ]
+      },
+      {
+        "id": "jane-smith",
+        "profile": {
+          "image": "images/stories/img3.jpg",
+          "name": "Jane Smith",
+          "location": "",
+          "stars": 0
+        },
+        "title": "Jane Smith",
+        "description": "A breathtaking trek through the Himalayas.",
+        "mainImage": "images/stories/img3.jpg",
+        "content": [
+          "<p>This is the main content of the story.</p>",
+          "<p>It can have multiple paragraphs.</p>"
+        ]
+      },
+      {
+        "id": "david-lee",
+        "profile": {
+          "image": "images/stories/img4.jpg",
+          "name": "David Lee",
+          "location": "",
+          "stars": 0
+        },
+        "title": "David Lee",
+        "description": "Discovering the ancient ruins of Machu Picchu.",
+        "mainImage": "images/stories/img4.jpg",
+        "content": [
+          "<p>This is the main content of the story.</p>",
+          "<p>It can have multiple paragraphs.</p>"
+        ]
+      }
+    ]
+  }
+  
