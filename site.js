@@ -200,55 +200,113 @@ document.addEventListener("DOMContentLoaded", () => {
       // Populate Wildlife Tab
       const wildlife = site.wildlife;
       if (wildlife) {
-        document.querySelector("[data-site-wildlife-text]").textContent =
+          document.querySelector("[data-site-wildlife-text]").textContent =
           wildlife.text;
-        document.querySelector(
+          document.querySelector(
           "[data-site-wildlife-abundance-title]"
-        ).textContent = "Wildlife Abundance";
-        const wildlifeAbundanceContainer = document.querySelector(
+          ).textContent = "Wildlife Abundance";
+          const wildlifeAbundanceContainer = document.querySelector(
           "[data-site-wildlife-abundance]"
-        );
-        if (wildlifeAbundanceContainer && wildlife.abundance) {
+          );
+          if (wildlifeAbundanceContainer && wildlife.abundance) {
           wildlifeAbundanceContainer.innerHTML = wildlife.abundance
-            .map(
+              .map(
               (animal) => `
-                    <div class="wildlife-card">
-                        <img src="${animal.image}" alt="${animal.name}" />
-                        <div class="wildlife-info">
-                            <h4>${animal.name}</h4>
-                            <p>Abundance: ${animal.abundance}</p>
-                        </div>
-                    </div>
-                `
-            )
-            .join("");
+                      <div class="wildlife-card">
+                          <img src="${animal.image}" alt="${animal.name}" />
+                          <div class="wildlife-info">
+                              <h4>${animal.name}</h4>
+                              <p>Abundance: ${animal.abundance}</p>
+                          </div>
+                      </div>
+                  `
+              )
+              .join("");
+          }
+
+          document.querySelector(
+          "[data-site-wildlife-highlights-title]"
+          ).textContent = "Wildlife Highlights";
+          document.querySelector(
+          "[data-site-wildlife-highlights-text]"
+          ).textContent =
+          "Damaraland and the neighboring Kunene region are home to a healthy population of desert-adapted elephants and lions, as well as a smaller population of black rhino (which can be tracked in the Palmwag region). The secretive brown hyena is sometimes seen lurking around seal colonies on the coast. Other marine wildlife includes the rare Heaviside’s dolphin and migrating southern right whale.";
+          const photoHighlightsContainer = document.querySelector(
+          "[data-site-wildlife-photo-highlights]"
+          );
+          if (photoHighlightsContainer && wildlife.photoHighlights) {
+              photoHighlightsContainer.innerHTML = wildlife.photoHighlights
+              .map(
+                  (image) => `
+                      <img src="${image}" alt="Wildlife Photo" class="wildlife-photo" />
+                  `
+              )
+              .join("");
+          }
+      }
+
+      // Populate Best Time To Visit Tab
+      const bestTime = site.bestTime;
+      if (bestTime) {
+        document.querySelector('[data-site-bestTime-title]').textContent = bestTime.title;
+        document.querySelector('[data-site-bestTime-overview-title]').textContent = bestTime.overviewTitle;
+        document.querySelector('[data-site-bestTime-overview-text]').textContent = bestTime.overviewText;
+        document.querySelector('[data-site-bestTime-bestTime]').textContent = bestTime.bestTime;
+        document.querySelector('[data-site-bestTime-highSeason]').textContent = bestTime.highSeason;
+        document.querySelector('[data-site-bestTime-lowSeason]').textContent = bestTime.lowSeason;
+        document.querySelector('[data-site-bestTime-bestWeather]').textContent = bestTime.bestWeather;
+        document.querySelector('[data-site-bestTime-worstWeather]').textContent = bestTime.worstWeather;
+
+        const drySeasonList = document.querySelector('[data-site-bestTime-drySeason-list]');
+        if (drySeasonList && bestTime.drySeason.list) {
+          drySeasonList.innerHTML = bestTime.drySeason.list.map(item => `<li>${item}</li>`).join('');
         }
 
-        document.querySelector(
-          "[data-site-wildlife-highlights-title]"
-        ).textContent = "Wildlife Highlights";
-        document.querySelector(
-          "[data-site-wildlife-highlights-text]"
-        ).textContent =
-          "Damaraland and the neighboring Kunene region are home to a healthy population of desert-adapted elephants and lions, as well as a smaller population of black rhino (which can be tracked in the Palmwag region). The secretive brown hyena is sometimes seen lurking around seal colonies on the coast. Other marine wildlife includes the rare Heaviside’s dolphin and migrating southern right whale.";
-        const photoHighlightsContainer = document.querySelector(
-          "[data-site-wildlife-photo-highlights] .swiper-wrapper"
-        );
-        if (photoHighlightsContainer && wildlife.photoHighlights) {
-          photoHighlightsContainer.innerHTML = wildlife.photoHighlights
-            .map(
-              (image) => `
-                    <div class="swiper-slide wildlife-card wildlife-photo">
-                        <img src="${image}" alt="Wildlife Photo" />
-                    </div>
-                `
-            )
-            .join("");
+        const wetSeasonList = document.querySelector('[data-site-bestTime-wetSeason-list]');
+        if (wetSeasonList && bestTime.wetSeason.list) {
+          wetSeasonList.innerHTML = bestTime.wetSeason.list.map(item => `<li>${item}</li>`).join('');
         }
+
+        document.querySelector('[data-site-bestTime-parkGuide-title]').textContent = bestTime.parkGuideTitle;
+        document.querySelector('[data-site-bestTime-parkGuide-text]').textContent = bestTime.parkGuideText;
       }
-    })
-    .catch((error) => console.error("Error fetching site data:", error));
+
+      // Populate Getting There Tab
+      const gettingThere = site.gettingThere;
+      if (gettingThere) {
+        const gettingThereTextElement = document.querySelector('[data-site-gettingThere-text]');
+        if (gettingThereTextElement) gettingThereTextElement.textContent = gettingThere.text;
+
+        const passportElement = document.querySelector('[data-site-gettingThere-passport]');
+        if (passportElement) passportElement.textContent = gettingThere.passport;
+
+        const visaElement = document.querySelector('[data-site-gettingThere-visa]');
+        if (visaElement) visaElement.textContent = gettingThere.visa;
+
+        const childrenElement = document.querySelector('[data-site-gettingThere-children]');
+        if (childrenElement) childrenElement.textContent = gettingThere.children;
+      }
+
+                  // Populate Safety Tab
+                  const safety = site.safety;
+                  if (safety) {
+                    document.querySelector('[data-site-safety-title]').textContent = safety.title;
+                    document.querySelector('[data-site-safety-text]').textContent = safety.text;
+                    document.querySelector('[data-site-safety-wildlife]').textContent = safety.wildlife;
+                    document.querySelector('[data-site-safety-cities]').textContent = safety.cities;
+                    document.querySelector('[data-site-safety-other]').textContent = safety.other;
+      
+                    const citiesList = document.querySelector('[data-site-safety-citiesList]');
+                    if (citiesList && safety.citiesList) {
+                      citiesList.innerHTML = safety.citiesList.map(item => `<li>${item}</li>`).join('');
+                    }
+                  }
+      
+  })
+  .catch(error => console.error("Error fetching site data:", error));
 });
+
+
 
 // Function to open the selected tab
 function openTab(evt, tabName) {
@@ -346,26 +404,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-  });
-});
-
-// JavaScript for Booking Widget
-document.addEventListener("DOMContentLoaded", function () {
-  const bookingForm = document.querySelector(".booking-form");
-
-  bookingForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Get form values
-    const destination = document.getElementById("destination").value;
-    const checkIn = document.getElementById("check-in").value;
-    const checkOut = document.getElementById("check-out").value;
-    const guests = document.getElementById("guests").value;
-
-    // Simulate search (replace with actual booking logic)
-    alert(
-      `Searching for safaris in ${destination} from ${checkIn} to ${checkOut} for ${guests} guests.`
-    );
   });
 });
 

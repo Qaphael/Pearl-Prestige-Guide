@@ -6,9 +6,7 @@
       "title": "Unforgettable Adventures Qaphael",
       "topic": "Discover Your Next Destination",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sequi, rem magnam nesciunt minima placeat.",
-      "images": [
-        "images/hero/hero1.jpg"
-      ],
+      "images": ["images/hero/hero1.jpg"],
       "overview": {
         "text": "<p>Qaphael Uganda, often referred to as the 'Pearl of Africa,' boasts diverse landscapes, abundant wildlife, and rich cultural heritage. From the misty mountains of Bwindi to the expansive savannas of Queen Elizabeth National Park, Uganda offers a unique safari experience.</p>",
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug",
@@ -17,8 +15,16 @@
           "highSeason": "June to September (Popular parks may be crowded)",
           "size": "241,038 km² / 93,065 mi²"
         },
-        "pros": ["Exceptional gorilla trekking experiences", "Rich birdlife with over 1,000 species", "Scenic landscapes including mountains and lakes", "Friendly and welcoming locals"],
-        "cons": ["Some areas have underdeveloped infrastructure", "Malaria is prevalent; precautions are necessary qaph"],
+        "pros": [
+          "Exceptional gorilla trekking experiences",
+          "Rich birdlife with over 1,000 species",
+          "Scenic landscapes including mountains and lakes",
+          "Friendly and welcoming locals"
+        ],
+        "cons": [
+          "Some areas have underdeveloped infrastructure",
+          "Malaria is prevalent; precautions are necessary qaph"
+        ],
         "reviews": {
           "score": "4.8",
           "count": "Based on 1,248 reviews",
@@ -36,12 +42,12 @@
               "text": "Great value for money. The product exceeded my expectations in terms of functionality.",
               "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
             },
-             {
+            {
               "name": "Michael Brown",
               "text": "The adventure activities were the highlight of our trip! The guides were knowledgeable and made everything so much fun.",
               "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
             },
-             {
+            {
               "name": "Emily Davis",
               "text": "The travel insurance gave us peace of mind during our trip. Thankfully, we didn’t need it, but it was great to know we were covered.",
               "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
@@ -127,39 +133,10 @@
           }
         ]
       },
-      "reviews": {
-        "score": "4.8",
-        "count": "Based on 1,248 reviews",
-        "quality": "4.6",
-        "value": "4.4",
-        "usability": "4.8",
-        "list": [
-          {
-            "name": "James Wilson",
-            "text": "Exceptional quality and outstanding customer service. The attention to detail is remarkable.",
-            "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-          },
-          {
-            "name": "Sarah Thompson",
-            "text": "Great value for money. The product exceeded my expectations in terms of functionality.",
-            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-          },
-           {
-              "name": "Michael Brown",
-              "text": "The adventure activities were the highlight of our trip! The guides were knowledgeable and made everything so much fun.",
-              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-            },
-             {
-              "name": "Emily Davis",
-              "text": "The travel insurance gave us peace of mind during our trip. Thankfully, we didn’t need it, but it was great to know we were covered.",
-              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-            }
-        ]
-      },
       "wildlife": {
         "text": "Uganda is home to a variety of wildlife, including the Big Five. The country is particularly renowned for its primate population, especially the endangered mountain gorillas and chimpanzees.",
         "activities": "Popular activities include gorilla and chimpanzee trekking, game drives, bird watching, boat safaris, and cultural tours.",
-         "abundance": [
+        "abundance": [
           {
             "name": "Elephant",
             "abundance": "Common",
@@ -178,52 +155,52 @@
           {
             "name": "Buffalo",
             "abundance": "Very Rare",
-             "image": "images/stories/img4.jpg"
+            "image": "images/stories/img4.jpg"
           },
           {
             "name": "Zebra",
             "abundance": "Common",
-             "image": "images/stories/img1.jpg"
+            "image": "images/stories/img1.jpg"
           },
           {
             "name": "Wildebeest Qaphael",
             "abundance": "Common",
-             "image": "images/stories/img2.jpg"
+            "image": "images/stories/img2.jpg"
           },
           {
             "name": "White Rhino",
             "abundance": "Occasional",
-             "image": "images/stories/img1.jpg"
+            "image": "images/stories/img1.jpg"
           },
           {
             "name": "Black Rhino",
             "abundance": "Occasional",
-             "image": "images/stories/img3.jpg"
+            "image": "images/stories/img3.jpg"
           },
           {
             "name": "Lion",
             "abundance": "Occasional",
-             "image": "images/stories/img1.jpg"
+            "image": "images/stories/img1.jpg"
           },
           {
             "name": "Leopard",
             "abundance": "Rare",
-             "image": "images/stories/img3.jpg"
+            "image": "images/stories/img3.jpg"
           },
           {
             "name": "Cheetah",
             "abundance": "Rare",
-             "image": "images/stories/img2.jpg"
+            "image": "images/stories/img2.jpg"
           },
           {
             "name": "Hyena",
             "abundance": "Occasional",
-             "image": "images/stories/img4.jpg"
+            "image": "images/stories/img4.jpg"
           },
           {
             "name": "Wild Dog",
             "abundance": "Rare",
-             "image": "images/stories/img3.jpg"
+            "image": "images/stories/img3.jpg"
           }
         ],
         "photoHighlights": [
@@ -236,20 +213,164 @@
         ]
       },
       "bestTime": {
-        "text": "The dry seasons from June to August and December to February are ideal for wildlife viewing and trekking activities.",
-        "weather": "Uganda enjoys a tropical climate with two dry seasons (December to February, June to August) and two wet seasons (March to May, September to November). Temperatures are generally pleasant, ranging from 21°C to 25°C (70°F to 77°F)."
+        "title": "Qaphael Best Time To Visit – Namibia",
+        "overviewText": "The best time to visit Namibia is during the Dry season (May to October). However, it can be visited year-round as the climate is generally dry and pleasant. Wildlife viewing in all parks, but especially in Etosha National Park, is best in the drier months. In the Wet season (November to April), animals move away from the waterholes and scatter around the parks. Between December and March, some days will be humid and rain may follow, often in localized afternoon thunderstorms.",
+        "bestTime": "QMay to September (Most parks)",
+        "highSeason": "July to October or November (Will not feel too crowded, except for Etosha and around Sossusvlei)",
+        "lowSeason": "November or December to June (All parks are very quiet)",
+        "bestWeather": "May to August (Moderate temperatures, little to no rainfall, green landscape)",
+        "worstWeather": "October or November to March (Very hot)",
+        "drySeason": {
+          "title": "May to October – Dry Season – Winter",
+          "list": [
+            "Wildlife gathers around rivers and waterholes, making animals easier to spot – this is the best time to visit Etosha National Park.",
+            "It’s sunny with no clouds and there is virtually no rain.",
+            "Even though most tourists visit during the Dry season, the parks still don’t feel crowded (except for Etosha and parts of Namib-Naukluft National Park).",
+            "It gets cold at night and in the mornings; pack warm clothes for morning game drives from June to August."
+          ]
+        },
+        "wetSeason": {
+          "title": "November to April – Wet Season – Summer",
+          "list": [
+            "The scenery is greener and there are newborn animals.",
+            "Rates are lower because it’s low season.",
+            "Migratory birds are present and birding is at its best.",
+            "Rains are mostly short showers in the afternoon and rarely have a negative impact on your trip.",
+            "It gets very hot from October or November to March.",
+            "It’s more difficult to spot animals, especially in Etosha."
+          ]
+        }
       },
       "gettingThere": {
-        "text": "Uganda is accessible by air, with Entebbe International Airport being the main gateway. Several airlines offer direct flights from major cities worldwide.",
+        "text": "Qaphael Uganda is accessible by air, with Entebbe International Airport being the main gateway. Several airlines offer direct flights from major cities worldwide.",
         "passport": "A passport is required for all foreign visitors and must be valid for at least six months.",
-        "visa": "Citizens from most countries do not require a visa and will receive a 30-day entry permit on arrival.",
-        "children": "Children under 18 must have a certified copy of their full, unabridged birth certificate and a valid passport. If traveling with only one parent or no parents, an affidavit from the missing parent(s) is required."
+        "visa": "qCitizens from most countries do not require a visa and will receive a 30-day entry permit on arrival.",
+        "children": "qaphael Children under 18 must have a certified copy of their full, unabridged birth certificate and a valid passport. If traveling with only one parent or no parents, an affidavit from the missing parent(s) is required."
       },
       "safety": {
         "text": "Uganda is a relatively safe country for tourists. However, it's important to take precautions against petty theft and scams, especially in urban areas. It's also advisable to consult your doctor about necessary vaccinations and malaria prevention.",
-        "wildlife": "Your safari guide will prioritize your safety at all times. Listen carefully to their instructions and always follow the park rules. When on a self-drive safari, don’t drive too close to wildlife and only leave your car in designated areas where it is safe to do so.",
+        "wildlife": "qaYour safari guide will prioritize your safety at all times. Listen carefully to their instructions and always follow the park rules. When on a self-drive safari, don’t drive too close to wildlife and only leave your car in designated areas where it is safe to do so.",
         "cities": "Namibian cities are relatively safe. Most crime issues are minor, such as petty theft and pickpocketing. On an organized tour, you will mostly be sheltered from these risks by your guide. When venturing out in cities unguided, you can reduce being at risk by following a few simple precautions:",
-        "citiesList": ["Get advice at your hotel before taking a walk in the city.", "Don’t carry any valuables and only take limited money with you.", "Don’t walk after dark; rather take a taxi.", "Never leave valuables visible in your car."]
+        "citiesList": [
+          "Get advice at your hotel before taking a walk in the city.",
+          "Don’t carry any valuables and only take limited money with you.",
+          "Don’t walk after dark; rather take a taxi.",
+          "Never leave valuables visible in your car."
+        ]
+      }
+    },
+    {
+      "id": "nature",
+      "author": "Experience Nature",
+      "title": "Breathtaking Landscapes",
+      "topic": "Immerse Yourself in Beauty",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sequi, rem magnam nesciunt minima placeat.",
+      "images": ["images/hero/hero2.jpg"],
+      "overview": {
+        "text": "<p>This is the overview for the nature site.</p>",
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug",
+        "keyInfo": {
+          "bestTime": "October to December",
+          "highSeason": "November to January",
+          "size": "100,000 km²"
+        },
+        "pros": ["Beautiful scenery", "Peaceful environment"],
+        "cons": ["Limited facilities", "Remote location"],
+        "reviews": {
+          "score": "4.5",
+          "count": "Based on 500 reviews",
+          "quality": "4.2",
+          "value": "4.0",
+          "usability": "4.7",
+          "list": [
+            {
+              "name": "Jane Doe",
+              "text": "The scenery was breathtaking.",
+              "stars": 4,
+              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+            },
+            {
+              "name": "Peter Smith",
+              "text": "A very peaceful and relaxing place.",
+              "stars": 4.5,
+              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+            }
+          ]
+        },
+        "wildlife": {
+          "text": "This area is known for its diverse plant life.",
+          "activities": "Hiking and nature walks are popular."
+        },
+        "bestTime": {
+          "text": "The best time to visit is during the spring.",
+          "weather": "The weather is mild and pleasant."
+        }
+      },
+      "parks": {
+        "premierParks": [
+          {
+            "name": "QaphaelEtosha National Park",
+            "location": "Namibia",
+            "rating": "4.6",
+            "description": "Classic safaris with abundant wildlife during the Dry season.",
+            "price": "From US$50",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Giraffe",
+            "abundance": "Common",
+            "image": "images/stories/img2.jpg"
+          }
+        ],
+        "allParks": [
+          {
+            "name": "Elephant",
+            "abundance": "Common",
+            "image": "images/stories/img1.jpg"
+          },
+          {
+            "name": "Giraffe",
+            "abundance": "Common",
+            "image": "images/stories/img2.jpg"
+          }
+        ]
+      },
+      "wildlife": {
+        "text": "This area is known for its diverse plant life.",
+        "activities": "Hiking and nature walks are popular."
+      },
+      "bestTime": {
+        "title": "Best Time To Visit – Nature",
+        "overviewText": "The best time to visit is during the spring.",
+        "bestTime": "Spring",
+        "highSeason": "Summer",
+        "lowSeason": "Winter",
+        "bestWeather": "Mild",
+        "worstWeather": "Extreme heat",
+        "drySeason": {
+          "title": "Spring",
+          "list": ["Flowers are in bloom.", "The weather is mild."]
+        },
+        "wetSeason": {
+          "title": "Summer",
+          "list": ["It can get very hot.", "Rain is possible."]
+        }
+      },
+      "gettingThere": {
+        "text": "This area is accessible by car.",
+        "passport": "A passport is not required.",
+        "visa": "A visa is not required.",
+        "children": "No special requirements for children."
+      },
+      "safety": {
+        "text": "This area is generally safe.",
+        "wildlife": "Be aware of local wildlife.",
+        "cities": "The nearby towns are safe.",
+        "citiesList": [
+          "Be aware of your surroundings.",
+          "Keep valuables safe."
+        ],
+        "other": "Follow local guidelines."
       }
     }
   ]

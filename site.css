@@ -28,11 +28,13 @@ header {
   width: 100%;
   height: 250px; /* Adjust as needed */
   object-fit: cover;
+  border-radius: 1.5rem;
 }
 
 h1.imgpagehead-title {
   color: var(--color--white);
   text-align: center;
+  font-size: 2rem;
 }
 
 .imgpagehead-title {
@@ -42,7 +44,7 @@ h1.imgpagehead-title {
 }
 
 .imgpagehead-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
 }
 
@@ -81,11 +83,12 @@ h1.imgpagehead-title {
   position: sticky;
   float: left;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: var(--color--white);
   width: 30%;
   min-width: 200px;
   height: calc(100vh - 40px);
   top: 20px;
+  border-radius: 1rem;
 }
 
 .tabcontent {
@@ -659,6 +662,10 @@ h3.name {
   background-color: #f4fbf2;
   border-left: 4px solid #4fb28f;
   margin-bottom: 20px;
+}
+
+.expert-section .experts-swiper .swiper-wrapper {
+  height: 250px !important;
 }
 
 .expert-title {
@@ -1730,6 +1737,31 @@ img.profile-pic {
 .expert-card .btn:hover {
   background: #e65a50;
 }
+
+/* Wildlife Photo Highlights Grid */
+.photo-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Spacing between images */
+  padding: 1rem 0; /* Add some padding */
+}
+
+.wildlife-photo {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.wildlife-photo:hover {
+  transform: scale(1.1);
+}
+
 
 /* Responsive spacing for small screens */
 @media (max-width: 768px) {
