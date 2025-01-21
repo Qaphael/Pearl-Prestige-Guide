@@ -1,113 +1,254 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const siteId = urlParams.get('id');
+  const siteId = urlParams.get("id");
 
   if (!siteId) {
-      console.error("No site ID provided in the URL.");
-      return;
+    console.error("No site ID provided in the URL.");
+    return;
   }
 
-  fetch('site-data.json')
-      .then(response => response.json())
-      .then(data => {
-          const site = data.sites.find(site => site.id === siteId);
+  fetch("site-data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const site = data.sites.find((site) => site.id === siteId);
 
-          if (!site) {
-              console.error(`Site with ID '${siteId}' not found.`);
-              return;
-          }
+      if (!site) {
+        console.error(`Site with ID '${siteId}' not found.`);
+        return;
+      }
 
-          // Update the content based on the selected site
-          const pageHeadSection = document.querySelector('.page-head-section');
-          if (pageHeadSection) {
-              const imgElement = pageHeadSection.querySelector('.pageheadimg');
-              if (imgElement) {
-                  imgElement.src = site.images[0];
-                  imgElement.alt = site.title;
-              }
-              const titleElement = pageHeadSection.querySelector('.imgpagehead-title');
-              if (titleElement) {
-                  titleElement.textContent = site.title;
-              }
-              const subtitleElement = pageHeadSection.querySelector('.imgpagehead-subtitle');
-              if (subtitleElement) {
-                  subtitleElement.textContent = site.description;
-              }
-          }
+      // Update the content based on the selected site
+      const pageHeadSection = document.querySelector(".page-head-section");
+      if (pageHeadSection) {
+        const imgElement = pageHeadSection.querySelector(".pageheadimg");
+        if (imgElement) {
+          imgElement.src = site.images[0];
+          imgElement.alt = site.title;
+        }
+        const titleElement =
+          pageHeadSection.querySelector(".imgpagehead-title");
+        if (titleElement) {
+          titleElement.textContent = site.title;
+        }
+        const subtitleElement = pageHeadSection.querySelector(
+          ".imgpagehead-subtitle"
+        );
+        if (subtitleElement) {
+          subtitleElement.textContent = site.description;
+        }
+      }
 
-          // Populate Overview Tab
-          const overview = site.overview;
-          console.log("Overview data:", overview);
+      // Populate Overview Tab
+      const overview = site.overview;
+      if (overview) {
+        document.querySelector("[data-site-overview-text]").innerHTML =
+          overview.text;
+        document.querySelector("[data-site-overview-map]").src = overview.map;
+        document.querySelector("[data-site-overview-bestTime]").textContent =
+          overview.keyInfo.bestTime;
+        document.querySelector("[data-site-overview-highSeason]").textContent =
+          overview.keyInfo.highSeason;
+        document.querySelector("[data-site-overview-size]").textContent =
+          overview.keyInfo.size;
 
-          const overviewTextElement = document.querySelector('[data-site-overview-text]');
-          console.log("Text element:", overviewTextElement);
-          console.log("Text content:", overview.text);
-          if (overviewTextElement) overviewTextElement.innerHTML = overview.text;
+        const prosList = document.querySelector("[data-site-overview-pros]");
+        if (prosList)
+          prosList.innerHTML = overview.pros
+            .map((pro) => `<li>${pro}</li>`)
+            .join("");
 
-          document.querySelector('[data-site-overview-map]').src = overview.map;
+        const consList = document.querySelector("[data-site-overview-cons]");
+        if (consList)
+          consList.innerHTML = overview.cons
+            .map((con) => `<li>${con}</li>`)
+            .join("");
 
-          const bestTimeElement = document.querySelector('[data-site-overview-bestTime]');
-          console.log("Best Time element:", bestTimeElement);
-          console.log("Best Time content:", overview.keyInfo.bestTime);
-          if (bestTimeElement) bestTimeElement.textContent = overview.keyInfo.bestTime;
+        document.querySelector(
+          "[data-site-overview-wildlife-text]"
+        ).textContent = overview.wildlife.text;
+        document.querySelector(
+          "[data-site-overview-activities-text]"
+        ).textContent = overview.wildlife.activities;
+        document.querySelector(
+          "[data-site-overview-weather-text]"
+        ).textContent = overview.bestTime.weather;
+        document.querySelector(
+          "[data-site-overview-bestTime-text]"
+        ).textContent = overview.bestTime.text;
+      }
 
-          const highSeasonElement = document.querySelector('[data-site-overview-highSeason]');
-          console.log("High Season element:", highSeasonElement);
-          console.log("High Season content:", overview.keyInfo.highSeason);
-          if (highSeasonElement) highSeasonElement.textContent = overview.keyInfo.highSeason;
+      // Populate Parks & Reserves Tab
+      const parks = site.parks;
+      const premierParksContainer = document.querySelector(
+        "[data-site-parks-premier] .parks-grid"
+      );
+      if (premierParksContainer && parks && parks.premierParks) {
+        premierParksContainer.innerHTML = parks.premierParks
+          .map(
+            (park) => `
+                  <div class="park-card">
+                      <img src="${park.image}" alt="${park.name}" class="park-image" />
+                      <div class="park-info">
+                          <h3 class="park-title">${park.name}</h3>
+                          <div class="location-rating">
+                              <p class="park-location">${park.location}</p>
+                              <p class="park-rating">
+                                  <span class="rating-score">${park.rating}</span> · Exceptional
+                              </p>
+                          </div>
+                          <p class="park-description">${park.description}</p>
+                          <div class="park-actions">
+                              <p class="price">
+                                  From <span class="price-value">${park.price}</span>
+                              </p>
+                              <a href="#" class="btn-view-more">View More</a>
+                          </div>
+                      </div>
+                  </div>
+              `
+          )
+          .join("");
+      }
 
-          const sizeElement = document.querySelector('[data-site-overview-size]');
-          console.log("Size element:", sizeElement);
-          console.log("Size content:", overview.keyInfo.size);
-          if (sizeElement) sizeElement.textContent = overview.keyInfo.size;
+      const allParksContainer = document.querySelector(
+        "[data-site-parks-all] .parks-grid"
+      );
+      if (allParksContainer && parks && parks.allParks) {
+        allParksContainer.innerHTML = parks.allParks
+          .map(
+            (park) => `
+                  <div class="park-card">
+                      <img src="${park.image}" alt="${park.name}" class="park-image" />
+                      <div class="park-info">
+                          <h3 class="park-title">${park.name}</h3>
+                          <div class="location-rating">
+                              <p class="park-location">${park.location}</p>
+                              <p class="park-rating">
+                                  <span class="rating-score">${park.rating}</span> · Exceptional
+                              </p>
+                          </div>
+                          <p class="park-description">${park.description}</p>
+                          <div class="park-actions">
+                              <p class="price">
+                                  From <span class="price-value">${park.price}</span>
+                              </p>
+                              <a href="#" class="btn-view-more">View More</a>
+                          </div>
+                      </div>
+                  </div>
+              `
+          )
+          .join("");
+      }
 
-          const prosList = document.querySelector('[data-site-overview-pros]');
-          console.log("Pros list element:", prosList);
-          console.log("Pros content:", overview.pros);
-          if (prosList) prosList.innerHTML = overview.pros.map(pro => `<li>${pro}</li>`).join('');
+      // Populate Reviews Tab
+      const reviews = site.overview.reviews;
+      if (reviews) {
+        document.querySelector("[data-site-reviews-score]").textContent =
+          reviews.score;
+        document.querySelector("[data-site-reviews-count]").textContent =
+          reviews.count;
+        document.querySelector("[data-site-reviews-quality]").textContent =
+          reviews.quality;
+        document.querySelector("[data-site-reviews-value]").textContent =
+          reviews.value;
+        document.querySelector("[data-site-reviews-usability]").textContent =
+          reviews.usability;
 
-          const consList = document.querySelector('[data-site-overview-cons]');
-          console.log("Cons list element:", consList);
-          console.log("Cons content:", overview.cons);
-          if (consList) consList.innerHTML = overview.cons.map(con => `<li>${con}</li>`).join('');
+        const reviewsListContainer = document.querySelector(
+          "[data-site-reviews-list]"
+        );
+        if (reviewsListContainer && reviews.list) {
+          reviewsListContainer.innerHTML = ""; // Clear existing content
+          reviews.list.forEach((review, index) => {
+            const reviewItem = document.createElement("div");
+            reviewItem.classList.add("review-item");
+            reviewItem.innerHTML = `
+                      <div class="profile-review-title">
+                          <div class="profile-card">
+                              <img
+                                  src="${review.image}"
+                                  alt="${review.name}"
+                                  class="profile-pic"
+                              />
+                              <div class="profile-info">
+                                  <p class="reviewer-name">${review.name}</p>
+                                  <div class="review-rating">
+                                      <span class="rating-score">4.5</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <h3 class="review-title">Poor quality spray nozzle</h3>
+                      </div>
+                      <p class="review-meta">
+                          <span class="review-location"
+                              >Reviewed in the United States</span
+                          >
+                          on <span class="review-date">August 23, 2019</span> |
+                          <span class="review-style">Style: Cashmere Woods</span> |
+                          <span class="verified">Verified Purchase</span>
+                      </p>
+                      <p class="review-content">
+                          ${review.text}
+                      </p>
+                  `;
+            reviewsListContainer.appendChild(reviewItem);
+          });
+        }
+      }
 
-          document.querySelector('[data-site-overview-reviews-score]').textContent = overview.reviews.score;
-          document.querySelector('[data-site-overview-reviews-count]').textContent = overview.reviews.count;
-          document.querySelector('[data-site-overview-reviews-quality]').textContent = overview.reviews.quality;
-          document.querySelector('[data-site-overview-reviews-value]').textContent = overview.reviews.value;
-          document.querySelector('[data-site-overview-reviews-usability]').textContent = overview.reviews.usability;
+      // Populate Wildlife Tab
+      const wildlife = site.wildlife;
+      if (wildlife) {
+        document.querySelector("[data-site-wildlife-text]").textContent =
+          wildlife.text;
+        document.querySelector(
+          "[data-site-wildlife-abundance-title]"
+        ).textContent = "Wildlife Abundance";
+        const wildlifeAbundanceContainer = document.querySelector(
+          "[data-site-wildlife-abundance]"
+        );
+        if (wildlifeAbundanceContainer && wildlife.abundance) {
+          wildlifeAbundanceContainer.innerHTML = wildlife.abundance
+            .map(
+              (animal) => `
+                    <div class="wildlife-card">
+                        <img src="${animal.image}" alt="${animal.name}" />
+                        <div class="wildlife-info">
+                            <h4>${animal.name}</h4>
+                            <p>Abundance: ${animal.abundance}</p>
+                        </div>
+                    </div>
+                `
+            )
+            .join("");
+        }
 
-          document.querySelector('[data-site-overview-reviews-review1-name]').textContent = overview.reviews.review1.name;
-          document.querySelector('[data-site-overview-reviews-review1-text]').textContent = overview.reviews.review1.text;
-          document.querySelector('[data-site-overview-reviews-review1-image]').src = overview.reviews.review1.image;
-
-          document.querySelector('[data-site-overview-reviews-review2-name]').textContent = overview.reviews.review2.name;
-          document.querySelector('[data-site-overview-reviews-review2-text]').textContent = overview.reviews.review2.text;
-          document.querySelector('[data-site-overview-reviews-review2-image]').src = overview.reviews.review2.image;
-
-          const wildlifeTextElement = document.querySelector('[data-site-overview-wildlife-text]');
-          console.log("Wildlife text element:", wildlifeTextElement);
-          console.log("Wildlife text content:", overview.wildlife.text);
-          if (wildlifeTextElement) wildlifeTextElement.textContent = overview.wildlife.text;
-
-          const activitiesTextElement = document.querySelector('[data-site-overview-activities-text]');
-          console.log("Activities text element:", activitiesTextElement);
-          console.log("Activities text content:", overview.wildlife.activities);
-          if (activitiesTextElement) activitiesTextElement.textContent = overview.wildlife.activities;
-
-          const weatherTextElement = document.querySelector('[data-site-overview-weather-text]');
-          console.log("Weather text element:", weatherTextElement);
-          console.log("Weather text content:", overview.bestTime.weather);
-          if (weatherTextElement) weatherTextElement.textContent = overview.bestTime.weather;
-
-          const bestTimeTextElement = document.querySelector('[data-site-overview-bestTime-text]');
-          console.log("Best Time text element:", bestTimeTextElement);
-          console.log("Best Time text content:", overview.bestTime.text);
-          if (bestTimeTextElement) bestTimeTextElement.textContent = overview.bestTime.text;
-      })
-      .catch(error => console.error("Error fetching site data:", error));
+        document.querySelector(
+          "[data-site-wildlife-highlights-title]"
+        ).textContent = "Wildlife Highlights";
+        document.querySelector(
+          "[data-site-wildlife-highlights-text]"
+        ).textContent =
+          "Damaraland and the neighboring Kunene region are home to a healthy population of desert-adapted elephants and lions, as well as a smaller population of black rhino (which can be tracked in the Palmwag region). The secretive brown hyena is sometimes seen lurking around seal colonies on the coast. Other marine wildlife includes the rare Heaviside’s dolphin and migrating southern right whale.";
+        const photoHighlightsContainer = document.querySelector(
+          "[data-site-wildlife-photo-highlights] .swiper-wrapper"
+        );
+        if (photoHighlightsContainer && wildlife.photoHighlights) {
+          photoHighlightsContainer.innerHTML = wildlife.photoHighlights
+            .map(
+              (image) => `
+                    <div class="swiper-slide wildlife-card wildlife-photo">
+                        <img src="${image}" alt="Wildlife Photo" />
+                    </div>
+                `
+            )
+            .join("");
+        }
+      }
+    })
+    .catch((error) => console.error("Error fetching site data:", error));
 });
-
 
 // Function to open the selected tab
 function openTab(evt, tabName) {
@@ -335,5 +476,3 @@ tabFiltersBackdrop.addEventListener("click", () => {
   sideBarTab.classList.remove("active"); // Hide the sidebar
   tabFiltersBackdrop.classList.remove("active"); // Hide the backdrop
 });
-
-

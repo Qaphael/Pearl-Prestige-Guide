@@ -1,53 +1,256 @@
 {
-    "sites": [
-      {
-        "id": "adventure",
-        "author": "Explore the World",
-        "title": "Unforgettable Adventures Qaphael",
-        "topic": "Discover Your Next Destination",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sequi, rem magnam nesciunt minima placeat.",
-        "images": [
-          "images/hero/hero1.jpg"
-        ],
-        "overview": {
-          "text": "<p>Uganda, often referred to as the 'Pearl of Africa,' boasts diverse landscapes, abundant wildlife, and rich cultural heritage. From the misty mountains of Bwindi to the expansive savannas of Queen Elizabeth National Park, Uganda offers a unique safari experience.</p>",
-          "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug",
-          "keyInfo": {
-            "bestTime": "June to September (Dry season)",
-            "highSeason": "June to September (Popular parks may be crowded)",
-            "size": "241,038 km² / 93,065 mi²"
-          },
-          "pros": ["Exceptional gorilla trekking experiences", "Rich birdlife with over 1,000 species", "Scenic landscapes including mountains and lakes", "Friendly and welcoming locals"],
-          "cons": ["Some areas have underdeveloped infrastructure", "Malaria is prevalent; precautions are necessary"],
-          "reviews": {
-            "score": "4.8",
-            "count": "Based on 1,248 reviews",
-            "quality": "4.6",
-            "value": "4.4",
-            "usability": "4.8",
-            "review1": {
+  "sites": [
+    {
+      "id": "adventure",
+      "author": "Explore the World",
+      "title": "Unforgettable Adventures Qaphael",
+      "topic": "Discover Your Next Destination",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sequi, rem magnam nesciunt minima placeat.",
+      "images": [
+        "images/hero/hero1.jpg"
+      ],
+      "overview": {
+        "text": "<p>Qaphael Uganda, often referred to as the 'Pearl of Africa,' boasts diverse landscapes, abundant wildlife, and rich cultural heritage. From the misty mountains of Bwindi to the expansive savannas of Queen Elizabeth National Park, Uganda offers a unique safari experience.</p>",
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992374.1211261343!2d29.535819802211764!3d1.3733339792246198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a7c23e579f03%3A0x93c03e6bc43d78e2!2sUganda!5e0!3m2!1sen!2sug!4v1612976817182!5m2!1sen!2sug",
+        "keyInfo": {
+          "bestTime": "June to September (Dry season)",
+          "highSeason": "June to September (Popular parks may be crowded)",
+          "size": "241,038 km² / 93,065 mi²"
+        },
+        "pros": ["Exceptional gorilla trekking experiences", "Rich birdlife with over 1,000 species", "Scenic landscapes including mountains and lakes", "Friendly and welcoming locals"],
+        "cons": ["Some areas have underdeveloped infrastructure", "Malaria is prevalent; precautions are necessary qaph"],
+        "reviews": {
+          "score": "4.8",
+          "count": "Based on 1,248 reviews",
+          "quality": "4.6",
+          "value": "4.4",
+          "usability": "4.8",
+          "list": [
+            {
               "name": "James Wilson",
               "text": "Exceptional quality and outstanding customer service. The attention to detail is remarkable.",
-              "stars": 5,
               "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
             },
-            "review2": {
+            {
               "name": "Sarah Thompson",
               "text": "Great value for money. The product exceeded my expectations in terms of functionality.",
-              "stars": 4.5,
               "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+            },
+             {
+              "name": "Michael Brown",
+              "text": "The adventure activities were the highlight of our trip! The guides were knowledgeable and made everything so much fun.",
+              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+            },
+             {
+              "name": "Emily Davis",
+              "text": "The travel insurance gave us peace of mind during our trip. Thankfully, we didn’t need it, but it was great to know we were covered.",
+              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
             }
-          },
-          "wildlife": {
-            "text": "Uganda is home to a variety of wildlife, including the Big Five. The country is particularly renowned for its primate population, especially the endangered mountain gorillas and chimpanzees.",
-            "activities": "Popular activities include gorilla and chimpanzee trekking, game drives, bird watching, boat safaris, and cultural tours."
-          },
-          "bestTime": {
-            "text": "The dry seasons from June to August and December to February are ideal for wildlife viewing and trekking activities.",
-            "weather": "Uganda enjoys a tropical climate with two dry seasons (December to February, June to August) and two wet seasons (March to May, September to November). Temperatures are generally pleasant, ranging from 21°C to 25°C (70°F to 77°F)."
-          }
+          ]
+        },
+        "wildlife": {
+          "text": "Uganda is home to a variety of wildlife, including the Big Five. The country is particularly renowned for its primate population, especially the endangered mountain gorillas and chimpanzees.",
+          "activities": "Popular activities include gorilla and chimpanzee trekking, game drives, bird watching, boat safaris, and cultural tours."
+        },
+        "bestTime": {
+          "text": "The dry seasons from June to August and December to February are ideal for wildlife viewing and trekking activities.",
+          "weather": "Uganda enjoys a tropical climate with two dry seasons (December to February, June to August) and two wet seasons (March to May, September to November). Temperatures are generally pleasant, ranging from 21°C to 25°C (70°F to 77°F)."
         }
+      },
+      "parks": {
+        "premierParks": [
+          {
+            "name": "QaphaelEtosha National Park",
+            "location": "Namibia",
+            "rating": "4.6",
+            "description": "Classic safaris with abundant wildlife during the Dry season.",
+            "price": "From US$50",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Namib-Naukluft National Park",
+            "location": "Namibia",
+            "rating": "4.8",
+            "description": "Stunning desert scenery with iconic sand dunes like Sossusvlei.",
+            "price": "From US$45",
+            "image": "images/hero/Bwindi.jpg"
+          }
+        ],
+        "allParks": [
+          {
+            "name": "Etosha National Park",
+            "location": "Namibia",
+            "rating": "4.6",
+            "description": "Classic safaris with abundant wildlife during the Dry season.",
+            "price": "From US$50",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Namib-Naukluft National Park",
+            "location": "Namibia",
+            "rating": "4.8",
+            "description": "Stunning desert scenery with iconic sand dunes like Sossusvlei.",
+            "price": "From US$45",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Skeleton Coast National Park",
+            "location": "Namibia",
+            "rating": "4.1",
+            "description": "Beautiful desert coastline with wildlife, though scarce.",
+            "price": "From US$40",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Bwabwata National Park",
+            "location": "Namibia",
+            "rating": "3.9",
+            "description": "Classic safaris featuring giraffe and four of the Big Five (no rhino).",
+            "price": "From US$35",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "|Ai-|Ais/Richtersveld Transfrontier Park",
+            "location": "Namibia",
+            "rating": "4.0",
+            "description": "Hiking paradise with stunning desert scenery and scarce wildlife.",
+            "price": "From US$30",
+            "image": "images/hero/Bwindi.jpg"
+          },
+          {
+            "name": "Damaraland",
+            "location": "Namibia",
+            "rating": "4.3",
+            "description": "Home to desert-adapted elephants, lions, and rare rhinos.",
+            "price": "From US$55",
+            "image": "images/hero/Bwindi.jpg"
+          }
+        ]
+      },
+      "reviews": {
+        "score": "4.8",
+        "count": "Based on 1,248 reviews",
+        "quality": "4.6",
+        "value": "4.4",
+        "usability": "4.8",
+        "list": [
+          {
+            "name": "James Wilson",
+            "text": "Exceptional quality and outstanding customer service. The attention to detail is remarkable.",
+            "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+          },
+          {
+            "name": "Sarah Thompson",
+            "text": "Great value for money. The product exceeded my expectations in terms of functionality.",
+            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+          },
+           {
+              "name": "Michael Brown",
+              "text": "The adventure activities were the highlight of our trip! The guides were knowledgeable and made everything so much fun.",
+              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+            },
+             {
+              "name": "Emily Davis",
+              "text": "The travel insurance gave us peace of mind during our trip. Thankfully, we didn’t need it, but it was great to know we were covered.",
+              "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+            }
+        ]
+      },
+      "wildlife": {
+        "text": "Uganda is home to a variety of wildlife, including the Big Five. The country is particularly renowned for its primate population, especially the endangered mountain gorillas and chimpanzees.",
+        "activities": "Popular activities include gorilla and chimpanzee trekking, game drives, bird watching, boat safaris, and cultural tours.",
+         "abundance": [
+          {
+            "name": "Elephant",
+            "abundance": "Common",
+            "image": "images/stories/img1.jpg"
+          },
+          {
+            "name": "Giraffe",
+            "abundance": "Common",
+            "image": "images/stories/img2.jpg"
+          },
+          {
+            "name": "Hippo",
+            "abundance": "Occasional",
+            "image": "images/stories/img3.jpg"
+          },
+          {
+            "name": "Buffalo",
+            "abundance": "Very Rare",
+             "image": "images/stories/img4.jpg"
+          },
+          {
+            "name": "Zebra",
+            "abundance": "Common",
+             "image": "images/stories/img1.jpg"
+          },
+          {
+            "name": "Wildebeest Qaphael",
+            "abundance": "Common",
+             "image": "images/stories/img2.jpg"
+          },
+          {
+            "name": "White Rhino",
+            "abundance": "Occasional",
+             "image": "images/stories/img1.jpg"
+          },
+          {
+            "name": "Black Rhino",
+            "abundance": "Occasional",
+             "image": "images/stories/img3.jpg"
+          },
+          {
+            "name": "Lion",
+            "abundance": "Occasional",
+             "image": "images/stories/img1.jpg"
+          },
+          {
+            "name": "Leopard",
+            "abundance": "Rare",
+             "image": "images/stories/img3.jpg"
+          },
+          {
+            "name": "Cheetah",
+            "abundance": "Rare",
+             "image": "images/stories/img2.jpg"
+          },
+          {
+            "name": "Hyena",
+            "abundance": "Occasional",
+             "image": "images/stories/img4.jpg"
+          },
+          {
+            "name": "Wild Dog",
+            "abundance": "Rare",
+             "image": "images/stories/img3.jpg"
+          }
+        ],
+        "photoHighlights": [
+          "images/stories/img1.jpg",
+          "images/stories/img2.jpg",
+          "images/stories/img3.jpg",
+          "images/stories/img4.jpg",
+          "images/stories/img1.jpg",
+          "images/stories/img2.jpg"
+        ]
+      },
+      "bestTime": {
+        "text": "The dry seasons from June to August and December to February are ideal for wildlife viewing and trekking activities.",
+        "weather": "Uganda enjoys a tropical climate with two dry seasons (December to February, June to August) and two wet seasons (March to May, September to November). Temperatures are generally pleasant, ranging from 21°C to 25°C (70°F to 77°F)."
+      },
+      "gettingThere": {
+        "text": "Uganda is accessible by air, with Entebbe International Airport being the main gateway. Several airlines offer direct flights from major cities worldwide.",
+        "passport": "A passport is required for all foreign visitors and must be valid for at least six months.",
+        "visa": "Citizens from most countries do not require a visa and will receive a 30-day entry permit on arrival.",
+        "children": "Children under 18 must have a certified copy of their full, unabridged birth certificate and a valid passport. If traveling with only one parent or no parents, an affidavit from the missing parent(s) is required."
+      },
+      "safety": {
+        "text": "Uganda is a relatively safe country for tourists. However, it's important to take precautions against petty theft and scams, especially in urban areas. It's also advisable to consult your doctor about necessary vaccinations and malaria prevention.",
+        "wildlife": "Your safari guide will prioritize your safety at all times. Listen carefully to their instructions and always follow the park rules. When on a self-drive safari, don’t drive too close to wildlife and only leave your car in designated areas where it is safe to do so.",
+        "cities": "Namibian cities are relatively safe. Most crime issues are minor, such as petty theft and pickpocketing. On an organized tour, you will mostly be sheltered from these risks by your guide. When venturing out in cities unguided, you can reduce being at risk by following a few simple precautions:",
+        "citiesList": ["Get advice at your hotel before taking a walk in the city.", "Don’t carry any valuables and only take limited money with you.", "Don’t walk after dark; rather take a taxi.", "Never leave valuables visible in your car."]
       }
-    ]
-  }
-  
+    }
+  ]
+}
