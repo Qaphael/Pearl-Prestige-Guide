@@ -1,109 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Details Page</title>
-    <link rel="stylesheet" href="news.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="news.css" rel="stylesheet" />
+    <link rel="stylesheet" href="news-detail.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar-left">
+            <img
+              src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d"
+              alt="Logo"
+              class="logo"
+            />
+            <div class="nav-links">
+              <a href="#" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Politics</a>
+              <a href="#" class="nav-link">Technology</a>
+              <a href="#" class="nav-link">Sports</a>
+            </div>
+          </div>
+          <div class="navbar-right">
+            <div class="search-bar">
+              <input type="text" placeholder="Search..." class="search-input" />
+              <button class="search-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </nav>
+        <div class="breaking-news">
+          <div class="marquee">
+            <span>Breaking News: Latest updates on global events</span>
+            <span>COVID-19: New variant discovered</span>
+            <span>Technology: Latest iPhone announcement</span>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Progress Bar -->
     <div class="progress-bar"></div>
 
     <!-- Main Container -->
     <div class="container">
-        <div class="grid">
-            <!-- Main Content -->
-            <main class="main-content">
-                <article>
-                    <!-- Article Header -->
-                    <header class="article-header">
-                        <div class="article-meta">
-                            <span class="category-tag">Technology</span>
-                            <span class="read-time">5 min read</span>
-                        </div>
-                        <h1 class="article-title">The Future of Artificial Intelligence in Modern Technology</h1>
-                        <div class="author-info">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Author" class="author-image">
-                            <div>
-                                <h3 class="author-name">John Doe</h3>
-                                <div class="publish-date">Published on Dec 15, 2023</div>
-                            </div>
-                        </div>
-                    </header>
-
-                    <!-- Featured Image -->
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology" class="featured-image">
-
-                    <!-- Article Content -->
-                    <div class="article-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-
-                        <h2>The Rise of Machine Learning</h2>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
-                        <blockquote>"The future of AI is not just about technology, but about how we can use it to improve human lives."</blockquote>
-
-                        <h2>Impact on Society</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                    </div>
-
-                    <!-- Share Buttons -->
-                    <div class="share-buttons">
-                        <span>Share:</span>
-                        <button class="share-button twitter">Twitter</button>
-                        <button class="share-button facebook">Facebook</button>
-                        <button class="share-button whatsapp">WhatsApp</button>
-                    </div>
-                </article>
-            </main>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <!-- Author Bio -->
-                <div class="author-bio">
-                    <h3>About the Author</h3>
-                    <div class="author-details">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Author" class="author-image">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p>Tech Journalist</p>
-                        </div>
-                    </div>
-                    <p>Technology enthusiast and AI researcher with over 10 years of experience.</p>
+      <div class="content-wrapper">
+        <!-- Main Content -->
+        <main class="main-content">
+          <article>
+            <!-- Article Header -->
+            <div class="hero-section">
+              <!-- Featured Image -->
+              <img
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+                alt="AI Technology"
+                class="hero-image"
+              />
+              <div class="hero-overlay">
+                <div class="article-meta">
+                  <span class="category-tag">Technology</span>
+                  <span class="read-time">5 min read</span>
                 </div>
-
-                <!-- Newsletter -->
-                <div class="newsletter">
-                    <h3>Subscribe to Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address">
-                        <button type="submit">Subscribe</button>
-                    </form>
+                <h1 class="hero-title">
+                  The Future of Artificial Intelligence in Modern Technology
+                </h1>
+                <div class="author-info">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                    alt="Author"
+                    class="author-image"
+                  />
+                  <div>
+                    <h3 class="author-name">John Doe</h3>
+                    <div class="publish-date">Published on Dec 15, 2023</div>
+                  </div>
                 </div>
+              </div>
+            </div>
 
-                <!-- Related Articles -->
-                <div class="related-articles">
-                    <h3>Related Articles</h3>
-                    <div class="article-list">
-                        <a href="#" class="article-item">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="Related Article">
-                            <div>
-                                <h4>The Evolution of AI</h4>
-                                <p>Dec 10, 2023</p>
-                            </div>
-                        </a>
-                    </div>
+            <!-- Article Content -->
+            <div class="article-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </p>
+
+              <h2>The Rise of Machine Learning</h2>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
+              </p>
+
+              <blockquote>
+                "The future of AI is not just about technology, but about how we
+                can use it to improve human lives."
+              </blockquote>
+
+              <h2>Impact on Society</h2>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis.
+              </p>
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+              <span>Share:</span>
+              <button class="share-button twitter">Twitter</button>
+              <button class="share-button facebook">Facebook</button>
+              <button class="share-button whatsapp">WhatsApp</button>
+            </div>
+          </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Author Details -->
+          <div class="author-details">
+            <div class="author-profile">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                alt="Author"
+                class="author-profile-image"
+              />
+              <div class="profile-card">
+                <h3 class="author-name">John Doe</h3>
+                <p class="author-role">Senior Politics Editor</p>
+              </div>
+            </div>
+            <div class="author-contact">
+              <p><i class="fas fa-envelope"></i> john.doe@news.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+              <p><i class="fas fa-pen"></i> 150+ Articles</p>
+            </div>
+            <div class="author-social">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="newsletter">
+            <h3>Subscribe to Newsletter</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <!-- Related Articles -->
+          <div class="related-articles">
+            <h3>Related Articles</h3>
+            <div class="article-list">
+              <a href="#" class="article-item">
+                <img
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+                  alt="Related Article"
+                />
+                <div>
+                  <h4>The Evolution of AI</h4>
+                  <p>Dec 10, 2023</p>
                 </div>
-            </aside>
-        </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <!-- <img
+              src="images/items/apartment/apartment1.jpg" 
+              alt="Storyteller Travel Logo"
+            /> -->
+          <span class="Logo-space">Logo</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+      </div>
+    </footer>
 
     <!-- Back to Top Button -->
     <button class="back-to-top">
-        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
+      <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
     </button>
-</body>
+  </body>
 </html>
