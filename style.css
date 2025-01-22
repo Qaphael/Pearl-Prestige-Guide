@@ -347,7 +347,7 @@ nav ul li a.active {
 header {
   background: rgba(44, 62, 80, 0); /* Transparent header */
   color: white;
-  padding: 0.5rem 0; /* Added padding to give more space */
+  padding: 0.5rem 1rem; /* Added padding to give more space */
   position: fixed;
   top: 0;
   left: 50%; /* Position at 50% from the left */
@@ -365,7 +365,6 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
 }
 
 /* Ensure the logo and navigation are properly aligned */
@@ -519,6 +518,9 @@ header.white-bg a {
 
 /* Mobile Layout */
 @media only screen and (max-width: 768px) {
+  header .container {
+    padding: 0 2rem;
+}
   header .logo {
     flex: 1;
   }
