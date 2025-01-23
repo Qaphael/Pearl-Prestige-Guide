@@ -12,11 +12,11 @@
 }
 
 /* Main Content */
-.main-content {
+.content {
     background-color: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .article-header {
@@ -78,10 +78,10 @@
 .share-buttons {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding-top: 32px;
+    gap: 1rem;
+    padding-top: 1rem;
     border-top: 1px solid #e5e7eb;
-    margin-top: 32px;
+    margin-top: 1rem; 
 }
 
 .share-buttons span {
@@ -89,24 +89,9 @@
 }
 
 .share-button {
+    background-color: var(--primary-color);
     padding: 8px 16px;
-    border-radius: 9999px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.share-button.twitter {
-    background-color: #1da1f2;
-}
-
-.share-button.facebook {
-    background-color: #1877f2;
-}
-
-.share-button.whatsapp {
-    background-color: #25d366;
+    
 }
 
 .share-button:hover {
@@ -118,14 +103,12 @@
     position: sticky;
     top: 1rem;
     height: fit-content;
-    margin-top: 1rem;
 }
 
 .author-bio,
-.newsletter,
-.related-articles {
+.newsletter {
     background-color: white;
-    padding: 24px;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 24px;
@@ -155,17 +138,9 @@
 }
 
 .newsletter-form button {
-    background-color: #2563eb;
-    color: white;
     padding: 8px 16px;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.newsletter-form button:hover {
-    background-color: #1d4ed8;
 }
 
 .related-articles .article-item {
@@ -187,6 +162,7 @@
     font-weight: 500;
     color: #111827;
     margin-bottom: 4px;
+    font-size: 1rem;
 }
 
 .related-articles .article-item p {

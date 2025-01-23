@@ -519,7 +519,7 @@ header.white-bg a {
 /* Mobile Layout */
 @media only screen and (max-width: 768px) {
   header .container {
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
   header .logo {
     flex: 1;
@@ -2448,7 +2448,6 @@ section.latest-stories {
 
 /* Footer */
 footer {
-  text-align: center;
   padding: 2rem 1rem;
   background: var(--background-color);
   font-family: var(--font-primary);
@@ -2485,7 +2484,6 @@ footer {
 .footer-column h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .footer-column ul {
@@ -2530,10 +2528,5 @@ footer p {
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-column {
-    text-align: center;
   }
 }

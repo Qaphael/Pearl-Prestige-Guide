@@ -1,52 +1,29 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9fafb;
-  margin: 0;
-  padding: 0;
-  color: #374151;
+header .container {
+  flex-direction: row;
 }
 
-/* Container */
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-@media (min-width: 1024px) {
-  .container {
-      flex-direction: row;
-  }
-}
-
-/* Main Content */
 .main-content {
-  width: 100%;
-  padding: 24px;
-}
-
-@media (min-width: 1024px) {
-  .main-content {
-      width: 75%;
-  }
-}
+  margin: 0 auto;
+  padding: 0;
+} 
 
 .destination-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-left: 0;
 }
 
 .destination-item {
   background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  gap: 1rem;
+  padding: 0.5rem;
   transition: box-shadow 0.3s;
+  border: 1px solid #ccc;
+  height: 100%;
 }
 
 .destination-item:hover {
@@ -59,18 +36,22 @@ body {
   }
 }
 
+
+
 .destination-image {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 230px;
+  object-fit: cover; /* Ensure the image covers the entire area */
   border-radius: 8px;
+  /*flex: 1;*/ /* Allow the image to grow and fill the available space */
 }
 
 @media (min-width: 768px) {
   .destination-image {
-      width: 192px;
-      height: 160px;
+      width: 175px;
+      height: 200px;
   }
+
 }
 
 .destination-details {
@@ -81,11 +62,13 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: #111827;
+  margin-bottom: 0;
 }
 
 .destination-description {
   color: #6b7280;
   margin-top: 8px;
+  font-size: 0.9rem;
 }
 
 .destination-info {
@@ -98,18 +81,12 @@ body {
 }
 
 .destination-button {
-  background-color: #3b82f6;
-  color: white;
   padding: 8px 24px;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 16px;
+  margin-top: 0.9rem;
 }
 
 .destination-button:hover {
-  background-color: #2563eb;
+  background-color: var(--hover-color);
 }
 
 /* Discount Slider */
@@ -176,25 +153,15 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 100%;
-  background-color: white;
-  padding: 24px;
-}
-
-@media (min-width: 1024px) {
-  .sidebar {
-      width: 25%;
-      position: fixed;
-      right: 0;
-      height: 100vh;
-      overflow-y: auto;
-  }
+  /* background-color: white; */
+  border-radius: 1rem;
+  /* padding: 1rem; */
 }
 
 .sidebar-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1rem;
 }
 
 .search-bar {
@@ -214,6 +181,10 @@ body {
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
+.section-title {
+  font-size: 1.2rem;
+}
+
 .popular-destinations .destination-list {
   display: flex;
   flex-direction: column;
@@ -224,6 +195,10 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.main-section .destination-item {
+  align-items: normal;
 }
 
 .destination-thumbnail {
@@ -256,6 +231,6 @@ body {
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 1.2rem;
+  height: 1.2rem;
 }

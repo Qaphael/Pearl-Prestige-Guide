@@ -3,13 +3,18 @@
       {
         "id": "exploring-hidden-gems",
         "title": "Exploring Hidden Gems",
+        "category": "travel",
         "meta": "October 26, 2023 • 4 min read",
         "image": "images/stories/img4.jpg",
-        "content": "<p>Discover off-the-beaten-path destinations and experience the magic of travel.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+        "blogtitle": "Any title",
+        "content": "<p>Discover off-the-beaten-path destinations and experience the magic of travel.</p><p>qaphael Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        "contentTwo": "<blockquote>The future of AI is not just about technology, but about how we can use it to improve human lives.</blockquote>",
+        "blogSubtitle": "Any subtitle"
       },
       {
         "id": "savoring-local-delights",
         "title": "Savoring Local Delights",
+        "category": "Music",
         "meta": "December 5, 2023 • 3 min read",
         "image": "images/stories/img1.jpg",
         "content": "<p>Indulge in the flavors of authentic cuisine and discover culinary treasures.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
@@ -17,6 +22,7 @@
       {
         "id": "encountering-majestic-animals",
         "title": "Encountering Majestic Animals",
+        "category": "Landscape",
         "meta": "December 18, 2023 • 4 min read",
         "image": "images/stories/img2.jpg",
         "content": "<p>Get up close and personal with incredible wildlife in their natural habitats.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
@@ -24,6 +30,15 @@
       {
         "id": "unwinding-in-serene-escapes",
         "title": "Unwinding in Serene Escapes",
+        "category": "Culture",
+        "meta": "January 2, 2024 • 5 min read",
+        "image": "images/stories/img3.jpg",
+        "content": "<p>Find tranquility and rejuvenation in peaceful and idyllic destinations.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+      },
+      {
+        "id": "unwinding-in-serene-escapes",
+        "title": "Unwinding in Serene Escapes",
+        "category": "Culture",
         "meta": "January 2, 2024 • 5 min read",
         "image": "images/stories/img3.jpg",
         "content": "<p>Find tranquility and rejuvenation in peaceful and idyllic destinations.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Details Page</title>
+    <title title-data-story-title>News Details Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -82,138 +82,120 @@
     <div class="progress-bar"></div>
 
     <!-- Main Container -->
-    <div class="container">
-      <div class="content-wrapper">
-        <!-- Main Content -->
-        <main class="main-content">
-          <article>
-            <!-- Article Header -->
-            <div class="hero-section">
-              <!-- Featured Image -->
-              <img
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
-                alt="AI Technology"
-                class="hero-image"
-              />
-              <div class="hero-overlay">
-                <div class="article-meta">
-                  <span class="category-tag">Technology</span>
-                  <span class="read-time">5 min read</span>
-                </div>
-                <h1 class="hero-title">
-                  The Future of Artificial Intelligence in Modern Technology
-                </h1>
-                <div class="author-info">
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
-                    alt="Author"
-                    class="author-image"
-                  />
-                  <div>
-                    <h3 class="author-name">John Doe</h3>
-                    <div class="publish-date">Published on Dec 15, 2023</div>
+    <section class="main-container">
+      <div class="container">
+        <div class="content-wrapper">
+          <!-- Main Content -->
+          <main class="content">
+            <article>
+              <!-- Article Header -->
+              <div class="hero-section">
+                <!-- Featured Image -->
+                <img
+                  data-story-image
+                  
+                  alt="AI Technology"
+                  class="hero-image"
+                />
+                <div class="hero-overlay">
+                  <div class="article-meta">
+                    <span data-story-category class="category-tag">Technology</span>
+                    <span data-story-meta class="read-time">5 min read</span>
+                  </div>
+                  <h1 data-story-title class="hero-title">
+                    <!-- The Future of Artificial Intelligence in Modern Technology -->
+                  </h1>
+                  <div class="author-info">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="Author" class="author-image" />
+                    <div>
+                      <h3 class="author-name">John Doe</h3>
+                      <div class="publish-date">Published on Dec 15, 2023</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Article Content -->
-            <div class="article-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-              </p>
+              <!-- Article Content -->
+              <div class="article-content">
+                <h2 data-story-blogtitle></h2>
+                <div data-story-content></div>
+                <div data-story-content-two></div>
+                <h2 data-story-blogSubtitle></h2>
+              </div>
 
-              <h2>The Rise of Machine Learning</h2>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident.
-              </p>
+              <!-- Share Buttons -->
+              <div class="share-buttons">
+                <span>Share:</span>
+                <button class="share-button btn twitter">Twitter</button>
+                <button class="share-button btn facebook">Facebook</button>
+                <button class="share-button btn whatsapp">WhatsApp</button>
+              </div>
+            </article>
+          </main>
 
-              <blockquote>
-                "The future of AI is not just about technology, but about how we
-                can use it to improve human lives."
-              </blockquote>
-
-              <h2>Impact on Society</h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis.
-              </p>
-            </div>
-
-            <!-- Share Buttons -->
-            <div class="share-buttons">
-              <span>Share:</span>
-              <button class="share-button twitter">Twitter</button>
-              <button class="share-button facebook">Facebook</button>
-              <button class="share-button whatsapp">WhatsApp</button>
-            </div>
-          </article>
-        </main>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-          <!-- Author Details -->
-          <div class="author-details">
-            <div class="author-profile">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
-                alt="Author"
-                class="author-profile-image"
-              />
-              <div class="profile-card">
-                <h3 class="author-name">John Doe</h3>
-                <p class="author-role">Senior Politics Editor</p>
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <!-- Author Details -->
+            <div class="author-details">
+              <div class="author-profile">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                  alt="Author"
+                  class="author-profile-image"
+                />
+                <div class="profile-card">
+                  <h3 class="author-name">John Doe</h3>
+                  <p class="author-role">Senior Politics Editor</p>
+                </div>
+              </div>
+              <div class="author-contact">
+                <p><i class="fas fa-envelope"></i> john.doe@news.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                <p><i class="fas fa-pen"></i> 150+ Articles</p>
+              </div>
+              <div class="author-social">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook"></i
+                ></a>
               </div>
             </div>
-            <div class="author-contact">
-              <p><i class="fas fa-envelope"></i> john.doe@news.com</p>
-              <p><i class="fas fa-map-marker-alt"></i> New York, USA</p>
-              <p><i class="fas fa-pen"></i> 150+ Articles</p>
-            </div>
-            <div class="author-social">
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
 
-          <!-- Newsletter -->
-          <div class="newsletter">
-            <h3>Subscribe to Newsletter</h3>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Your email address" />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
-
-          <!-- Related Articles -->
-          <div class="related-articles">
-            <h3>Related Articles</h3>
-            <div class="article-list">
-              <a href="#" class="article-item">
-                <img
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
-                  alt="Related Article"
-                />
-                <div>
-                  <h4>The Evolution of AI</h4>
-                  <p>Dec 10, 2023</p>
-                </div>
-              </a>
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <h3>Subscribe to Newsletter</h3>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" />
+                <button class="btn" type="submit">Subscribe</button>
+              </form>
             </div>
-          </div>
-        </aside>
+
+            <!-- Related Articles -->
+            <div class="related-articles">
+              <h3>Related Articles</h3>
+              <div class="article-list">
+                <a href="#" class="article-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+                    alt="Related Article"
+                  />
+                  <div>
+                    <h4>The Evolution of AI</h4>
+                    <p>Dec 10, 2023</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
-    </div>
+    </section>
+    "
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -291,5 +273,6 @@
         ></path>
       </svg>
     </button>
+    <script src="story.js"></script>
   </body>
 </html>
