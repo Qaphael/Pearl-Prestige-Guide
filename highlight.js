@@ -25,12 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="card-description">${highlight.description}</p>
                             <a href="highlight-template.html?id=${highlight.id}" class="read-more-link">
                                 Read More
-                                <svg class="circle-svg" viewBox="0 0 70 36">
-                                    <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"/>
-                                </svg>
                             </a>
                         </div>
                     </div>
+
+                    <div class="story-card">
+                      <div class="story-image-container">
+                          <img src="images/hero/Bwindi.jpg" alt="Bali Beach" class="story-image">
+                      </div>
+                      <div class="story-details">
+                          <h2 class="story-title">Bali Paradise</h2>
+                          <p class="story-description">Experience the serene beaches and vibrant culture of Bali</p>
+                          <div class="story-tags">
+                              <span class="tag beach">Beach</span>
+                              <span class="tag culture">Culture</span>
+                          </div>
+                          <div class="story-info">
+                              <span>Duration: 7 days</span>
+                              <span>Difficulty: Easy</span>
+                          </div>
+                      </div>
+                  </div>
                 `).join('');
                 highlightsListContainer.innerHTML = highlightsHTML;
             })
