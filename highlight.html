@@ -1,124 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-highlight-title>Trekker's Highlight - Global Trekker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="general.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <span class="Logo-space">Logo</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="destinations.html">Tours</a></li>
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="login-options">
-                <a href="#login">Login</a> <a href="#signup">Sign up</a>
-            </div>
-            <div class="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-highlight-BrowserTitle>
+      Trekker's Highlight - Global Trekker
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="highlight-post.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <span class="Logo-space">Logo</span>
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="destinations.html">Tours</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login-options">
+          <a href="#login">Login</a> <a href="#signup">Sign up</a>
+        </div>
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
     </header>
-    <main>
-        <section class="highlight-post">
-            <h1 class="highlight-title" data-highlight-title></h1>
-            <div class="profile-card">
-                <img data-highlight-profile-image alt="Profile Picture">
-                <div class="info">
-                    <h3 data-highlight-profile-name></h3>
-                    <p data-highlight-profile-location></p>
-                    <div class="stars" data-highlight-profile-stars>
-                    </div>
+
+    <section>
+      <div class="container">
+        <div class="content-wrapper">
+          <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+              <!-- Article Header -->
+              <div class="article-header">
+                <span
+                  data-highlight-category
+                  class="category"
+                  id="category"
+                ></span>
+                <!-- Category of the article -->
+                <h1
+                  data-highlight-title
+                  class="article-title"
+                  id="highlight-title"
+                ></h1>
+                <!-- Title of the article -->
+                <div class="author-info">
+                  <img
+                    data-highlight-profile-image
+                    src=""
+                    alt="Author"
+                    class="author-image"
+                    id="author-profile-image"
+                  />
+                  <!-- Author profile image -->
+                  <div class="author-details">
+                    <p
+                      data-highlight-profile-name
+                      class="author-name"
+                      id="author-name"
+                    ></p>
+                    <!-- Author's name -->
+                    <p
+                      data-highlight-profile-location
+                      class="author-location"
+                      id="author-location"
+                    ></p>
+                    <!-- Author's location -->
+                    <p
+                      data-highlight-publish
+                      class="publish-date"
+                      id="publish-date"
+                    ></p>
+                    <!-- Publish date -->
+                  </div>
                 </div>
+              </div>
+
+              <!-- Main Image of the Article -->
+              <img
+                data-highlight-main-image
+                src=""
+                alt="Hero Image"
+                class="hero-image"
+                id="highlight-main-image"
+              />
+              <!-- Main image for the article -->
             </div>
-            <img data-highlight-main-image alt="Main Highlight Image" class="highlight-main-image">
-            <div class="highlight-content" data-highlight-content>
+
+            <p
+              data-highlight-description
+              class="highlight-description"
+              id="highlight-description"
+            ></p>
+
+            <p
+              data-highlight-quote
+              class="highlight-quote"
+              id="highlight-quote"
+            ></p>
+
+            <div data-highlight-gallery class="gallery-container">
+              <!-- Images will be dynamically added here -->
             </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-logo">
-                <span class="Logo-space">Logo</span>
-                <p>
-                    Storyteller Media covers the best destinations, animals, and natural
-                    experiences around the world.
-                </p>
-                <p>
-                    We are located in Antigonish, a beautiful university town on Nova
-                    Scotia’s Northumberland shore.
-                </p>
-                <p>Storyteller Travel is part of Storyteller Group</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>Destinations</h3>
-                    <ul>
-                        <li><a href="#destinations">Where Should I Travel?</a></li>
-                        <li><a href="#africa">Africa Travel Guide</a></li>
-                        <li><a href="#uganda">Uganda Travel Guide</a></li>
-                        <li><a href="#north-america">North America Travel</a></li>
-                        <li><a href="#south-america">South America Travel</a></li>
-                        <li><a href="#ecuador">Ecuador Guide</a></li>
-                        <li><a href="#cuenca">Cuenca Ecuador</a></li>
-                        <li><a href="#central-america">Central America</a></li>
-                        <li><a href="#asia">Asia Travel Guide</a></li>
-                        <li><a href="#oceania">Oceania</a></li>
-                        <li><a href="#europe">Europe Travel</a></li>
-                    </ul>
+
+            <!-- Article Content -->
+            <div
+              data-highlight-content
+              class="article-content"
+              id="highlight-content"
+            ></div>
+            <!-- Article content -->
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+              <h3 class="section-title">Comments</h3>
+              <div
+                data-highlight-comments
+                class="comment-list"
+                id="commentsContainer"
+              ></div>
+              <!-- Comment Input Area -->
+              <div class="comment-input">
+                <textarea
+                  id="commentTextarea"
+                  placeholder="Add a comment..."
+                  rows="1"
+                ></textarea>
+                <div class="input-footer">
+                  <span id="charCount">500 characters remaining</span>
+                  <button id="submitComment">Submit</button>
                 </div>
-                <div class="footer-column">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#sitemap">Site Map</a></li>
-                        <li><a href="#animals">Animals of the World</a></li>
-                        <li><a href="#start-planning">Start Planning Now</a></li>
-                        <li><a href="#start-here">Start Here</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Storyteller Travel</h3>
-                    <p>Antigonish, Nova Scotia, CANADA</p>
-                    <p>Phone Number: (902) 517-0570</p>
-                    <p>
-                        Email:
-                        <a href="mailto:admin@storyteller.travel"
-                            >admin@storyteller.travel</a
-                        >
-                    </p>
-                    <p>
-                        As an Amazon Associate, we earn from qualifying purchases. Here's
-                        more about <a href="#how-we-work">how we work</a>.
-                    </p>
-                </div>
+                <p id="error" class="error"></p>
+              </div>
+              <!-- Load More Button -->
+              <div id="loadMoreContainer" class="load-more">
+                <button id="loadMore">
+                  Load More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
             </div>
-            <div class="social-icons">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">YouTube</a>
+          </main>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <!-- Related Articles -->
+            <div class="related-articles">
+              <h3 class="section-title">Related Articles</h3>
+              <div class="article-list" id="related-articles"></div>
+              <!-- Related articles -->
             </div>
-            <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+
+            <!-- Advertisement Section -->
+            <div class="advertisement">
+              <p>Advertisement Space</p>
+            </div>
+
+            <!-- Popular Articles -->
+            <div class="popular-articles">
+              <h3 class="section-title">Popular Articles</h3>
+              <div class="article-list" id="popular-articles"></div>
+              <!-- Popular articles -->
+            </div>
+          </aside>
         </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <span class="Logo-space">Logo</span>
+          <p>
+            Storyteller Media covers the best destinations, animals, and natural
+            experiences around the world.
+          </p>
+          <p>
+            We are located in Antigonish, a beautiful university town on Nova
+            Scotia’s Northumberland shore.
+          </p>
+          <p>Storyteller Travel is part of Storyteller Group</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+      </div>
     </footer>
     <script
-        src="https://kit.fontawesome.com/39c1912948.js"
-        crossorigin="anonymous"
+      src="https://kit.fontawesome.com/39c1912948.js"
+      crossorigin="anonymous"
     ></script>
     <script src="highlight.js"></script>
-</body>
+  </body>
 </html>

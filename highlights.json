@@ -1,71 +1,256 @@
 {
-    "highlights": [
-      {
-        "id": "maria-angelica",
-        "profile": {
-          "image": "https://via.placeholder.com/80",
-          "name": "Opiyo Qaphael Ocaya",
-          "location": "Tee Tank, School Road Subward",
-          "stars": 5
-        },
-        
-        "title": "Maria Angelica",
-        "description": "An unforgettable journey through Turkey. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur doloremque ullam iusto cupiditate adipisci? Omnis pariatur adipisci beatae iure, numquam iusto odio amet illo sunt, quaerat officia quam saepe soluta.",
-        "mainImage": "images/stories/img1.jpg",
-        "content": [
-          "<p>This is the main content of the story.</p>",
-          "<p>It can have multiple paragraphs.</p>",
-          "<p>And more content here.</p>"
-        ]
+  "highlights": [
+    {
+      "id": 1,
+      "category": "Technology",
+      "title": "The Future of Artificial Intelligence: Breaking New Boundaries",
+      "author": {
+        "name": "John Doe",
+        "location": "San Francisco, CA",
+        "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
       },
-      {
-        "id": "john-doe",
-        "profile": {
-          "image": "images/stories/img2.jpg",
-          "name": "John Doe",
-          "location": "",
-          "stars": 0
-        },
-        "title": "John Doe",
-        "description": "Exploring the hidden gems of the Amazon rainforest.",
-        "mainImage": "images/stories/img2.jpg",
-        "content": [
-          "<p>This is the main content of the story.</p>",
-          "<p>It can have multiple paragraphs.</p>"
-        ]
-      },
-      {
-        "id": "jane-smith",
-        "profile": {
-          "image": "images/stories/img3.jpg",
+      "publish_date": "March 15, 2024",
+      "main_image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "quote": "The future of AI is not just about technology, it's about how we shape it to benefit humanity.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+      ],
+      "comments": [
+        { 
+          "id": 1,
           "name": "Jane Smith",
-          "location": "",
-          "stars": 0
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
         },
-        "title": "Jane Smith",
-        "description": "A breathtaking trek through the Himalayas.",
-        "mainImage": "images/stories/img3.jpg",
-        "content": [
-          "<p>This is the main content of the story.</p>",
-          "<p>It can have multiple paragraphs.</p>"
-        ]
+        {
+          "id": 2,
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Health",
+      "title": "Revolutionizing Healthcare with AI",
+      "author": {
+        "name": "Emily Carter",
+        "location": "Boston, MA",
+        "profile_image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167"
       },
-      {
-        "id": "david-lee",
-        "profile": {
-          "image": "images/stories/img4.jpg",
-          "name": "David Lee",
-          "location": "",
-          "stars": 0
+      "publish_date": "April 10, 2024",
+      "main_image": "https://images.unsplash.com/photo-1576091160501-bbe57469278b",
+      "content": "Artificial intelligence is transforming the medical field, from diagnosis to treatment.",
+      "quote": "AI in healthcare is a game-changer, improving efficiency and saving lives.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1576091160501-bbe57469278b",
+        "https://images.unsplash.com/photo-1576091160501-bbe57469278b",
+        "https://images.unsplash.com/photo-1576091160501-bbe57469278b"
+      ],
+      "comments": [
+        {
+          "id": 3,
+          "name": "Jane Smith",
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
         },
-        "title": "David Lee",
-        "description": "Discovering the ancient ruins of Machu Picchu.",
-        "mainImage": "images/stories/img4.jpg",
-        "content": [
-          "<p>This is the main content of the story.</p>",
-          "<p>It can have multiple paragraphs.</p>"
-        ]
-      }
-    ]
-  }
-  
+        {
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Cybersecurity",
+      "title": "The Evolution of Cybersecurity in the AI Era",
+      "author": {
+        "name": "Alex Carter",
+        "location": "San Francisco, USA"
+      },
+      "publish_date": "April 10, 2024",
+      "main_image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "content": "With AI advancing rapidly, cybersecurity has become a crucial concern. From intelligent threat detection to automated risk analysis, AI is reshaping the way we approach digital security.",
+      "quote": "AI-driven cybersecurity is our best defense against evolving digital threats.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+      ],
+      "comments": [
+        {
+          "id": 4,
+          "name": "Jane Smith",
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
+        },
+        {
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Healthcare",
+      "title": "AI and Healthcare – A New Frontier",
+      "author": {
+        "name": "Dr. Susan Clarke",
+        "location": "London, UK"
+      },
+      "publish_date": "May 2, 2024",
+      "main_image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "content": "AI is transforming the healthcare industry, from predictive diagnostics to robotic-assisted surgeries. The integration of AI ensures better patient outcomes and more efficient healthcare systems.",
+      "quote": "AI in healthcare is not replacing doctors; it's empowering them to make better decisions.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+      ],
+      "comments": [
+        {
+          "name": "Jane Smith",
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
+        },
+        {
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Finance",
+      "title": "How AI is Reshaping the Future of Financial Markets",
+      "author": {
+        "name": "Jonathan Steele",
+        "location": "New York, USA"
+      },
+      "publish_date": "May 20, 2024",
+      "main_image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+      "content": "AI-driven trading algorithms, fraud detection, and risk assessment models are transforming the financial industry, making markets more efficient and secure.",
+      "quote": "AI doesn’t just predict market trends—it creates them.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+      ],
+      "comments": [
+        {
+          "name": "Jane Smith",
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
+        },
+        {
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Education",
+      "title": "AI in Education: Personalizing Learning for Students",
+      "author": {
+        "name": "Emily Foster",
+        "location": "Toronto, Canada"
+      },
+      "publish_date": "June 5, 2024",
+      "main_image": "images/hero/Bwindi.jpg",
+      "content": "With AI-powered tools, educators can provide personalized learning experiences, adaptive assessments, and intelligent tutoring systems, transforming traditional education.",
+      "quote": "AI is making education more accessible, personalized, and engaging.",
+      "gallery": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+      ],
+      "comments": [
+        {
+          "name": "Jane Smith",
+          "profile_image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+          "text": "Great article! Very informative and well-written.",
+          "timestamp": "2023-10-01T12:34:56Z",
+          "replies": []
+        },
+        {
+          "name": "Sarah Johnson",
+          "profile_image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "text": "This perspective on AI's future is fascinating. Would love to see more articles like this!",
+          "timestamp": "2023-10-02T09:15:30Z",
+          "replies": [
+            {
+              "name": "Mike Brown",
+              "profile_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+              "text": "Completely agree! The implications for machine learning are particularly interesting.",
+              "timestamp": "2023-10-02T10:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
