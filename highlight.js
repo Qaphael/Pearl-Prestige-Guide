@@ -259,7 +259,7 @@ function createReplyElement(reply) {
   userAvatar.alt = `${reply.name}'s avatar`;
   userAvatar.className = 'user-avatar';
 
-  const userName = document.createElement('h4');
+  const userName = document.createElement('h3');
   userName.textContent = reply.name;
 
   const timestamp = document.createElement('span');
