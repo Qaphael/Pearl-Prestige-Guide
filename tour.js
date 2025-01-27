@@ -1,3 +1,10 @@
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('backdrop');
+    sidebar.classList.toggle('open');
+    backdrop.classList.toggle('open');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const tourId = urlParams.get('id');

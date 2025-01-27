@@ -1,117 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured Tours - Global Trekker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="general.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <span class="Logo-space">Logo</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="destinations.html">Tours</a></li>
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="login-options">
-                <a href="#login">Login</a> <a href="#signup">Sign up</a>
-            </div>
-            <div class="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="tours-list.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">TravelQuest</div>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+          <svg class="menu-icon" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </nav>
     </header>
-    <main>
-        <section class="featured-tours-list">
-            <div class="container">
-                <h1 class="section-title">Featured Tours</h1>
-                <div class="tours-list" data-tours-list>
-                    <!-- Tours will be loaded here -->
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-logo">
-                <span class="Logo-space">Logo</span>
-                <p>
-                    Storyteller Media covers the best destinations, animals, and natural
-                    experiences around the world.
-                </p>
-                <p>
-                    We are located in Antigonish, a beautiful university town on Nova
-                    Scotia’s Northumberland shore.
-                </p>
-                <p>Storyteller Travel is part of Storyteller Group</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>Destinations</h3>
-                    <ul>
-                        <li><a href="#destinations">Where Should I Travel?</a></li>
-                        <li><a href="#africa">Africa Travel Guide</a></li>
-                        <li><a href="#uganda">Uganda Travel Guide</a></li>
-                        <li><a href="#north-america">North America Travel</a></li>
-                        <li><a href="#south-america">South America Travel</a></li>
-                        <li><a href="#ecuador">Ecuador Guide</a></li>
-                        <li><a href="#cuenca">Cuenca Ecuador</a></li>
-                        <li><a href="#central-america">Central America</a></li>
-                        <li><a href="#asia">Asia Travel Guide</a></li>
-                        <li><a href="#oceania">Oceania</a></li>
-                        <li><a href="#europe">Europe Travel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#sitemap">Site Map</a></li>
-                        <li><a href="#animals">Animals of the World</a></li>
-                        <li><a href="#start-planning">Start Planning Now</a></li>
-                        <li><a href="#start-here">Start Here</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Storyteller Travel</h3>
-                    <p>Antigonish, Nova Scotia, CANADA</p>
-                    <p>Phone Number: (902) 517-0570</p>
-                    <p>
-                        Email:
-                        <a href="mailto:admin@storyteller.travel"
-                            >admin@storyteller.travel</a
-                        >
-                    </p>
-                    <p>
-                        As an Amazon Associate, we earn from qualifying purchases. Here's
-                        more about <a href="#how-we-work">how we work</a>.
-                    </p>
-                </div>
-            </div>
-            <div class="social-icons">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">YouTube</a>
-            </div>
-            <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+
+    <!-- Find Section -->
+    <section id="find" class="find-section">
+      <div class="container">
+        <h2 class="section-title">What Are You Looking For?</h2>
+        <h3 class="section-sub-title">
+          From the research, we have collected the categories most visited by
+          travelers.
+        </h3>
+        <button class="filter-toggle-btn" id="filterToggleBtn">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="categories">
+          <div class="categories-list">
+            <a class="active find-filters" href="#" data-category="villa"
+              >Villa</a
+            >
+            <a class="find-filters" href="#" data-category="apartment"
+              >Apartment</a
+            >
+            <a class="find-filters" href="#" data-category="hotel">Hotel</a>
+            <a class="find-filters" href="#" data-category="small-home"
+              >Small Home</a
+            >
+            <a class="find-filters" href="#" data-category="beach">Beach</a>
+            <a class="find-filters" href="#" data-category="hiking">Hiking</a>
+            <a class="find-filters" href="#" data-category="mountain"
+              >Mountain</a
+            >
+            <a class="find-filters" href="#" data-category="cinema">Cinema</a>
+          </div>
         </div>
+        <!-- Flex container to position the sidebar and main content -->
+        <div class="find-content">
+          <!-- Filters Sidebar -->
+          <div id="filtersBackdrop"></div>
+          <aside id="filtersSidebar" class="filters-sidebar">
+            <h4 class="card-title">Filter by:</h4>
+            <button class="filter-close-btn" id="closeSidebarBtn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="filters-content">
+              <div class="search-box">
+                <input
+                  type="text"
+                  placeholder="Search packages..."
+                  class="search-input"
+                />
+              </div>
+    
+              <div class="filter-section">
+                <h3 class="filter-title">Destination Type</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input type="checkbox" class="filter-checkbox" />
+                    <span>Beach</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" class="filter-checkbox" />
+                    <span>Mountain</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" class="filter-checkbox" />
+                    <span>City Tours</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" class="filter-checkbox" />
+                    <span>Adventure</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" class="filter-checkbox" />
+                    <span>Cultural</span>
+                  </label>
+                </div>
+              </div>
+    
+              <div class="filter-section">
+                <h3 class="filter-title">Price Range</h3>
+                <input type="range" min="0" max="5000" class="price-range" />
+                <div class="price-labels">
+                  <span>$0</span>
+                  <span>$5000</span>
+                </div>
+              </div>
+    
+              <div class="filter-section">
+                <h3 class="filter-title">Duration</h3>
+                <select class="filter-select">
+                  <option>Any Duration</option>
+                  <option>1-3 Days</option>
+                  <option>4-7 Days</option>
+                  <option>8-14 Days</option>
+                  <option>15+ Days</option>
+                </select>
+              </div>
+    
+              <div class="filter-section">
+                <h3 class="filter-title">Difficulty Level</h3>
+                <select class="filter-select">
+                  <option>Any Level</option>
+                  <option>Easy</option>
+                  <option>Moderate</option>
+                  <option>Challenging</option>
+                  <option>Expert</option>
+                </select>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="main-content">
+            <div id="findGrid" class="find-grid">
+              <!-- Property items will be dynamically added here -->
+              <!-- Tour Package Cards -->
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2"
+                  alt="Bali Beach Resort"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag beach">Beach</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★☆</span>
+                      <span class="rating-value">4.8</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">Bali Beach Paradise</h2>
+                  <p class="tour-description">
+                    Experience the ultimate beach getaway in beautiful Bali.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$1,299</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
+                  alt="Swiss Alps Adventure"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag mountain">Mountain</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★★</span>
+                      <span class="rating-value">4.9</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">Swiss Alps Explorer</h2>
+                  <p class="tour-description">
+                    Discover the majestic Swiss Alps with guided hiking tours.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$2,499</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                  alt="New York City Tour"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag city">City</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★☆</span>
+                      <span class="rating-value">4.7</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">NYC Discovery</h2>
+                  <p class="tour-description">
+                    Explore the vibrant culture and landmarks of New York City.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$1,899</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                  alt="New York City Tour"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag city">City</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★☆</span>
+                      <span class="rating-value">4.7</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">NYC Discovery</h2>
+                  <p class="tour-description">
+                    Explore the vibrant culture and landmarks of New York City.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$1,899</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                  alt="New York City Tour"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag city">City</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★☆</span>
+                      <span class="rating-value">4.7</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">NYC Discovery</h2>
+                  <p class="tour-description">
+                    Explore the vibrant culture and landmarks of New York City.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$1,899</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                  alt="New York City Tour"
+                  class="tour-image"
+                />
+                <div class="tour-details">
+                  <div class="tour-tags">
+                    <span class="tag city">City</span>
+                    <div class="tour-rating">
+                      <span class="rating-stars">★★★★☆</span>
+                      <span class="rating-value">4.7</span>
+                    </div>
+                  </div>
+                  <h2 class="tour-title">NYC Discovery</h2>
+                  <p class="tour-description">
+                    Explore the vibrant culture and landmarks of New York City.
+                  </p>
+                  <div class="tour-footer">
+                    <span class="tour-price">$1,899</span>
+                    <button class="tour-button">Book Now</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="pagination">
+              <a href="#">1</a>
+              <a href="#" class="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="cta-title">Ready for Your Next Adventure?</h2>
+      <p class="cta-description">
+        Discover amazing destinations and create unforgettable memories.
+      </p>
+      <div class="cta-buttons">
+        <button class="cta-button primary">Book Your Adventure Now</button>
+        <button class="cta-button secondary">Explore More Packages</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <span class="Logo-space">Logo</span>
+          <p>
+            Storyteller Media covers the best destinations, animals, and natural
+            experiences around the world.
+          </p>
+          <p>
+            We are located in Antigonish, a beautiful university town on Nova
+            Scotia’s Northumberland shore.
+          </p>
+          <p>Storyteller Travel is part of Storyteller Group</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Destinations</h3>
+            <ul>
+              <li><a href="#destinations">Where Should I Travel?</a></li>
+              <li><a href="#africa">Africa Travel Guide</a></li>
+              <li><a href="#uganda">Uganda Travel Guide</a></li>
+              <li><a href="#north-america">North America Travel</a></li>
+              <li><a href="#south-america">South America Travel</a></li>
+              <li><a href="#ecuador">Ecuador Guide</a></li>
+              <li><a href="#cuenca">Cuenca Ecuador</a></li>
+              <li><a href="#central-america">Central America</a></li>
+              <li><a href="#asia">Asia Travel Guide</a></li>
+              <li><a href="#oceania">Oceania</a></li>
+              <li><a href="#europe">Europe Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#sitemap">Site Map</a></li>
+              <li><a href="#animals">Animals of the World</a></li>
+              <li><a href="#start-planning">Start Planning Now</a></li>
+              <li><a href="#start-here">Start Here</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Storyteller Travel</h3>
+            <p>Antigonish, Nova Scotia, CANADA</p>
+            <p>Phone Number: (902) 517-0570</p>
+            <p>
+              Email:
+              <a href="mailto:admin@storyteller.travel"
+                >admin@storyteller.travel</a
+              >
+            </p>
+            <p>
+              As an Amazon Associate, we earn from qualifying purchases. Here's
+              more about <a href="#how-we-work">how we work</a>.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p>&copy; 2024 Jungle Beauty Sunset. All rights reserved.</p>
+      </div>
     </footer>
     <script
-        src="https://kit.fontawesome.com/39c1912948.js"
-        crossorigin="anonymous"
+      src="https://kit.fontawesome.com/39c1912948.js"
+      crossorigin="anonymous"
     ></script>
     <script src="tour.js"></script>
-</body>
+  </body>
 </html>
