@@ -1,0 +1,84 @@
+/* Footer Base */
+footer {
+  padding: 2rem 1rem;
+  background: var(--background-color);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: var(--background-color);
+  border-top: 1px solid var(--color--body-text);
+}
+
+/* Footer Logo Section */
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p,
+.footer-logo span {
+  margin: 0.5rem 0;
+  color: var(--color--body-text);
+}
+
+/* Footer Links Grid */
+.footer-links {
+  color: var(--color--body-text);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: var(--color--body-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: var(--hover-color);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: var(--color--body-text);
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+  }
+}

@@ -390,12 +390,12 @@ const renderItems = (category = "villa") => {
     // Add new items to the grid
     filteredItems.forEach((item) => {
       const itemHTML = `
-          <div class="find-item" data-category="${item.category}">
-            <img src="${item.image}" alt="${item.title}">
+          <div class="find-item card" data-category="${item.category}">
+            <img class="card-image" src="${item.image}" alt="${item.title}">
             <div class="find-info">
               <div class="price-div">
-              <h3 class="card-title">${item.title}</h3>
-              <p class="card-price">${item.price}</p>
+                <h3 class="card-title">${item.title}</h3>
+                <p class="card-price">${item.price}</p>
               </div>
               <p class="card-location">${item.location}</p>
               <div class="find-meta">
@@ -409,6 +409,9 @@ const renderItems = (category = "villa") => {
       findGrid.innerHTML += itemHTML;
     });
 
+    // Show first page of items
+    showPage(1, filteredItems, 9);
+
     // Update pagination for the filtered items
     updatePagination(filteredItems);
 
@@ -418,8 +421,8 @@ const renderItems = (category = "villa") => {
 
     setTimeout(() => {
       findGrid.classList.remove("fade-in"); // Clean up classes after animation
-    }, 300); // Match the CSS animation duration
-  }, 300); // Match the CSS fade-out duration
+    }, 300);
+  }, 300);
 };
 
 // Function to update pagination
@@ -452,24 +455,28 @@ const updatePagination = (filteredItems) => {
 const showPage = (page, filteredItems, itemsPerPage) => {
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-
-  // Select the items from the filtered list
+  
+  // Select all find-item elements
   const findGridItems = document.querySelectorAll(".find-item");
-
-  // Hide all items first
-  findGridItems.forEach((item) => {
-    item.classList.remove("visible");
+  
+  // First hide all items
+  findGridItems.forEach(item => {
+    item.style.display = "none";
   });
 
-  // Show the items for the current page
-  filteredItems.slice(start, end).forEach((item, index) => {
-    findGridItems[start + index].classList.add("visible");
-  });
+  // Show only the items for current page
+  for (let i = start; i < Math.min(end, filteredItems.length); i++) {
+    if (findGridItems[i]) {
+      findGridItems[i].style.display = "block";
+    }
+  }
 
   // Update active class on pagination links
   const paginationLinks = document.querySelectorAll(".pagination a");
-  paginationLinks.forEach((link) => link.classList.remove("active"));
-  paginationLinks[page - 1].classList.add("active");
+  paginationLinks.forEach(link => link.classList.remove("active"));
+  if (paginationLinks[page - 1]) {
+    paginationLinks[page - 1].classList.add("active");
+  }
 };
 
 // Event listener for category filtering

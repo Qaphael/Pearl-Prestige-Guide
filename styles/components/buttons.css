@@ -1,0 +1,118 @@
+/* Button Base Styles */
+.btn {
+  font-family: var(--font-primary);
+  background-color: var(--color--primary);
+  font-weight: var(--font-weight-bold);
+  transition: background-color var(--transition-duration) var(--animation-curve);
+  cursor: pointer;
+  padding: 0 var(--button-padding-x);
+  color: var(--color--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  height: var(--button-height-md);
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Back to Top Button */
+.btt-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color--primary);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow--natural);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: fixed;
+  top: 90%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: var(--z-fixed);
+}
+
+.btt-button:hover {
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  align-items: center;
+}
+
+.carousel-slider .btn {
+  padding: var(--spacing--20) var(--spacing--40);
+  /* width: 50px; */
+  border-radius: var(--border-radius-xl);
+}
+
+.read-more-button {
+  /* Position at the top right */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Remove default margin */
+  margin: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-button {
+  background: var(--color--primary);
+  color: var(--color--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.subscribe-button:hover {
+  background: var(--color--hover);
+}
+
+.slider-button {
+  padding: var(--spacing--20) var(--spacing--40);
+  background: var(--color--primary);
+  color: var(--color--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.slider-button:hover {
+  background: var(--color--hover);
+}
+
+@media (max-width: 768px) {
+  .read-more-button {
+    position: static; /* Remove absolute positioning */
+    display: block; /* Make it a block element to take full width */
+    width: 100%; /* Full width button */
+    text-align: center; /* Center text */
+    margin-top: 1rem; /* Add top margin for spacing */
+    padding: var(--spacing--20) var(--spacing--40);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slider .buttons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 95%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

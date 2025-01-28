@@ -1,0 +1,430 @@
+.carousel-slider {
+  height: 600px; /* Calculated height, adjust as needed */
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius-md);
+}
+
+.carousel-slider .section-title h2 {
+  position: relative;
+  z-index: 10;
+  color: var(--color--white);
+  margin-top: 1rem;
+  left: 100px;
+}
+
+.carousel-slider .list .item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  border-radius: var(--border-radius-md);
+}
+.carousel-slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.carousel-slider .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+.carousel-slider .list .item .author {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.carousel-slider .list .item .title,
+.carousel-slider .list .item .topic {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.carousel-slider .list .item .title {
+  color: var(--color--primary);
+}
+
+.carousel-slider .list .item .topic {
+  color: var(--color--background);
+}
+
+.carousel-slider .list .item .author {
+  color: var(--color--background);
+  margin-bottom: 0;
+}
+
+.carousel-slider .list .item .des {
+  width: 50%;
+}
+
+.carousel-slider .list .item .buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 1024px) {
+  .carousel-slider .list .item .des {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slider .section-title {
+    left: 70px;
+  }
+
+  .carousel-slider .list .item .content {
+    top: 15%;
+    height: 75%;
+    /* padding-right: 5%; */
+  }
+  .carousel-slider .list .item .title,
+  .carousel-slider .list .item .topic {
+    font-size: 1.8rem; /* Adjust further for smaller screens */
+  }
+
+  .carousel-slider .list .item .des {
+    width: 70%;
+  }
+  .carousel-slider .list .item .buttons {
+    gap: 3px;
+  }
+  .carousel-slider .list .item .buttons button {
+    font-size: 0.8em;
+  }
+  .thumbnail-slider {
+    left: 35%;
+    /* bottom: 85px; */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slider .section-title {
+    left: 70px;
+  }
+  .carousel-slider .list .item .content {
+    top: 15%;
+  }
+  .carousel-slider .list .item .title,
+  .carousel-slider .list .item .topic {
+    font-size: 1.5rem; /* Further reduce size */
+  }
+
+  .carousel-slider .list .item .des {
+    width: 100%;
+  }
+
+  .carousel-slider .list .item .buttons {
+    /* position: absolute; */
+    /* top: 2rem; */
+    /* bottom: 0; */
+    /* right: 0; */
+  }
+
+  .carousel-slider .list .item .buttons button {
+    /* position: inherit; */
+    /* width: 80px; */
+    /* height: 80px; */
+    /* bottom: -70px; */
+    /* padding: 0.75rem; */
+  }
+}
+
+/* thumbail */
+.thumbnail-slider {
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+.thumbnail-slider .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+.thumbnail-slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail-slider .item .content {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.thumbnail-slider .item .content h3 {
+  font-weight: 500;
+  color: var(--color--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.thumbnail-slider .item .content p {
+  font-weight: 300;
+  line-height: 1;
+  font-size: 0.875rem;
+}
+
+/* arrows */
+.arrows {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 95%;
+  left: 50%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .arrows {
+    max-width: unset;
+    justify-content: space-between;
+  }
+}
+
+/* Position arrows on the left side */
+.arrows {
+  left: 100px;
+  transform: translateY(-50%);
+  width: auto;
+  max-width: none;
+  justify-content: flex-start;
+}
+
+@media (max-width: 480px) {
+  .arrows {
+    left: 20px;
+  }
+}
+
+/* animation */
+.carousel-slider .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel-slider .list .item:nth-child(1) .content .author,
+.carousel-slider .list .item:nth-child(1) .content .title,
+.carousel-slider .list .item:nth-child(1) .content .topic,
+.carousel-slider .list .item:nth-child(1) .content .des,
+.carousel-slider .list .item:nth-child(1) .content .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.2s 1s linear 1 forwards;
+}
+
+@media (max-width: 480px) {
+  .carousel-slider .list .item:nth-child(1) .content .buttons {
+    position: absolute;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    top: 102%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: showButtons 0.2s 1.8s linear 1 forwards;
+    width: 100%;
+  }
+
+  @keyframes showButtons {
+    from {
+      transform: translate(-50%, -50%) translateY(50px);
+      filter: blur(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%) translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.carousel-slider .list .item:nth-child(1) .content .title {
+  animation-delay: 1.2s !important;
+}
+.carousel-slider .list .item:nth-child(1) .content .topic {
+  animation-delay: 1.4s !important;
+}
+.carousel-slider .list .item:nth-child(1) .content .des {
+  animation-delay: 1.6s !important;
+}
+.carousel-slider .list .item:nth-child(1) .content .buttons {
+  animation-delay: 1.8s !important;
+}
+/* create animation when next click */
+.carousel-slider .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  border-radius: 1.5rem;
+  animation: showImage 0.5s linear 1 forwards;
+}
+@keyframes showImage {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.carousel-slider.next .thumbnail-slider .item:nth-last-child(1) {
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel-slider.prev .list .item img {
+  z-index: 100;
+}
+@keyframes showThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+.carousel-slider.next .thumbnail-slider {
+  animation: effectNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+  from {
+    transform: translateX(150px);
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbnail-slider {
+    left: 35%;
+  }
+  .carousel-slider.next .list .item:nth-child(1) img {
+    left: 35%;
+  }
+}
+/* running time */
+
+.carousel-slider .time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 0px;
+  background-color: #f1683a;
+  left: 0;
+  top: 0;
+}
+
+.carousel-slider.next .time,
+.carousel-slider.prev .time {
+  animation: runningTime 0.5s linear 1 forwards;
+}
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* prev click */
+
+.carousel-slider.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel-slider.prev .list .item:nth-child(2) img {
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail-slider .item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel-slider.next .arrows button,
+.carousel-slider.prev .arrows button {
+  pointer-events: none;
+}
+.carousel-slider.prev .list .item:nth-child(2) .content .author,
+.carousel-slider.prev .list .item:nth-child(2) .content .title,
+.carousel-slider.prev .list .item:nth-child(2) .content .topic,
+.carousel-slider.prev .list .item:nth-child(2) .content .des,
+.carousel-slider.prev .list .item:nth-child(2) .content .buttons {
+  animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .carousel-slider .list .item .content {
+    padding-right: 0;
+  }
+  .carousel-slider .list .item .content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .carousel-slider .list .item .content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+}

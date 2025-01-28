@@ -1,0 +1,85 @@
+/* Header Base */
+header {
+  background: rgba(var(--color--secondary), 0);
+  color: var(--color--white);
+  padding: var(--spacing--20) var(--spacing--40);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: var(--z-modal);
+  max-width: var(--container-max-width);
+}
+
+/* Header Container */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+header .logo {
+  flex: 0 1 auto;
+  width: 117.03px;
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+header .logo span {
+  font-weight: var(--font-weight-bold);
+  color: var(--color--primary);
+}
+
+/* Login Options */
+header .login-options {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+header .login-options a {
+  color: var(--color--primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-medium);
+  padding-left: 1rem;
+}
+
+/* Header Background Change */
+header.white-bg {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  header .logo {
+    flex: 1;
+  }
+
+  header .login-options {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 15px;
+  }
+}
+header nav ul li a {
+  color: var(--color--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-medium);
+  transition: color var(--transition-duration) var(--animation-curve);
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--color--primary);
+}

@@ -29,7 +29,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <link href="style.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
@@ -37,7 +37,7 @@
       <div class="container">
         <div class="logo">
           <!-- <img src="logo.png" alt="Logo" width="150" /> -->
-          <span class="Logo-space">Logo</span>
+          <span class="Logo-space">Pearl Prestige</span>
         </div>
         <nav>
           <ul>
@@ -250,6 +250,7 @@
           From the research, we have collected the categories most visited by
           travelers.
         </h3>
+        <!-- Filter Toggle Button for Mobile -->
         <button class="filter-toggle-btn" id="filterToggleBtn">
           <i class="fa-solid fa-sliders"></i> Filters
         </button>
@@ -275,38 +276,38 @@
         </div>
         <!-- Flex container to position the sidebar and main content -->
         <div class="find-content">
-          <!-- Filters Sidebar -->
+          <!-- Backdrop for Mobile Filter Overlay -->
           <div id="filtersBackdrop"></div>
+          <!-- Filters Sidebar -->
           <aside id="filtersSidebar" class="filters-sidebar">
             <h4 class="card-title">Filter by:</h4>
+            <!-- Close Button for Mobile -->
             <button class="filter-close-btn" id="closeSidebarBtn">
               <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="filters-content">
+              <!-- Filter Groups -->
               <div class="filter-group">
                 <h4>Location</h4>
                 <ul>
                   <li>
                     <label>
-                      <input class="filter-input" type="checkbox" /><span
-                        class="filter-checkbox"
-                      ></span>
+                      <input class="filter-input" type="checkbox" />
+                      <span class="filter-checkbox"></span>
                       Feteira (82)
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="filter-input" type="checkbox" /><span
-                        class="filter-checkbox"
-                      ></span>
+                      <input class="filter-input" type="checkbox" />
+                      <span class="filter-checkbox"></span>
                       Angra do Heroismo (33)
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="filter-input" type="checkbox" /><span
-                        class="filter-checkbox"
-                      ></span>
+                      <input class="filter-input" type="checkbox" />
+                      <span class="filter-checkbox"></span>
                       Praia da Vitoria (2)
                     </label>
                   </li>
@@ -491,60 +492,60 @@
         <h2 class="section-title">Our Services</h2>
 
         <!-- Services Grid -->
-        <div class="services-grid">
+        <div class="find-grid">
           <!-- Service Item 1 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-route service-icon"></i>
-            <h3 class="service-title">Custom Tour Packages</h3>
-            <p class="service-description">
+            <h3 class="card-title">Custom Tour Packages</h3>
+            <p class="card-description">
               We design personalized tours tailored to your preferences and
               budget.
             </p>
           </div>
 
           <!-- Service Item 2 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-hotel service-icon"></i>
-            <h3 class="service-title">Accommodation</h3>
-            <p class="service-description">
+            <h3 class="card-title">Accommodation</h3>
+            <p class="card-description">
               Comfortable stays at the best hotels, resorts, and guesthouses.
             </p>
           </div>
 
           <!-- Service Item 3 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-car service-icon"></i>
-            <h3 class="service-title">Transportation</h3>
-            <p class="service-description">
+            <h3 class="card-title">Transportation</h3>
+            <p class="card-description">
               Reliable and comfortable transport to all destinations, including
               airport transfers.
             </p>
           </div>
 
           <!-- Service Item 4 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-hiking service-icon"></i>
-            <h3 class="service-title">Adventure Activities</h3>
-            <p class="service-description">
+            <h3 class="card-title">Adventure Activities</h3>
+            <p class="card-description">
               Exciting activities like hiking, trekking, wildlife safaris, and
               more.
             </p>
           </div>
 
           <!-- Service Item 5 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-globe service-icon"></i>
-            <h3 class="service-title">Travel Insurance</h3>
-            <p class="service-description">
+            <h3 class="card-title">Travel Insurance</h3>
+            <p class="card-description">
               Comprehensive travel insurance for your peace of mind.
             </p>
           </div>
 
           <!-- Service Item 6 -->
-          <div class="service-item">
+          <div class="card service-item">
             <i class="fas fa-headset service-icon"></i>
-            <h3 class="service-title">24/7 Support</h3>
-            <p class="service-description">
+            <h3 class="card-title">24/7 Support</h3>
+            <p class="card-description">
               Our dedicated team is available to assist you throughout your
               journey.
             </p>
@@ -732,11 +733,11 @@
         <h2 class="section-title">Latest Stories</h2>
         <div class="story-grid">
           <!-- Large Story Card -->
-          <div class="story-card story-lg">
+          <div class="story-card card story-lg">
             <img
               src="images/stories/img4.jpg"
               alt="A serene travel destination"
-              class="story-image"
+              class="story-image card-image"
             />
             <div class="story-content">
               <h4 class="card-category">Travel</h4>
@@ -757,11 +758,11 @@
 
           <!-- Additional Stories -->
           <div class="additional-stories">
-            <div class="story-card">
+            <div class="story-card card">
               <img
                 src="images/stories/img1.jpg"
                 alt="A plate of local food"
-                class="story-image"
+                class="story-image card-image"
               />
               <div class="story-content">
                 <h4 class="card-category">Food</h4>
@@ -780,11 +781,11 @@
               </div>
             </div>
 
-            <div class="story-card">
+            <div class="story-card card">
               <img
                 src="images/stories/img2.jpg"
                 alt="Wild animals in their natural habitat"
-                class="story-image"
+                class="story-image card-image"
               />
               <div class="story-content">
                 <h4 class="card-category">Wildlife</h4>
@@ -803,11 +804,11 @@
               </div>
             </div>
 
-            <div class="story-card">
+            <div class="story-card card">
               <img
                 src="images/stories/img3.jpg"
                 alt="A peaceful spa retreat"
-                class="story-image"
+                class="story-image card-image"
               />
               <div class="story-content">
                 <h4 class="card-category">Relaxation</h4>
@@ -834,12 +835,16 @@
     <section class="trekker-highlights">
       <div class="container">
         <h2 class="section-title">Trekker's Highlights</h2>
-        <div class="highlights-grid">
+        <div class="story-grid">
           <!-- Large hightlight container -->
-          <div class="highlight-card large">
-            <div class="highlight-details">
+          <div class="story-card card large">
+            <div class="story-details">
               <div class="profile-card">
-                <img src="images/hero/hero1.jpg" alt="Profile Picture" />
+                <img
+                  src="images/hero/hero1.jpg"
+                  alt="Profile Picture"
+                  class="profile-avatar"
+                />
                 <div class="info">
                   <h3>Opiyo Qaphael Ocaya</h3>
                   <p>Tee Tank, School Road Subward</p>
@@ -862,16 +867,31 @@
               </p>
               <a href="highlight.html?id=1" class="read-more-link">
                 Read More
-                
               </a>
             </div>
             <!-- Carousel -->
             <div class="highlight-carousel">
               <div class="highlight-carousel-track">
-                <img src="images/stories/img1.jpg" alt="Image 1" />
-                <img src="images/stories/img2.jpg" alt="Image 2" />
-                <img src="images/stories/img3.jpg" alt="Image 3" />
-                <img src="images/stories/img4.jpg" alt="Image 3" />
+                <img
+                  class="highlight-image"
+                  src="images/stories/img1.jpg"
+                  alt="Image 1"
+                />
+                <img
+                  class="highlight-image"
+                  src="images/stories/img2.jpg"
+                  alt="Image 2"
+                />
+                <img
+                  class="highlight-image"
+                  src="images/stories/img3.jpg"
+                  alt="Image 3"
+                />
+                <img
+                  class="highlight-image"
+                  src="images/stories/img4.jpg"
+                  alt="Image 3"
+                />
               </div>
               <div class="highlight-carousel-buttons">
                 <button class="btn carousel-button prev">
@@ -890,57 +910,54 @@
             </div>
           </div>
           <!-- hightlight container -->
-          <div class="highlight-card-container">
-            <div class="highlight-card">
+          <div class="additional-stories">
+            <div class="story-card card">
               <img
                 src="images/stories/img2.jpg"
                 alt="Highlight 2"
-                class="highlight-image"
+                class="story-image card-image"
               />
-              <div class="highlight-details">
+              <div class="story-details">
                 <h3 class="card-title">John Doe</h3>
                 <p class="card-description">
                   Exploring the hidden gems of the Amazon rainforest.
                 </p>
                 <a href="highlight.html?id=1" class="read-more-link">
                   Read More
-                  
                 </a>
               </div>
             </div>
 
-            <div class="highlight-card">
+            <div class="story-card card">
               <img
                 src="images/stories/img3.jpg"
                 alt="Highlight 3"
-                class="highlight-image"
+                class="story-image card-image"
               />
-              <div class="highlight-details">
+              <div class="story-details">
                 <h3 class="card-title">Jane Smith</h3>
                 <p class="card-description">
                   A breathtaking trek through the Himalayas.
                 </p>
                 <a href="highlight.html?id=2" class="read-more-link">
                   Read More
-                  
                 </a>
               </div>
             </div>
 
-            <div class="highlight-card">
+            <div class="story-card card">
               <img
                 src="images/stories/img4.jpg"
                 alt="Highlight 4"
-                class="highlight-image"
+                class="story-image card-image"
               />
-              <div class="highlight-details">
+              <div class="story-details">
                 <h3 class="card-title">David Lee</h3>
                 <p class="card-description">
                   Discovering the ancient ruins of Machu Picchu.
                 </p>
                 <a href="highlight.html?id=3" class="read-more-link">
                   Read More
-                  
                 </a>
               </div>
             </div>
@@ -962,11 +979,11 @@
           <p class="tour-package-count">1-20 of 1,384 Uganda Tour Packages</p>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <article class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-1.jpg"
                   alt="Tour Package 1"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -988,7 +1005,7 @@
                     </p>
                   </div>
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Entebbe (Start), Ziwa Rhino Ranch, Murchison
                       Falls NP, Kibale NP (Chimps), Queen Elizabeth NP, Bwindi
@@ -1010,14 +1027,14 @@
                     </div>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
             <div class="swiper-slide">
-              <article class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-2.jpg"
                   alt="Tour Package 2"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -1039,7 +1056,7 @@
                     </p>
                   </div>
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Entebbe (Start), Murchison Falls NP, Kibale
                       Forest NP (Chimps), Queen Elizabeth NP, Bwindi
@@ -1061,14 +1078,14 @@
                     </div>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
             <div class="swiper-slide">
-              <article class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-3.jpg"
                   alt="Tour Package 3"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -1090,7 +1107,7 @@
                     </p>
                   </div>
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Kigali (Start), Bwindi Impenetrable Forest
                       (Gorillas), Kigali (End)
@@ -1111,14 +1128,14 @@
                     </div>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
             <div class="swiper-slide">
-              <article class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-4.jpg"
                   alt="Tour Package 4"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -1141,7 +1158,7 @@
                   </div>
 
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Entebbe (Start), Kibale Forest (Chimps), Queen
                       Elizabeth NP, Bwindi Impenetrable NP (Gorillas), Lake
@@ -1163,14 +1180,14 @@
                     </div>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
             <div class="swiper-slide">
-              <div class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-5.jpg"
                   alt="Tour Package 5"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -1192,7 +1209,7 @@
                     </p>
                   </div>
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Entebbe (Start), Kibale Forest NP (Chimps),
                       Queen Elizabeth NP, Bwindi Impenetrable Forest (Gorillas),
@@ -1217,11 +1234,11 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="tour-card">
+              <div class="tour-card card">
                 <img
                   src="https://swiperjs.com/demos/images/nature-6.jpg"
                   alt="Tour Package 6"
-                  class="tour-image"
+                  class="tour-image card-image"
                 />
                 <div class="tour-card-content">
                   <div class="price-div">
@@ -1243,7 +1260,7 @@
                     </p>
                   </div>
                   <div class="tour-description-wrapper">
-                    <p class="tour-description">
+                    <p class="card-description">
                       <i class="fas fa-info-circle"></i>
                       You Visit: Entebbe (Start), Murchison Falls NP, Kibale
                       Forest NP (Chimps), Queen Elizabeth NP, Bwindi
@@ -1306,7 +1323,7 @@
             <div class="testimonial swiper-slide">
               <p>
                 "The best vacation of my life! Great service and breathtaking
-                destinations. I’ll definitely book again."
+                destinations. I'll definitely book again."
               </p>
               <img src="images/hero/Gulu.jpg" alt="David L." />
               <div class="stars">
@@ -1405,6 +1422,21 @@
           </div>
           <div class="cta-image">
             <img src="images/hero/Gulu.jpg" alt="Travel Inspiration" />
+          </div>
+        </div>
+        <div class="discount-slider">
+          <img
+            src="images/hero/Bwindi.jpg"
+            alt="Special Offer"
+            class="slider-image"
+          />
+          <div class="slider-overlay">
+            <span class="slider-discount">30% OFF</span>
+            <h3 class="slider-title">Summer Special Packages</h3>
+            <p class="slider-description">
+              Book now and save big on your dream vacation!
+            </p>
+            <button class="slider-button">Book Now</button>
           </div>
         </div>
       </div>

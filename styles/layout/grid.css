@@ -1,0 +1,154 @@
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+/* Row and Column Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -var(--spacing-small);
+}
+
+.col {
+  flex: 1;
+  padding: 0 var(--spacing-small);
+}
+
+.categories {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: var(--spacing-medium);
+}
+
+.categories-list {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color--primary) transparent;
+}
+
+/* Customize the scrollbar thumb */
+.categories-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* Thumb color */
+  border-radius: 10px; /* Rounded thumb */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in/out */
+}
+
+/* Scrollbar track */
+.categories-list::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent track */
+}
+
+/* Show thumb on hover */
+.categories-list:hover::-webkit-scrollbar-thumb {
+  opacity: 1; /* Show thumb on hover */
+}
+
+/* Set the scrollbar height for the categories list */
+.categories-list::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.find-filters {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  color: var(--color--body-text);
+  text-decoration: none;
+}
+
+.find-filters.active {
+  background: var(--color--primary);
+  color: var(--color--white);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.find-filters:hover {
+  background: var(--color--hover);
+  color: var(--color--white);
+  font-weight: var(--font-weight-bold);
+}
+
+.find-content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.additional-stories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing--40);
+}
+
+/* Grid Layouts */
+.find-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing--40);
+}
+
+/* Story Grid Layout */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing--40);
+}
+
+/* Highlights Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing--40);
+}
+
+/* Tour Grid */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing--40);
+}
+
+@media (max-width: 868px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .highlight-card img {
+    height: 180px;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: var(--spacing--50) var(--spacing--40);
+}

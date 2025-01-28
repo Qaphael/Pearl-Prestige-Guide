@@ -520,7 +520,7 @@ header.white-bg a {
 @media only screen and (max-width: 768px) {
   header .container {
     padding: 0 1rem;
-}
+  }
   header .logo {
     flex: 1;
   }
