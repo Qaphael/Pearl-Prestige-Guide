@@ -123,21 +123,6 @@
   .carousel-slider .list .item .des {
     width: 100%;
   }
-
-  .carousel-slider .list .item .buttons {
-    /* position: absolute; */
-    /* top: 2rem; */
-    /* bottom: 0; */
-    /* right: 0; */
-  }
-
-  .carousel-slider .list .item .buttons button {
-    /* position: inherit; */
-    /* width: 80px; */
-    /* height: 80px; */
-    /* bottom: -70px; */
-    /* padding: 0.75rem; */
-  }
 }
 
 /* thumbail */

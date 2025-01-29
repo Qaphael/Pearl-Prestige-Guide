@@ -11,11 +11,6 @@
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
 
-  /* Font Sizes */
-  --font-small: 0.875rem;
-  --font-medium: 1rem;
-  --font-large: 1.25rem;
-
   /* Other */
   --transition-duration: 0.3s;
 
@@ -35,11 +30,16 @@
   --font-var: "Bebas Neue", sans-serif;
 
   /* Font Size Variables */
-  --font-size-small: 14px;
+  /* Font Sizes */
+  --font-small: 0.875rem;
+  --font-medium: 1rem;
+  --font-large: 1.25rem;
+  --font-size--small: 13px;
   --font-size-base: 16px;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.5rem;
   --font-size-heading: 3rem;
+  --font-size--x-large: 42px;
 
   /* Font Weight Variables */
   --font-weight-normal: 400;
@@ -74,12 +74,6 @@
   --color--body-text: #44525e;
   --color--alternate: #000000;
   --color--transparent: rgba(0, 0, 0, 0);
-
-  /* Additional Font Size Variables */
-  --font-size--small: 13px;
-  --font-size--medium: 20px;
-  --font-size--large: 36px;
-  --font-size--x-large: 42px;
 
   /* Additional Font Family Variables */
   --font-family--inter: "Inter", sans-serif;

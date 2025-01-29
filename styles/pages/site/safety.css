@@ -1,0 +1,52 @@
+.wet-season {
+  margin-top: var(--spacing-large);
+}
+
+.dry-season {
+  margin-top: var(--spacing-large);
+}
+
+.photo-highlights {
+  margin-top: var(--spacing-large);
+}
+/* Safety Section Styles */
+.expert-intro {
+  margin-bottom: var(--spacing-large);
+}
+
+.travel-advice {
+  margin-bottom: var(--spacing-large);
+}
+
+.links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  margin: var(--spacing-medium) 0;
+}
+
+.links-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.useful-links {
+  margin-bottom: var(--spacing-large);
+}
+
+.expert-section {
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--color--quaternary);
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+}
+
+.expert-section .experts-swiper .swiper-wrapper {
+  height: 250px !important;
+}
+
+.expert-title {
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+}

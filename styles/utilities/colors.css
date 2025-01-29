@@ -1,0 +1,37 @@
+/* Color Utilities */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-body {
+  color: var(--color--body-text);
+}
+.text-light {
+  color: var(--color--text-light);
+}
+.text-white {
+  color: var(--color--white);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-light {
+  background-color: var(--color--quaternary);
+}
+.bg-white {
+  background-color: var(--color--white);
+}
+
+/* Border colors */
+.border-primary {
+  border-color: var(--primary-color);
+}
+.border-light {
+  border-color: var(--border-color);
+}

@@ -65,7 +65,7 @@
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: var(--border-radius-md);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: all var(--transition-duration);
   color: var(--color--body-text);
   text-decoration: none;
 }
@@ -74,8 +74,6 @@
   background: var(--color--primary);
   color: var(--color--white);
   font-weight: var(--font-weight-bold);
-  border: none;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .find-filters:hover {

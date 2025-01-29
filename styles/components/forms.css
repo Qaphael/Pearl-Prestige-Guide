@@ -1,19 +1,22 @@
 /* Form Base Styles */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-medium);
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color--text);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: var(--spacing-small);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
 }
 
 /* Search Form */
@@ -28,7 +31,7 @@
   width: 50%;
   max-width: 800px;
   z-index: var(--z-tooltip);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color--white-alpha);
   padding: var(--spacing--20);
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-lg);
@@ -45,7 +48,7 @@
   padding: var(--spacing--20) var(--spacing--30);
   border: none;
   border-radius: var(--border-radius-md);
-  font-size: var(--font-medium);
+  font-size: var(--font-size-medium);
   background-color: var(--color--quaternary);
 }
 
@@ -76,16 +79,83 @@
 @media (max-width: 768px) {
   .search {
     width: 90%;
-    top: 15px;
-    /* padding: 0.7rem; */
+    top: var(--spacing-medium);
   }
 
   .search-form {
-    gap: 5px;
+    gap: var(--spacing-xs);
   }
 
   .search-input {
-    font-size: 14px;
-    /* padding: 0.5rem; */
+    font-size: var(--font-size-small);
   }
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form .form-group {
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}
+
+.newsletter-form label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  background: var(--color--primary);
+  color: var(--color--white);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.newsletter-form .btn:hover {
+  background: var(--color--primary-dark);
+}
+
+/* Booking Form */
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group select,
+.form-group input {
+  padding: var(--spacing-small) var(--spacing-medium);
+  cursor: pointer;
+  background-color: var(--color--quaternary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  color: var(--color--body-text);
+}
+
+.form-group input[type="date"] {
+  padding: calc(var(--spacing-small) - 1px);
 }

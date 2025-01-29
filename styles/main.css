@@ -1,8 +1,15 @@
-/* Import all CSS files */
+/* Base */
 @import url("./base/reset.css");
 @import url("./base/variables.css");
 @import url("./base/typography.css");
 
+/* Layout */
+@import url("./layout/grid.css");
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+@import url("./layout/sections.css");
+
+/* Shared Components */
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
 @import url("./components/carousel.css");
@@ -10,7 +17,7 @@
 @import url("./components/navigation.css");
 @import url("./components/sidebar.css");
 
-@import url("./layout/grid.css");
-@import url("./layout/header.css");
-@import url("./layout/footer.css");
-@import url("./layout/sections.css");
+/* Utilities */
+@import url("./utilities/animations.css");
+@import url("./utilities/spacing.css");
+@import url("./utilities/colors.css");

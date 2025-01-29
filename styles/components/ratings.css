@@ -1,0 +1,116 @@
+/* Rating Components */
+.rating-overview {
+  display: flex;
+  /* align-items: center; */
+  gap: var(--spacing-medium);
+  width: 100%;
+  margin-top: var(--spacing-medium);
+}
+
+.rating-overview .stars {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-score {
+  font-size: var(--font-size--x-large);
+  font-weight: var(--font-weight-bold);
+  color: var(--color--primary);
+}
+
+.stars {
+  /* margin-left: var(--spacing-small); */
+}
+
+.star-icons {
+  color: var(--color--primary);
+  font-size: var(--font-size-medium);
+}
+
+.stars i {
+  display: inline-block;
+  margin-right: var(--spacing-small);
+}
+
+.stars i:last-child {
+  margin-right: 0;
+}
+
+.stars .fa-star,
+.stars .fa-star-half-alt {
+  color: var(--color--primary);
+  /* font-size: var(--font-size-medium); */
+}
+
+.review-count {
+  font-size: var(--font-size-xs);
+  color: var(--color--text-light);
+}
+
+/* Rating Bars */
+.rating-bars {
+  margin-bottom: var(--spacing-medium);
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-small);
+}
+
+.label {
+  width: 80px;
+  font-size: var(--font-size-small);
+  color: var(--color--text);
+}
+
+.bar-bg {
+  flex: 1;
+  height: 8px;
+  background-color: var(--color--tertiary);
+  border-radius: var(--border-radius-sm);
+  margin: 0 var(--spacing-small);
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: var(--color--primary);
+  border-radius: var(--border-radius-sm);
+}
+
+.score {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color--text);
+}
+
+.keyword-section {
+  margin-bottom: 20px;
+}
+
+.keyword-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keywords span {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.keywords span:hover {
+  background: #d4d4d4;
+}

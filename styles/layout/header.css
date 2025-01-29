@@ -22,13 +22,14 @@ header .container {
 /* Logo Styles */
 header .logo {
   flex: 0 1 auto;
-  width: 117.03px;
+  /* width: 117.03px; */
   display: flex;
   align-items: center;
 }
 
 header .logo img {
-  width: 150px;
+  width: 28px;
+  height: auto;
 }
 header .logo span {
   font-weight: var(--font-weight-bold);

@@ -1,0 +1,57 @@
+/* Accordion Styling */
+.accordion {
+  margin-bottom: var(--spacing-large);
+}
+
+.accordion-item {
+  margin-bottom: var(--spacing-small);
+  background: transparent;
+  border: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: var(--spacing-small) 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--border-color);
+  text-align: left;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-content {
+  padding: var(--spacing-medium);
+  background: var(--color--quaternary);
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  display: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-content ul {
+  font-size: var(--font-size-base);
+  color: var(--color--text-light);
+  margin: 0 0 var(--spacing-medium) 0;
+  padding-left: var(--spacing-medium);
+}
+
+.accordion-content ul li {
+  margin-bottom: var(--spacing-small);
+}
+
+.accordion-content .btn {
+  background: transparent;
+  color: var(--primary-color);
+  padding: 0;
+  display: inline-block;
+  margin-top: var(--spacing-small);
+  transition: background-color 0.3s ease;
+}
+
+.accordion-content .btn:hover {
+  color: var(--color--text);
+}

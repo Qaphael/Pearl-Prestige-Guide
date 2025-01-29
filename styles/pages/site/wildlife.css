@@ -1,0 +1,65 @@
+/* Wildlife Section Styles */
+.wildlife-activities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium) 0;
+}
+
+.photo-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium) 0;
+}
+
+.wildlife-cards {
+  margin: var(--spacing--40) 0;
+}
+
+.wildlife-photo {
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.wildlife-photo:hover {
+  transform: scale(1.1);
+}
+
+.wildlife-list th,
+.wildlife-list td {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-small);
+}
+
+.wildlife-info {
+  padding: 0.785rem;
+}
+
+.wildlife-info h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4fb28f;
+  margin: 0;
+}
+
+.wildlife-info p {
+  font-size: 0.785rem;
+  color: #515654;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .wildlife-list th,
+  .wildlife-list td {
+    padding: var(--spacing-small);
+    font-size: var(--font-size-small);
+  }
+}

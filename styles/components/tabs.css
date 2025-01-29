@@ -1,0 +1,88 @@
+/* Tab Navigation Styles */
+.tab-section {
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-large);
+}
+
+.tabcontent {
+  float: left;
+  width: 70%;
+  border-left: none;
+  padding: 0 0 var(--spacing-medium) var(--spacing-medium);
+}
+
+/* Tab Content Typography */
+.tabcontent h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-large);
+  color: var(--color--text);
+  margin-bottom: var(--spacing-medium);
+}
+
+.tabcontent h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-medium);
+  color: var(--color--text);
+  margin-bottom: var(--spacing-small);
+}
+
+.tabcontent p {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color--text);
+  margin-bottom: var(--spacing-medium);
+}
+
+.tabcontent span {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+@media (max-width: 540px) {
+  .tabcontent {
+    padding: 0;
+  }
+
+  .tabcontent.active {
+    display: block;
+    width: 100%;
+  }
+
+  .side-bar-tab {
+    position: fixed;
+    width: 95%;
+    top: var(--spacing-medium);
+    left: -200%;
+    z-index: var(--z-fixed);
+    transform: translateX(-50%);
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+
+  .side-bar-tab.active {
+    left: 50%;
+  }
+
+  #filtersBackdrop.active {
+    display: block;
+  }
+
+  .filter-toggle-btn {
+    position: sticky;
+    display: block;
+    top: var(--spacing-medium);
+    left: 90%;
+    z-index: var(--z-tooltip);
+    margin-bottom: var(--spacing-medium);
+  }
+}

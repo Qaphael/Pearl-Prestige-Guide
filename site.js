@@ -86,22 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
         premierParksContainer.innerHTML = parks.premierParks
           .map(
             (park) => `
-                  <div class="park-card">
-                      <img src="${park.image}" alt="${park.name}" class="park-image" />
+                  <div class="park-card card">
+                      <img src="${park.image}" alt="${park.name}" class="card-image" />
                       <div class="park-info">
-                          <h3 class="park-title">${park.name}</h3>
+                          <h3 class="card-title">${park.name}</h3>
                           <div class="location-rating">
-                              <p class="park-location">${park.location}</p>
-                              <p class="park-rating">
+                              <p class="card-location">${park.location}</p>
+                              <p class="card-rating">
                                   <span class="rating-score">${park.rating}</span> · Exceptional
                               </p>
                           </div>
-                          <p class="park-description">${park.description}</p>
+                          <p class="card-description">${park.description}</p>
                           <div class="park-actions">
                               <p class="price">
-                                  From <span class="price-value">${park.price}</span>
+                                  <span class="price-value">${park.price}</span>
                               </p>
-                              <a href="#" class="btn-view-more">View More</a>
+                              <a href="#" class="btn btn-view-more">View More</a>
                           </div>
                       </div>
                   </div>
@@ -117,22 +117,22 @@ document.addEventListener("DOMContentLoaded", () => {
         allParksContainer.innerHTML = parks.allParks
           .map(
             (park) => `
-                  <div class="park-card">
-                      <img src="${park.image}" alt="${park.name}" class="park-image" />
+                  <div class="park-card card">
+                      <img src="${park.image}" alt="${park.name}" class="card-image" />
                       <div class="park-info">
-                          <h3 class="park-title">${park.name}</h3>
+                          <h3 class="card-title">${park.name}</h3>
                           <div class="location-rating">
-                              <p class="park-location">${park.location}</p>
-                              <p class="park-rating">
+                              <p class="card-location">${park.location}</p>
+                              <p class="card-rating">
                                   <span class="rating-score">${park.rating}</span> · Exceptional
                               </p>
                           </div>
-                          <p class="park-description">${park.description}</p>
+                          <p class="card-description">${park.description}</p>
                           <div class="park-actions">
                               <p class="price">
-                                  From <span class="price-value">${park.price}</span>
+                                  <span class="price-value">${park.price}</span>
                               </p>
-                              <a href="#" class="btn-view-more">View More</a>
+                              <a href="#" class="btn btn-view-more">View More</a>
                           </div>
                       </div>
                   </div>
@@ -184,8 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
                           <span class="review-location"
                               >Reviewed in the United States</span
                           >
-                          on <span class="review-date">August 23, 2019</span> |
-                          <span class="review-style">Style: Cashmere Woods</span> |
+                          <span class="review-date">August 23, 2019</span>
+                          <span class="review-style">Style: Cashmere Woods</span> 
                           <span class="verified">Verified Purchase</span>
                       </p>
                       <p class="review-content">
@@ -212,11 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
           wildlifeAbundanceContainer.innerHTML = wildlife.abundance
               .map(
               (animal) => `
-                      <div class="wildlife-card">
-                          <img src="${animal.image}" alt="${animal.name}" />
+                      <div class="wildlife-card card">
+                          <img class="card-image" src="${animal.image}" alt="${animal.name}" />
                           <div class="wildlife-info">
-                              <h4>${animal.name}</h4>
-                              <p>Abundance: ${animal.abundance}</p>
+                              <h4 class="card-title">${animal.name}</h4>
+                              <p class="card-description">Abundance: ${animal.abundance}</p>
                           </div>
                       </div>
                   `
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
               photoHighlightsContainer.innerHTML = wildlife.photoHighlights
               .map(
                   (image) => `
-                      <img src="${image}" alt="Wildlife Photo" class="wildlife-photo" />
+                      <img src="${image}" alt="Wildlife Photo" class="wildlife-photo card-image" />
                   `
               )
               .join("");

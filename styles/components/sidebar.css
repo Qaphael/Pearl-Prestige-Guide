@@ -12,10 +12,25 @@
   border-radius: var(--border-radius-sm);
 }
 
+.side-bar-tab {
+  position: sticky;
+  height: calc(100vh - 40px);
+  top: 20px;
+  border-radius: 1rem;
+}
+
 /* Sidebar Content */
 .filters-sidebar .filters-content {
   overflow-y: auto;
   height: 100%;
+}
+
+.side-nav a {
+  color: var(--color--body-text);
+  text-decoration: none;
+  display: block;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3s ease;
 }
 
 /* Filter Groups */
